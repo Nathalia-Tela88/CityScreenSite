@@ -1,0 +1,1191 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import "shadcn/tailwind.css";
+
+/* Relume UI ships its classes inside node_modules, which Tailwind v4 does not
+   scan by default. Without this the Button renders unstyled. */
+@source "../../node_modules/@relume_io/relume-ui/dist";
+@plugin "@tailwindcss/typography";
+
+@custom-variant dark (&:is(.dark *));
+
+/* ---------------------------------------------------------------------------
+   CityScreen design system
+
+   Everything here is derived from one idea: the page is an LED wall. The
+   surfaces are unlit cabinets, the rules are the seams between them, the data
+   is set in the monospace of an instrument readout, and light is the only
+   saturated colour on the page.
+   --------------------------------------------------------------------------- */
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  /* One face, everywhere: IBM Plex Mono.
+
+     The site already set every number, unit, spec value and eyebrow in this
+     face — the instrument-readout voice was the loudest thing about it. Running
+     the same face through the headlines and the prose stops the page switching
+     voice between what it claims and what it measures, and reads as one machine
+     rather than a brochure quoting one.
+
+     The cost is real and worth stating: monospace sets roughly 15–20% wider
+     than the proportional face it replaced, so paragraphs run longer and the
+     spec pages are taller. That is the trade being made deliberately. */
+  --font-display: var(--font-plex-mono);
+  --font-sans: var(--font-plex-mono);
+  --font-mono: var(--font-plex-mono);
+  --font-heading: var(--font-plex-mono);
+
+  /* Every colour resolves through a theme variable so one utility works in
+     both themes. The names stay physical — `obsidian` is the base surface,
+     `filament` is primary text — even though the values flip.
+
+     Dark is the wall with power to it. Light is the same hardware unlit:
+     die-cast aluminium and paper, not a plain white page. */
+  --color-obsidian: var(--surface-base);
+  --color-cabinet: var(--surface-raised);
+  --color-cabinet-raised: var(--surface-raised-2);
+  --color-seam: var(--line);
+  --color-seam-bright: var(--line-strong);
+
+  --color-signal: var(--brand);
+  --color-signal-dim: var(--brand-dim);
+  --color-filament: var(--text-primary);
+  --color-graphite: var(--text-secondary);
+  --color-graphite-dim: var(--text-tertiary);
+
+  --color-ring: var(--ring);
+  --color-input: var(--input);
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-accent: var(--accent);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-muted: var(--muted);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-secondary: var(--secondary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-primary: var(--primary);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-popover: var(--popover);
+  --color-card-foreground: var(--card-foreground);
+  --color-card: var(--card);
+
+  /* Cabinets have square corners. So does everything else here. */
+  --radius-sm: 0px;
+  --radius-md: 0px;
+  --radius-lg: 0px;
+  --radius-xl: 0px;
+  --radius-2xl: 0px;
+  --radius-3xl: 0px;
+  --radius-4xl: 0px;
+}
+
+/* --- Dark: the default, and the brand's home ground ----------------------- */
+:root,
+.dark {
+  color-scheme: dark;
+
+  --surface-base: #05060a;
+  --surface-raised: #0b0d13;
+  --surface-raised-2: #12141c;
+  --line: #1c1f2a;
+  --line-strong: #2b2f3d;
+
+  --brand: #ff2233;
+  --brand-dim: #b3111e;
+  /* Not a neutral white: a lit diode always reads warm toward the red. */
+  --text-primary: #fff1f2;
+  --text-secondary: #969bab;
+  /* Carries the eyebrows and unit labels. 4.5:1 is the WCAG floor for body
+     text and was too low here: these are set at 11px and tracked out, where
+     the same ratio reads markedly fainter. Lifted to ~6.4:1 on the base
+     surface, still clearly a step below `--text-secondary` so the hierarchy
+     between a label and the text it labels survives. */
+  --text-tertiary: #8b91a3;
+
+  --background: var(--surface-base);
+  --foreground: var(--text-primary);
+  --card: var(--surface-raised);
+  --card-foreground: var(--text-primary);
+  --popover: var(--surface-raised);
+  --popover-foreground: var(--text-primary);
+  --primary: var(--brand);
+  --primary-foreground: var(--surface-base);
+  --secondary: var(--surface-raised-2);
+  --secondary-foreground: var(--text-primary);
+  --muted: var(--surface-raised-2);
+  --muted-foreground: var(--text-secondary);
+  --accent: var(--surface-raised-2);
+  --accent-foreground: var(--brand);
+  --destructive: #ff7a85;
+  --border: var(--line);
+  --input: var(--line-strong);
+  --ring: var(--brand);
+  --radius: 0px;
+
+  /* The module the whole page is measured against. Section seams, grid ticks
+     and the hero canvas all resolve to this number. */
+  --module: 64px;
+  --grid-line: rgb(255 255 255 / 3.5%);
+  --diode-dot: rgb(255 255 255 / 3.5%);
+  --diode-size: 11px;
+  --surface-sheen: none;
+  --panel-lift: none;
+}
+
+/* --- Light: the same cabinet with the power off ---------------------------
+
+   Not a white page. An LED wall with no power to it is cast aluminium with a
+   visible grid of dark diodes across it, and the joins between cabinets are
+   more obvious unlit than lit. So the light theme is cooler and deeper than
+   paper, carries that diode grid as texture, and draws its seams harder than
+   the dark theme does. */
+.light {
+  color-scheme: light;
+
+  --surface-base: #e8ebef;
+  --surface-raised: #ffffff;
+  --surface-raised-2: #dbdfe6;
+  --line: #c3c9d2;
+  --line-strong: #97a0ae;
+
+  /* The logo's own red rather than the emissive one. #ff2233 measures 4.35:1
+     on this background, which fails for the small mono labels; this clears
+     5.6:1 and still reads as the same brand colour. */
+  --brand: #c00510;
+  --brand-dim: #8d040c;
+  --text-primary: #0c0d13;
+  --text-secondary: #4a4f5c;
+  /* The light theme's counterpart to the lift in the dark block above. */
+  --text-tertiary: #4f5563;
+
+  --destructive: #b3111e;
+  --grid-line: rgb(12 13 19 / 6%);
+  /* Unlit diodes. Clearly present, never loud enough to fight body text. */
+  --diode-dot: rgb(16 20 30 / 11%);
+  --diode-size: 11px;
+  /* Light falling across a matte metal face, brighter at the top. */
+  --surface-sheen: linear-gradient(
+    to bottom,
+    rgb(255 255 255 / 65%),
+    rgb(255 255 255 / 0%) 42rem
+  );
+  --panel-lift: 0 1px 1px rgb(16 20 30 / 4%), 0 10px 30px -18px rgb(16 20 30 / 22%);
+}
+
+/* The hero and any header sitting on an LED wall stay dark in both themes.
+   An emissive surface does not become pale because the room is lit, and the
+   night footage behind it would read as a hole in a light page. */
+.light .on-wall {
+  --surface-base: #05060a;
+  --surface-raised: #0b0d13;
+  --surface-raised-2: #12141c;
+  --line: #1c1f2a;
+  --line-strong: #2b2f3d;
+  --brand: #ff2233;
+  --brand-dim: #b3111e;
+  --text-primary: #fff1f2;
+  --text-secondary: #969bab;
+  --text-tertiary: #8b91a3;
+  --grid-line: rgb(255 255 255 / 3.5%);
+  --diode-dot: rgb(255 255 255 / 3.5%);
+  --surface-sheen: none;
+  --panel-lift: none;
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: var(--font-sans), ui-monospace, monospace;
+
+    /* No `-webkit-font-smoothing: antialiased` and no `text-rendering:
+       optimizeLegibility` here, both removed deliberately.
+
+       `antialiased` forces greyscale antialiasing and renders stems about a
+       third of a pixel thinner than the system default. On a fixed-width face
+       — where every stem is the same weight and there is no bowl or serif to
+       carry the letterform — that thinning is what reads as fuzzy rather than
+       as fine. It buys nothing on Windows, where the property is ignored.
+
+       `optimizeLegibility` enables kerning and discretionary ligatures. A
+       monospace font has one advance for every glyph, so there is no kerning
+       to apply; the browser does the extra shaping work and changes nothing. */
+
+
+    /* The base surface is the unlit wall itself: a diode grid over cast metal,
+       with the sheen of light falling down it. Both resolve to nothing in the
+       dark theme, where the lit wall carries the texture instead. */
+    background-image: var(--surface-sheen),
+      radial-gradient(var(--diode-dot) 1px, transparent 1px);
+    background-size:
+      100% 100%,
+      var(--diode-size) var(--diode-size);
+    background-attachment: fixed, scroll;
+    background-repeat: no-repeat, repeat;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
+
+  /* Headlines are still the billboard, tuned for a fixed-width face.
+
+     No `font-variation-settings` here any more: the expanded setting existed
+     to work Archivo's width axis, and Plex Mono has no such axis — leaving the
+     declaration would be a line that reads like it does something and doesn't.
+
+     Tracking is pulled in instead. A monospace face reserves the same advance
+     for an `i` as for an `m`, which at display size leaves the line looking
+     gappy; negative tracking closes that up so the headline reads as set type
+     rather than as terminal output. It stays lighter than the old Archivo
+     values, because there is no extra width here to claw back. */
+  h1,
+  h2,
+  h3,
+  .font-display {
+    font-family: var(--font-display), ui-monospace, monospace;
+    letter-spacing: -0.02em;
+    text-wrap: balance;
+  }
+  h1,
+  h2 {
+    letter-spacing: -0.03em;
+  }
+  p {
+    text-wrap: pretty;
+  }
+
+  ::selection {
+    background: var(--color-signal);
+    color: #ffffff;
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-signal);
+    outline-offset: 3px;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Utilities
+   --------------------------------------------------------------------------- */
+
+/* The join between two cabinets: a hairline with a brighter tick where the
+   module grid crosses it. Used to separate sections instead of empty space. */
+@utility seam {
+  position: relative;
+  height: 1px;
+  width: 100%;
+  background: var(--color-seam);
+}
+
+@utility seam-ticks {
+  background-image: linear-gradient(
+    to right,
+    var(--color-seam-bright) 1px,
+    transparent 1px
+  );
+  background-size: var(--module) 100%;
+  background-position: 0 0;
+}
+
+/* Focus easing for data tables: the row under the cursor stays crisp while the
+   rest of the table softens back.
+
+   Gated behind a real hover-capable pointer — on touch, `:hover` sticks after a
+   tap and would leave the table permanently half-blurred. `:focus-within` is
+   included so keyboard users get the same emphasis when they tab into a row.
+
+   `will-change` is applied only while the table is actually being hovered.
+   Leaving it on every row permanently forces the compositor to hold a layer
+   per row for the life of the page, which costs more than it saves. */
+@utility row-focus {
+  @media (hover: hover) and (pointer: fine) {
+    & tbody tr {
+      transition:
+        filter 280ms ease,
+        opacity 280ms ease;
+    }
+
+    &:hover tbody tr,
+    &:focus-within tbody tr {
+      will-change: filter, opacity;
+    }
+
+    & tbody:hover tr:not(:hover),
+    & tbody:focus-within tr:not(:focus-within) {
+      filter: blur(2px);
+      opacity: 0.6;
+    }
+
+    /* A row that is both hovered and focused must stay sharp — without this
+       the two rules above can cancel each other out on a focused row the
+       cursor has moved away from. */
+    & tbody tr:hover,
+    & tbody tr:focus-within {
+      filter: none;
+      opacity: 1;
+    }
+  }
+}
+
+/* Panels that should read as physical cabinets sitting on the wall rather than
+   as flat fills. Does nothing in the dark theme, where an unlit edge already
+   separates them. */
+@utility panel-lift {
+  box-shadow: var(--panel-lift);
+}
+
+/* The unlit substrate. A pitch grid, not a decorative dot pattern — the
+   spacing is the module the layout is built on. */
+@utility pitch-grid {
+  background-image:
+    linear-gradient(to right, var(--grid-line) 1px, transparent 1px),
+    linear-gradient(to bottom, var(--grid-line) 1px, transparent 1px);
+  background-size: var(--module) var(--module);
+}
+
+/* Emissive text. Light bleeds; printed ink does not. */
+@utility text-emissive {
+  text-shadow:
+    0 0 1px color-mix(in oklab, var(--color-signal) 60%, transparent),
+    0 0 28px color-mix(in oklab, var(--color-signal) 35%, transparent);
+}
+
+/* Instrument readout: every number, unit, spec value and eyebrow on the site.
+
+   Set at 600 rather than 500. At 11px, uppercase, in a monospace face and
+   tracked out to 0.18em, each stroke is thin and separated from its
+   neighbours — the label reads considerably fainter than its measured
+   contrast ratio implies, because that ratio is defined for normal body text
+   and assumes strokes that sit close together. The extra weight puts the ink
+   back without touching the colour hierarchy. */
+/* Navigation. The same readout voice as `label-data`, two points larger and a
+   shade less tracked.
+
+   `label-data` is sized for a label sitting *beside* the thing it names — an
+   eyebrow, a unit, a spec key — where being quiet is the job. A nav item is
+   the thing itself, and a primary route set at 11px asks the visitor to lean
+   in. The tracking comes down with the size increase because 0.18em is tuned
+   to keep 11px glyphs from touching; at 13px it starts to read as gappy. */
+@utility label-nav {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  /* 15px and 1px, both deliberate whole numbers.
+
+     Plex Mono advances 0.6em per glyph, so at 15px every character occupies
+     9px, and a 1px letter-spacing makes the pitch exactly 10. Every glyph then
+     starts on a whole pixel. At the previous 13px with 0.14em the pitch was
+     9.62px, so each successive letter landed a little further off the grid and
+     was rendered across two columns instead of one — measurably softer, and
+     the reason the bar looked rough at ordinary display density.
+
+     Tracking is in px rather than em for the same reason: an em value follows
+     the font size and lands wherever it lands. */
+  font-size: 0.9375rem;
+  line-height: 1;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+@utility label-data {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.6875rem;
+  line-height: 1;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+@utility tabular {
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: "tnum";
+}
+
+/* ---------------------------------------------------------------------------
+   Relume compatibility layer
+
+   The Relume export and @relume_io/relume-ui expect the v3 preset's tokens.
+   That preset can't load under Tailwind v4's CSS-first pipeline, so the tokens
+   it defines are declared here instead — remapped onto the CityScreen palette.
+   --------------------------------------------------------------------------- */
+@theme {
+  /* Relume breakpoints (note lg is 992px, not Tailwind's 1024px) */
+  --breakpoint-sm: 480px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1280px;
+  --breakpoint-2xl: 1440px;
+
+  /* Fluid type scale.
+
+     Every step interpolates between a 320px viewport and a 1440px one, so the
+     page never steps between breakpoints — the headline is always sized to the
+     column it sits in. The `clamp()` floor and ceiling are the old fixed
+     values at each end, so nothing is smaller on a phone or larger on a
+     desktop than the scale already allowed.
+
+     The slope steepens as the scale climbs. Body copy barely moves, because
+     reading size is a function of the reader rather than the viewport; the
+     display sizes move a lot, because a billboard headline should fill
+     whatever wall it is given. `--text-xs`/`--text-sm` stay fixed outright:
+     they carry the mono unit labels, which fall below legible size the moment
+     they are allowed to scale down.
+
+     Each preferred value is `intercept + slope*vw`, solved so the line passes
+     exactly through both clamp bounds. */
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1.5;
+  --text-sm: 0.8125rem;
+  --text-sm--line-height: 1.6;
+  --text-base: clamp(0.875rem, 0.857rem + 0.089vw, 0.9375rem);
+  --text-base--line-height: 1.65;
+  --text-md: clamp(0.9375rem, 0.902rem + 0.179vw, 1.0625rem);
+  --text-md--line-height: 1.6;
+  --text-lg: clamp(1.0625rem, 1.027rem + 0.179vw, 1.1875rem);
+  --text-lg--line-height: 1.55;
+  --text-xl: clamp(1.125rem, 1.071rem + 0.268vw, 1.3125rem);
+  --text-xl--line-height: 1.35;
+  --text-2xl: clamp(1.25rem, 1.179rem + 0.357vw, 1.5rem);
+  --text-2xl--line-height: 1.3;
+  --text-3xl: clamp(1.375rem, 1.268rem + 0.536vw, 1.75rem);
+  --text-3xl--line-height: 1.25;
+  --text-4xl: clamp(1.625rem, 1.482rem + 0.714vw, 2.125rem);
+  --text-4xl--line-height: 1.15;
+  --text-5xl: clamp(1.875rem, 1.696rem + 0.893vw, 2.5rem);
+  --text-5xl--line-height: 1.08;
+  --text-6xl: clamp(2.125rem, 1.875rem + 1.25vw, 3rem);
+  --text-6xl--line-height: 1.05;
+  --text-7xl: clamp(2.375rem, 1.982rem + 1.964vw, 3.75rem);
+  --text-7xl--line-height: 1.02;
+  --text-8xl: clamp(2.625rem, 2.089rem + 2.679vw, 4.5rem);
+  --text-8xl--line-height: 0.98;
+  --text-9xl: clamp(2.875rem, 2.125rem + 3.75vw, 5.5rem);
+  --text-9xl--line-height: 0.95;
+  --text-10xl: clamp(3.125rem, 2.089rem + 5.179vw, 6.75rem);
+  --text-10xl--line-height: 0.92;
+
+  /* Relume semantic colours, remapped to the CityScreen dark palette.
+     background-alternative drives the primary Button fill, so it carries the
+     brand red rather than Relume's default black. */
+  --color-background-primary: var(--surface-base);
+  --color-background-secondary: var(--surface-raised);
+  --color-background-alternative: var(--brand);
+  --color-neutral-black: var(--surface-base);
+  --color-neutral-lightest: var(--surface-raised);
+  --color-neutral-lighter: var(--surface-raised-2);
+  --color-neutral-light: var(--line);
+  --color-neutral-darker: var(--text-secondary);
+  --color-border-primary: var(--line);
+  --color-border-alternative: var(--text-primary);
+  --color-text-primary: var(--text-secondary);
+  --color-text-alternative: var(--text-primary);
+
+  --animate-tabs: tabs 0.6s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes tabs {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* The hero wall's power-on sweep. */
+@keyframes calibrate-sweep {
+  0% {
+    transform: translateX(-110%);
+    opacity: 0;
+  }
+  12% {
+    opacity: 1;
+  }
+  88% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateX(110%);
+    opacity: 0;
+  }
+}
+
+/* Content resolving out of defocus, the way a wall pulls into calibration.
+   Paired with the counting figures, these are the site's one motion idea
+   rather than two unrelated effects. */
+/* Block-level counterpart to word-in, on the same principle: the fade leads,
+   the focus and the lift trail behind it. */
+@keyframes resolve-in {
+  0% {
+    opacity: 0;
+    filter: blur(10px);
+    transform: translateY(16px);
+  }
+  40% {
+    opacity: 0.8;
+    filter: blur(4.5px);
+  }
+  70% {
+    opacity: 1;
+    filter: blur(1.6px);
+    transform: translateY(2px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+    transform: none;
+  }
+}
+
+/* The reduced-motion counterpart: opacity only, nothing moves and nothing
+   defocuses. A cross-fade carries no vestibular risk, so visitors who asked
+   for less motion still get the content arriving in reading order rather than
+   a page that assembles itself before they look at it. */
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Per-word headline reveal. Opacity and blur only — no travel, which keeps
+   long headings from shuffling sideways as each word lands.
+
+   Opacity finishes well before the blur does. Running both to the same stop
+   makes a word arrive and sharpen in one abrupt event; letting the fade lead
+   and the focus trail behind it is what reads as smooth. The extra stops keep
+   the blur falling off gradually instead of snapping over the last few
+   pixels, which is where the harshness was. */
+@keyframes word-in {
+  0% {
+    opacity: 0;
+    filter: blur(12px);
+  }
+  35% {
+    opacity: 0.72;
+    filter: blur(6px);
+  }
+  65% {
+    opacity: 1;
+    filter: blur(2.4px);
+  }
+  85% {
+    filter: blur(0.7px);
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+/* Reduced-motion counterpart: the same cadence without the defocus. */
+@keyframes word-fade-in {
+  0% {
+    opacity: 0;
+  }
+  65% {
+    opacity: 0.85;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/* A word striking on like a diode that has to try twice.
+
+   The shape is deliberate rather than random noise: two full-amplitude strikes
+   in the first third, then the settling ripples are shallow — 0.62 and 0.86
+   rather than back to nothing. That is a safety limit, not a taste one. WCAG
+   2.3.1 caps flashing at three per second because large, high-contrast
+   luminance swings can trigger photosensitive seizures, and this is a headline
+   at 9rem. Two big strikes across 1.6s is comfortably under the limit; a
+   convincing-looking stutter of eight would be over it.
+
+   Opacity only. Animating the glow alongside it would double the cost per
+   frame for something the eye reads as the same event. */
+@keyframes word-flicker {
+  0% {
+    opacity: 0;
+    filter: blur(5px);
+  }
+  9% {
+    opacity: 0.82;
+    filter: blur(0);
+  }
+  13% {
+    opacity: 0.08;
+  }
+  30% {
+    opacity: 1;
+  }
+  36% {
+    opacity: 0.12;
+  }
+  47% {
+    opacity: 1;
+  }
+  58% {
+    opacity: 0.62;
+  }
+  67% {
+    opacity: 1;
+  }
+  78% {
+    opacity: 0.86;
+  }
+  100% {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+@keyframes rise-in {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Tailwind v4 dropped the container's automatic centring and max-widths. */
+@utility container {
+  margin-inline: auto;
+  width: 100%;
+  @media (width >= 992px) {
+    max-width: 992px;
+  }
+  @media (width >= 1280px) {
+    max-width: 1216px;
+  }
+  @media (width >= 1440px) {
+    max-width: 1344px;
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Page transitions
+
+   The wall does not slide; the content on it does. Navigation moves the page
+   body horizontally while the header stays pinned, so the visitor keeps one
+   fixed reference point and reads the movement as "the content changed",
+   not "the viewport lurched".
+
+   Timing is deliberately asymmetric — the outgoing page leaves quickly so it
+   stops competing for attention, and the incoming page arrives more slowly,
+   with its fade delayed until the exit has finished. Same principle as the
+   `word-in` reveal: the fade leads and the focus trails.
+   --------------------------------------------------------------------------- */
+:root {
+  --vt-exit: 150ms;
+  --vt-enter: 210ms;
+  --vt-move: 400ms;
+}
+
+::view-transition-old(.nav-forward) {
+  --slide-offset: -60px;
+  animation:
+    var(--vt-exit) ease-in both vt-fade reverse,
+    var(--vt-move) ease-in-out both vt-slide reverse;
+}
+::view-transition-new(.nav-forward) {
+  --slide-offset: 60px;
+  animation:
+    var(--vt-enter) ease-out var(--vt-exit) both vt-fade,
+    var(--vt-move) ease-in-out both vt-slide;
+}
+
+::view-transition-old(.nav-back) {
+  --slide-offset: 60px;
+  animation:
+    var(--vt-exit) ease-in both vt-fade reverse,
+    var(--vt-move) ease-in-out both vt-slide reverse;
+}
+::view-transition-new(.nav-back) {
+  --slide-offset: -60px;
+  animation:
+    var(--vt-enter) ease-out var(--vt-exit) both vt-fade,
+    var(--vt-move) ease-in-out both vt-slide;
+}
+
+@keyframes vt-slide {
+  from {
+    translate: var(--slide-offset);
+  }
+  to {
+    translate: 0;
+  }
+}
+
+/* The blur is doing real work here, not decoration: it hides the pixel
+   interpolation artefacts a cross-fade produces over photographic content. */
+@keyframes vt-fade {
+  from {
+    opacity: 0;
+    filter: blur(3px);
+  }
+  to {
+    opacity: 1;
+    filter: blur(0);
+  }
+}
+
+/* The header is the fixed anchor, so it is excluded from the slide entirely.
+   Hiding the old snapshot prevents the moment where two headers overlap. */
+::view-transition-group(site-header) {
+  animation: none;
+  z-index: 100;
+}
+::view-transition-old(site-header) {
+  display: none;
+}
+::view-transition-new(site-header) {
+  animation: none;
+}
+
+/* The transition overlay swallows clicks for its whole duration. Letting them
+   through means a visitor who taps during the animation is not ignored. */
+::view-transition {
+  pointer-events: none;
+}
+
+/* Softens the shared-element morph between a card and the page it opens. */
+::view-transition-group(.morph) {
+  animation-duration: 360ms;
+}
+::view-transition-image-pair(.morph) {
+  animation-name: vt-via-blur;
+}
+@keyframes vt-via-blur {
+  30% {
+    filter: blur(3px);
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   Microinteractions
+   --------------------------------------------------------------------------- */
+
+/* Every pressable surface on the site shares one response: it takes the press.
+   Hover is gated behind a real pointer, because on touch `:hover` latches
+   after a tap and would leave the control stuck in its hover state. */
+@utility press {
+  transition:
+    transform 140ms cubic-bezier(0.2, 0, 0, 1),
+    background-color 200ms ease,
+    border-color 200ms ease,
+    color 200ms ease,
+    box-shadow 200ms ease;
+
+  &:active {
+    transform: scale(0.97);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      transform: translateY(-1px);
+    }
+    &:active:hover {
+      transform: scale(0.97);
+    }
+  }
+}
+
+/* A quieter press for large surfaces — a whole card scaling by 3% reads as the
+   layout breaking rather than as a button depressing. */
+@utility press-soft {
+  transition:
+    transform 220ms cubic-bezier(0.2, 0, 0, 1),
+    background-color 260ms ease,
+    border-color 260ms ease;
+
+  &:active {
+    transform: scale(0.995);
+  }
+}
+
+/* A tile in a hairline grid that pulls forward under the pointer — a cabinet
+   coming off the wall for service.
+
+   Scale, not just a lighter fill. These tiles are separated by a 1px seam and
+   nothing else, so growing past that seam is what makes one read as lifted off
+   the sheet rather than merely highlighted; `z-index` is what keeps it on top
+   of the neighbours it grows over instead of being clipped by them.
+
+   `:focus-within` is included so a keyboard user tabbing through the tile's
+   links gets the same emphasis the cursor gives. */
+@utility tile-lift {
+  position: relative;
+  transition:
+    transform 340ms cubic-bezier(0.2, 0, 0, 1),
+    background-color 340ms ease,
+    box-shadow 340ms ease;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover,
+    &:focus-within {
+      z-index: 1;
+      transform: scale(1.04);
+      background-color: var(--color-cabinet-raised);
+      box-shadow: 0 24px 48px -28px rgb(0 0 0 / 0.8);
+    }
+  }
+}
+
+/* The figure on a step tile. Sits quiet as a seam-coloured numeral until you
+   point at its tile, then lights and grows.
+
+   Written as a utility rather than a string of `group-hover:` classes for one
+   specific reason: `text-emissive` and `text-signal` both live in Tailwind's
+   `text-` group, so passing them together through `cn()` would have
+   tailwind-merge drop the colour as a conflict and leave the glow alone. */
+@utility step-numeral {
+  display: inline-block;
+  transform-origin: left center;
+  transition:
+    color 300ms ease,
+    transform 340ms cubic-bezier(0.2, 0, 0, 1),
+    text-shadow 300ms ease;
+
+  @media (hover: hover) and (pointer: fine) {
+    .group:hover &,
+    .group:focus-within & {
+      color: var(--color-signal);
+      transform: scale(1.22);
+      text-shadow:
+        0 0 1px color-mix(in oklab, var(--color-signal) 60%, transparent),
+        0 0 28px color-mix(in oklab, var(--color-signal) 35%, transparent);
+    }
+  }
+}
+
+/* Form fields. A field responds to the cursor before it is even focused, so
+   the visitor knows it is live; on focus the seam brightens to the signal
+   colour and a soft bloom comes up behind it — the same emissive language the
+   rest of the site uses for "this is powered". Nothing moves, because a field
+   that shifts under the caret is a field you mistype into. */
+@utility field {
+  transition:
+    border-color 180ms ease,
+    box-shadow 180ms ease,
+    background-color 180ms ease;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover:not(:disabled):not(:focus-visible) {
+      border-color: var(--color-seam-bright);
+    }
+  }
+
+  &:focus-visible,
+  &[data-state="open"] {
+    box-shadow: 0 0 0 1px var(--color-signal),
+      0 0 18px -4px color-mix(in oklab, var(--color-signal) 55%, transparent);
+  }
+}
+
+@keyframes spin-loader {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* The instrument-panel loading state: a ring that reads as a readout settling
+   rather than a generic app spinner. */
+@utility spinner {
+  display: inline-block;
+  border-radius: 9999px;
+  border: 1.5px solid color-mix(in oklab, currentColor 25%, transparent);
+  border-top-color: currentColor;
+  animation: spin-loader 620ms linear infinite;
+}
+
+/* ---------------------------------------------------------------------------
+   Hover rules
+
+   A hairline that draws itself under a label on hover, in the signal colour —
+   the same red the rest of the site uses for "this is live".
+
+   Two directions, and the direction carries meaning. Navigation grows from the
+   centre: a menu item is a place you have arrived at, and a symmetrical rule
+   reads as the item settling under the cursor. A title wipes in from the left,
+   along the reading direction, because it is pointing onward to the thing it
+   names.
+
+   `width: fit-content` is what makes these work on a heading. Card titles sit
+   in boxes two to five times wider than the words in them — "Rental LED" is
+   155px of text in a 637px card — so a rule spanning the element's own box
+   would run a long way past the last letter. On the inline spans in the nav
+   the width is simply ignored, which is why one pair of utilities covers both.
+   --------------------------------------------------------------------------- */
+@utility rule-center {
+  position: relative;
+  width: fit-content;
+  max-width: 100%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.18em;
+    height: 1px;
+    background: var(--color-signal);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 300ms cubic-bezier(0.2, 0, 0, 1);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .group:hover &::after,
+    .group:focus-visible &::after,
+    &:hover::after,
+    &:focus-visible::after {
+      transform: scaleX(1);
+    }
+  }
+}
+
+@utility rule-left {
+  position: relative;
+  width: fit-content;
+  max-width: 100%;
+
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: -0.14em;
+    height: 1px;
+    background: var(--color-signal);
+    transform: scaleX(0);
+    /* Parked against the right edge so the rule leaves the way it arrived
+       rather than retreating: in from the left, out to the right. Origin is
+       not an animatable property, so the flip below is instantaneous and only
+       the scale is ever in motion. */
+    transform-origin: right;
+    transition: transform 340ms cubic-bezier(0.2, 0, 0, 1);
+  }
+
+  @media (hover: hover) and (pointer: fine) {
+    .group:hover &::after,
+    .group:focus-visible &::after,
+    &:hover::after,
+    &:focus-visible::after {
+      transform: scaleX(1);
+      transform-origin: left;
+    }
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   3D lift
+
+   A word tips out of the page toward the cursor and drops back when it leaves.
+   Applied per word rather than to the whole headline: the words are already
+   separate inline-blocks for the reveal, and lifting one at a time lets the
+   line respond as you read across it instead of heaving as a slab.
+
+   `translateZ` is what does the work — it needs a `perspective` ancestor and a
+   `transform-style: preserve-3d` on the lifting element, both set by
+   `lift-stage` below. Without the perspective the Z translation is a no-op and
+   you get a rotate with no depth to it.
+
+   Two details that matter on this particular headline:
+
+   - Only `transform` and `text-shadow` transition. The reveal animation owns
+     `opacity` and `filter`, and transitioning those here would fight it while
+     a word is still resolving into focus.
+   - The lift is smaller than the 40px/1.1 of a demo. At the hero's display size
+     a word is already 100px tall, and scaling it that far pushes the line into
+     its neighbours and past the gutter.
+   --------------------------------------------------------------------------- */
+@utility lift-stage {
+  perspective: 900px;
+}
+
+@utility lift-3d {
+  transform-style: preserve-3d;
+  transition:
+    transform 350ms cubic-bezier(0.2, 0, 0, 1),
+    text-shadow 350ms ease;
+
+  @media (hover: hover) and (pointer: fine) {
+    &:hover {
+      transform: rotateX(10deg) rotateY(-10deg) translateZ(26px) scale(1.04);
+      text-shadow:
+        0 10px 22px rgb(0 0 0 / 0.55),
+        0 0 28px color-mix(in oklab, var(--color-signal) 45%, transparent);
+    }
+    /* Pressed: it goes flat and slightly under, so a click reads as the word
+       being pushed back into the wall. */
+    &:active {
+      transform: rotateX(0deg) rotateY(0deg) translateZ(0) scale(0.97);
+    }
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   CTA flicker
+
+   The button strikes on once, with the hero headline, and then holds steady.
+
+   It reuses `word-flicker` rather than carrying its own keyframes: the title
+   and the button lighting up in the same way reads as one sign coming on,
+   where two different stutters would read as two things going wrong.
+
+   Once rather than forever, which is the substantive difference from where
+   this started. A permanent flicker on the page's primary button reads as a
+   fault rather than as light — the one element that most needs to look
+   dependable — and an animation that never ends also has no point at which a
+   visitor sensitive to motion gets relief from it.
+
+   The delay matches the button's own reveal so the two arrive together; they
+   sit on different elements, so their opacities multiply instead of one
+   replacing the other. */
+@utility cta-flicker {
+  animation: word-flicker 1.6s steps(1, end) 1.15s both;
+}
+
+/* ---------------------------------------------------------------------------
+   Hover reveal
+
+   Cards hold a hidden tier — quick actions, a tag overlay, a second image —
+   that arrives on hover. On a touch device there is no hover, so the same
+   content is simply always visible rather than unreachable behind a gesture
+   the device cannot make.
+   --------------------------------------------------------------------------- */
+@utility reveal-layer {
+  opacity: 1;
+  transform: none;
+  transition:
+    opacity 300ms ease,
+    transform 300ms cubic-bezier(0.2, 0, 0, 1);
+
+  @media (hover: hover) and (pointer: fine) {
+    opacity: 0;
+    transform: translateY(8px);
+
+    .group:hover &,
+    .group:focus-visible &,
+    .group:focus-within & {
+      opacity: 1;
+      transform: none;
+    }
+  }
+}
+
+/* The second image sits under the first and is uncovered, not faded in over
+   it — so the two are never both half-visible at once. */
+@utility reveal-swap {
+  opacity: 0;
+  transition: opacity 420ms ease;
+
+  @media (hover: hover) and (pointer: fine) {
+    .group:hover &,
+    .group:focus-within & {
+      opacity: 1;
+    }
+  }
+}
+
+/* ---------------------------------------------------------------------------
+   SVG path drawing
+   --------------------------------------------------------------------------- */
+
+/* The stroke draws itself in. `pathLength="1"` is set on the element so the
+   dash values are a fraction of the path rather than a magic pixel number,
+   which means one rule works for every path regardless of its real length. */
+@keyframes draw-path {
+  from {
+    stroke-dashoffset: 1;
+  }
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+@utility path-draw {
+  stroke-dasharray: 1;
+  stroke-dashoffset: 1;
+  animation: draw-path 1.1s cubic-bezier(0.33, 0, 0.15, 1) forwards;
+}
+
+/* ---------------------------------------------------------------------------
+   Reduced motion
+
+   The blanket rule in the base layer flattens durations, but view transition
+   pseudo-elements live outside the document tree and are not matched by it,
+   so they need their own reset. Positional slides are the highest-risk motion
+   on the site, so they are the first thing to go.
+   --------------------------------------------------------------------------- */
+@media (prefers-reduced-motion: reduce) {
+  ::view-transition-old(*),
+  ::view-transition-new(*),
+  ::view-transition-group(*) {
+    animation-duration: 0s !important;
+    animation-delay: 0s !important;
+  }
+
+  /* Reveals stay legible without the travel: the content is simply present. */
+  .reveal-layer,
+  .reveal-swap {
+    transform: none !important;
+  }
+
+  /* The tile still lights up and still raises its shadow — it just does not
+     move. Flattening the duration alone would not be enough here: that turns
+     the growth into an instant jump, which is the exact motion this setting
+     exists to suppress. */
+  .tile-lift:hover,
+  .tile-lift:focus-within {
+    transform: none !important;
+  }
+
+  .group:hover .step-numeral,
+  .group:focus-within .step-numeral {
+    transform: none !important;
+  }
+
+  /* Stopped outright rather than run fast. Collapsing the duration would fire
+     every strike inside 0.01ms, which is a single hard flash — the one thing
+     this setting exists to prevent. The button simply arrives lit. */
+  .cta-flicker {
+    animation: none !important;
+    opacity: 1 !important;
+  }
+
+  /* The word still lights under the cursor — it just does not leave the page. */
+  .lift-3d:hover,
+  .lift-3d:active {
+    transform: none !important;
+  }
+
+  .path-draw {
+    animation: none !important;
+    stroke-dashoffset: 0 !important;
+  }
+}

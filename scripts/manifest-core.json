@@ -1,0 +1,102 @@
+[
+  {
+    "name": "hero-facade",
+    "aspect": "21:9",
+    "prompt": "Wide cinematic architectural photograph at blue hour of a downtown Toronto office tower whose lower eight storeys are wrapped in a seamless high-resolution LED media facade. The screen emits a single controlled crimson-red abstract light field that washes across wet asphalt and streetcar tracks below. Deep indigo-black winter sky, bare trees, long-exposure traffic light trails, faint snow in the air"
+  },
+  {
+    "name": "app-professional",
+    "aspect": "4:3",
+    "prompt": "A utility grid control room at night. A vast seamless fine-pitch LED video wall spans the far wall showing abstract red and grey telemetry fields with no readable text. Four operators in silhouette at curved desks, task lighting only, dark acoustic ceiling, very low ambient light"
+  },
+  {
+    "name": "app-commercial",
+    "aspect": "4:3",
+    "prompt": "A flagship retail shopfront at dusk seen from the sidewalk. Floor-to-ceiling glazing with a transparent LED display bonded to the glass showing an abstract crimson gradient while the store interior stays fully visible through it. Polished concrete, brushed steel shopfit, rain on the pavement"
+  },
+  {
+    "name": "app-rental",
+    "aspect": "4:3",
+    "prompt": "A festival main stage from the side at night. A towering curved LED backdrop and two side wings glow with an abstract red and white light field. Truss, rigging motors and haze visible, silhouetted crowd hands in the foreground, dense atmospheric fog catching the beams"
+  },
+  {
+    "name": "app-dooh",
+    "aspect": "4:3",
+    "prompt": "A large roadside digital billboard on a steel monopole beside a Canadian highway at dusk in winter. The panel glows with an abstract crimson-red field, brilliantly bright against a slate-grey overcast sky, snowbanks along the shoulder, motion-blurred transport trucks passing below"
+  },
+  {
+    "name": "product-fine-pitch",
+    "aspect": "4:5",
+    "prompt": "Studio product photograph of a single slim black chip-on-board fine-pitch LED display cabinet standing upright on a seamless charcoal backdrop. The emissive face shows a soft dark red glow, the machined aluminium frame catches a hard rim light along one edge. Dramatic single-source studio lighting, catalogue photography"
+  },
+  {
+    "name": "product-commercial",
+    "aspect": "4:5",
+    "prompt": "Studio product photograph of a slim indoor LED display cabinet with magnetic front-service modules, one module lifted slightly away to reveal the honeycomb structure behind it, standing on a seamless charcoal backdrop. Cool key light, warm red glow from the emissive face, catalogue photography"
+  },
+  {
+    "name": "product-rental",
+    "aspect": "4:5",
+    "prompt": "Studio product photograph of a die-cast magnesium rental LED cabinet with visible cam-lock latches, integrated hanging bar and curve-lock hardware, standing on a seamless charcoal backdrop. Hard directional key light raking across the machined frame, faint red glow from the panel face, catalogue photography"
+  },
+  {
+    "name": "product-outdoor",
+    "aspect": "4:5",
+    "prompt": "Studio product photograph of a heavy sealed outdoor LED billboard cabinet with a weatherproof gasketed rear door, cooling fins and cable glands, standing on a seamless charcoal backdrop. Beads of water on the sealed front face, hard cool key light, intense red glow from the panel, catalogue photography"
+  },
+  {
+    "name": "spec-pitch",
+    "aspect": "3:2",
+    "prompt": "Extreme macro photograph of the surface of an LED display module, showing the regular grid of individual red green and blue diode packages set in matte black resin. Razor-shallow depth of field so the front row is tack sharp and the grid falls away into bokeh, the red diodes lit brightest"
+  },
+  {
+    "name": "spec-brightness",
+    "aspect": "3:2",
+    "prompt": "A high-brightness outdoor LED billboard photographed straight into harsh midday summer sun, lens flare across the frame, the panel's abstract red graphic still perfectly legible and saturated against the blown-out sky. Heat shimmer, deep blue sky at the top of frame"
+  },
+  {
+    "name": "spec-refresh",
+    "aspect": "3:2",
+    "prompt": "A broadcast studio camera on a pedestal, shot from behind and slightly to one side, framing a large LED scenic wall that glows with an abstract red field. The wall shows a perfectly clean image with no scan lines or banding. Dark studio, lighting rig visible overhead, shallow depth of field on the camera body"
+  },
+  {
+    "name": "spec-ingress",
+    "aspect": "3:2",
+    "prompt": "A sealed outdoor LED billboard cabinet during a heavy Canadian ice storm at dusk, rime ice and driven snow building on the top edge and the mounting frame while the panel face stays clear and burns bright crimson through the weather. Bleak grey-white whiteout background"
+  },
+  {
+    "name": "gallery-arena",
+    "aspect": "1:1",
+    "prompt": "A centre-hung four-sided LED scoreboard suspended above an empty ice hockey rink, glowing crimson, the ice below reflecting the light in long streaks. Dark empty arena bowl, bright rink surface"
+  },
+  {
+    "name": "gallery-lobby",
+    "aspect": "1:1",
+    "prompt": "A corporate tower lobby at night. A tall portrait-format seamless LED canvas set flush into a dark stone feature wall, glowing with an abstract red gradient. Polished terrazzo floor reflecting the glow, a single security desk in silhouette"
+  },
+  {
+    "name": "gallery-dealership",
+    "aspect": "1:1",
+    "prompt": "A car dealership showroom at night seen through the glazing from the forecourt. A wide LED banner display runs above the service drive glowing crimson, vehicles in silhouette below, wet tarmac in the foreground reflecting the panel"
+  },
+  {
+    "name": "gallery-transit",
+    "aspect": "1:1",
+    "prompt": "A subway station concourse late at night. A long curved LED ribbon display follows the ceiling line glowing red, empty platform, wet tiled floor, deep receding perspective"
+  },
+  {
+    "name": "gallery-church",
+    "aspect": "1:1",
+    "prompt": "A modern church auditorium with a large fine-pitch LED wall behind the stage glowing a soft crimson, empty seating in darkness, timber acoustic panels, very quiet restrained lighting"
+  },
+  {
+    "name": "gallery-facade",
+    "aspect": "1:1",
+    "prompt": "Looking straight up the corner of a mid-rise building clad in a transparent mesh LED media facade glowing crimson against a black night sky, the structural grid of the mesh clearly visible, dramatic upward perspective"
+  },
+  {
+    "name": "cta-calibration",
+    "aspect": "16:9",
+    "prompt": "An LED calibration and burn-in bay inside a working technical facility. Rows of LED cabinets racked on steel frames, each glowing a uniform deep red, a technician in a dark work shirt with a colorimeter on a tripod in the mid-ground, coiled data cables, concrete floor, industrial ceiling"
+  }
+]
