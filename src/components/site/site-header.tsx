@@ -24,7 +24,7 @@ function Wordmark({ homeAria }: { homeAria: string }) {
       // reads as a return rather than a step forward.
       transitionTypes={["nav-back"]}
       className="flex shrink-0 items-center"
-      aria-label={`${company.name} — ${homeAria}`}
+      aria-label={`${company.name}, ${homeAria}`}
     >
       <Image
         src="/brand/cityscreen-logo-dark.png"

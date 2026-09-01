@@ -29,7 +29,7 @@ export async function generateMetadata({
     title: item.name,
     description:
       item.summary ??
-      `${item.name} — a series in the CityScreen ${platform.name} platform. ${platform.tagline} Datasheet on request.`,
+      `${item.name}, a series in the CityScreen ${platform.name} platform. ${platform.tagline} Datasheet on request.`,
   };
 }
 

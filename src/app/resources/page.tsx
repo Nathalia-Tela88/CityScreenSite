@@ -10,7 +10,7 @@ import { ResourcesContent } from "./resources-content";
 export const metadata: Metadata = {
   title: "Resources",
   description:
-    "Technical guides from CityScreen engineers — pixel pitch and viewing distance, nits and outdoor brightness, IP ratings, power loads and permit timelines in Ontario.",
+    "Technical guides from CityScreen engineers: pixel pitch and viewing distance, nits and outdoor brightness, IP ratings, power loads and permit timelines in Ontario.",
 };
 
 export default function Page() {

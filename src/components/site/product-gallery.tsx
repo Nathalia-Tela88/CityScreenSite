@@ -143,7 +143,7 @@ export function ProductGallery({
           <Image
             key={src}
             src={src}
-            alt={count > 1 ? `${name} — ${index + 1} of ${count}` : name}
+            alt={count > 1 ? `${name}, image ${index + 1} of ${count}` : name}
             fill
             priority={index === 0}
             quality={90}
@@ -180,7 +180,7 @@ export function ProductGallery({
                 type="button"
                 onClick={() => setActive(index)}
                 aria-current={index === active}
-                aria-label={`${name} — ${index + 1}`}
+                aria-label={`${name}, image ${index + 1}`}
                 className={cn(
                   "press relative block size-16 overflow-hidden border md:size-20",
                   index === active

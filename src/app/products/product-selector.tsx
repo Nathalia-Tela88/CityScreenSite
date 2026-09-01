@@ -45,7 +45,7 @@ export function ProductSelector() {
             <div className="relative aspect-[16/10] overflow-hidden">
               <Image
                 src={service.image}
-                alt={`${service.name} — ${service.tagline}`}
+                alt={`${service.name}: ${service.tagline}`}
                 fill
                 sizes="(max-width: 768px) 100vw, 50vw"
                 className="object-cover transition-transform duration-[900ms] ease-out group-hover:scale-[1.03]"

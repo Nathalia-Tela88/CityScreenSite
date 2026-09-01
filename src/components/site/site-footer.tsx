@@ -79,7 +79,7 @@ export function SiteFooter() {
             href="/"
             transitionTypes={["nav-back"]}
             className="inline-flex items-center"
-            aria-label={`${company.name} — ${t.nav.homeAria}`}
+            aria-label={`${company.name}, ${t.nav.homeAria}`}
           >
             <Image
               src="/brand/cityscreen-logo-dark.png"

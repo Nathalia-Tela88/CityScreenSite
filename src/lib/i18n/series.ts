@@ -44,7 +44,7 @@ const en: Record<string, SeriesCopy> = {
   lmini: {
     tagline: "Mini LED, front-serviced, eye-rated",
     summary:
-      "The fine-pitch workhorse: Mini LED on a flip-chip COB surface, 29.6 mm deep, and serviced entirely from the front. It is specified where a screen is read for a full shift rather than glanced at — control rooms and monitoring floors — which is why the low-blue-light rating matters more here than peak brightness does.",
+      "The fine-pitch workhorse: Mini LED on a flip-chip COB surface, 29.6 mm deep, and serviced entirely from the front. It is specified where a screen is read for a full shift rather than glanced at: control rooms and monitoring floors. That is why the low-blue-light rating matters more here than peak brightness does.",
     heroStats: [
       { label: "Pixel pitch", value: "0.93 – 1.8 mm" },
       { label: "Contrast", value: "10,000:1" },
@@ -91,7 +91,7 @@ const en: Record<string, SeriesCopy> = {
   "lmini-p": {
     tagline: "The energy case for fine pitch",
     summary:
-      "A narrower two-pitch range than the LMini, tuned for the rooms where a screen runs all day in front of the public. Its EBL optical stack lifts black level and colour consistency, and it draws roughly 40% less than a conventional P1.2 — which on a wall that never switches off is the figure the facilities manager actually cares about.",
+      "A narrower two-pitch range than the LMini, tuned for the rooms where a screen runs all day in front of the public. Its EBL optical stack lifts black level and colour consistency, and it draws roughly 40% less than a conventional P1.2. On a wall that never switches off, that is the figure the facilities manager actually cares about.",
     heroStats: [
       { label: "Pixel pitch", value: "1.25 / 1.56 mm" },
       { label: "Energy saving", value: "~40%" },
@@ -104,7 +104,7 @@ const en: Record<string, SeriesCopy> = {
       },
       {
         title: "Black that stays black",
-        body: "EBL multilayer optical processing for a deep black level and high colour consistency panel to panel — the failure a fine-pitch wall is actually judged on, since a mismatched cabinet is visible from across the room.",
+        body: "EBL multilayer optical processing for a deep black level and high colour consistency panel to panel. That is the failure a fine-pitch wall is actually judged on, since a mismatched cabinet is visible from across the room.",
       },
       {
         title: "Aligned from six directions",
@@ -158,7 +158,7 @@ const en: Record<string, SeriesCopy> = {
       },
       {
         title: "Redundant power and data",
-        body: "Both paths support redundancy, so a single supply or cable failure does not take the wall down. In a command centre the display is part of the operating picture — a dark wall is an incident, not an inconvenience.",
+        body: "Both paths support redundancy, so a single supply or cable failure does not take the wall down. In a command centre the display is part of the operating picture: a dark wall is an incident, not an inconvenience.",
       },
       {
         title: "Sealed back, front-serviced",
@@ -210,7 +210,7 @@ const en: Record<string, SeriesCopy> = {
       },
       {
         title: "It reports its own faults",
-        body: "Optional spot detection, PSU voltage monitoring, signal detection and module temperature tracking — the telemetry a service contract is built on, so a failing module is a phone call from us rather than a complaint from you.",
+        body: "Optional spot detection, PSU voltage monitoring, signal detection and module temperature tracking. That is the telemetry a service contract is built on, so a failing module is a phone call from us rather than a complaint from you.",
       },
     ],
     specTables: [
@@ -250,7 +250,7 @@ const en: Record<string, SeriesCopy> = {
     highlights: [
       {
         title: "It is the wall until it is a screen",
-        body: "The surface is finished as a decorative material — wood grain, marble — so when it is off it belongs to the interior rather than interrupting it. That is the whole argument for it, and the reason it goes where a conventional display would be refused.",
+        body: "The surface is finished as a decorative material (wood grain, marble) so when it is off it belongs to the interior rather than interrupting it. That is the whole argument for it, and the reason it goes where a conventional display would be refused.",
       },
       {
         title: "0.5% reflectivity",
@@ -344,7 +344,7 @@ const en: Record<string, SeriesCopy> = {
   "rn-ii": {
     tagline: "Lead the P1 era of indoor rental",
     summary:
-      "The fine-pitch end of the rental platform, down to 1.5 mm with 15,000:1 contrast and 96% DCI-P3. Specified where a rental wall is on camera and has to hold up as a broadcast source rather than as a backdrop — launches, awards, virtual production.",
+      "The fine-pitch end of the rental platform, down to 1.5 mm with 15,000:1 contrast and 96% DCI-P3. Specified where a rental wall is on camera and has to hold up as a broadcast source rather than as a backdrop: launches, awards, virtual production.",
     heroStats: [
       { label: "Pixel pitch", value: "1.5 – 2.6 mm" },
       { label: "Contrast", value: "15,000:1" },
@@ -353,7 +353,7 @@ const en: Record<string, SeriesCopy> = {
     highlights: [
       {
         title: "Built to be shot",
-        body: "15,000:1 contrast and 96% DCI-P3 coverage. On camera the wall is a light source in the frame, so gamut and black level decide whether the shot grades — a backdrop that cannot hold its blacks costs post time on every take.",
+        body: "15,000:1 contrast and 96% DCI-P3 coverage. On camera the wall is a light source in the frame, so gamut and black level decide whether the shot grades. A backdrop that cannot hold its blacks costs post time on every take.",
       },
       {
         title: "Tool-free, both sides",
@@ -538,14 +538,14 @@ const en: Record<string, SeriesCopy> = {
       },
       {
         title: "Serviced from either side",
-        body: "Front and rear maintenance, so the access method is decided by the site rather than by the product — which on a hoarding with no rear walkway is the whole question.",
+        body: "Front and rear maintenance, so the access method is decided by the site rather than by the product. On a hoarding with no rear walkway, that is the whole question.",
       },
     ],
     specTables: [
       {
         title: "LST Series",
         caption:
-          "Distributor datasheet — confirm against a current LAMPRO datasheet before quoting",
+          "Distributor datasheet, confirm against a current LAMPRO datasheet before quoting",
         rows: [
           { parameter: "Pixel pitch", value: "4.44 / 6.67 / 8 / 10 mm" },
           { parameter: "Brightness", value: "5,500 – 10,000 nits" },
@@ -564,7 +564,7 @@ const en: Record<string, SeriesCopy> = {
   lsk: {
     tagline: "Fine-pitch outdoor, sealed to IP69K",
     summary:
-      "The high-density outdoor series, 2.6 to 5.95 mm, sealed to IP69K — a rating written for high-pressure, high-temperature washdown rather than for weather. Specified where an outdoor face is close to the viewer and is going to be cleaned aggressively for the life of the contract.",
+      "The high-density outdoor series, 2.6 to 5.95 mm, sealed to IP69K, a rating written for high-pressure, high-temperature washdown rather than for weather. Specified where an outdoor face is close to the viewer and is going to be cleaned aggressively for the life of the contract.",
     heroStats: [
       { label: "Pixel pitch", value: "2.6 – 5.95 mm" },
       { label: "Brightness", value: "5,000 – 6,500 nits" },
@@ -577,14 +577,14 @@ const en: Record<string, SeriesCopy> = {
       },
       {
         title: "Fine pitch, outdoors",
-        body: "Down to 2.604 mm at 5,000+ nits. Close-viewed outdoor faces — transit shelters, retail frontages, covered concourses — need the pitch of an indoor screen with the output of an outdoor one.",
+        body: "Down to 2.604 mm at 5,000+ nits. Close-viewed outdoor faces (transit shelters, retail frontages, covered concourses) need the pitch of an indoor screen with the output of an outdoor one.",
       },
     ],
     specTables: [
       {
         title: "LSK Series",
         caption:
-          "Distributor datasheet — confirm against a current LAMPRO datasheet before quoting",
+          "Distributor datasheet, confirm against a current LAMPRO datasheet before quoting",
         rows: [
           {
             parameter: "Pixel pitch",
@@ -608,7 +608,7 @@ const pt: Record<string, SeriesCopy> = {
   lmini: {
     tagline: "Mini LED, manutenção frontal, certificado para os olhos",
     summary:
-      "O cavalo de batalha do pixel pitch fino: Mini LED sobre uma superfície COB flip-chip, 29,6 mm de profundidade e assistência integralmente pela frente. É especificado onde um ecrã é lido durante um turno inteiro e não apenas consultado — salas de controlo e centros de monitorização — razão pela qual a classificação de baixa luz azul importa aqui mais do que a luminosidade de pico.",
+      "O cavalo de batalha do pixel pitch fino: Mini LED sobre uma superfície COB flip-chip, 29,6 mm de profundidade e assistência integralmente pela frente. É especificado onde um ecrã é lido durante um turno inteiro e não apenas consultado: salas de controlo e centros de monitorização. É a razão pela qual a classificação de baixa luz azul importa aqui mais do que a luminosidade de pico.",
     heroStats: [
       { label: "Pixel pitch", value: "0,93 – 1,8 mm" },
       { label: "Contraste", value: "10 000:1" },
@@ -655,7 +655,7 @@ const pt: Record<string, SeriesCopy> = {
   "lmini-p": {
     tagline: "O argumento energético do pixel pitch fino",
     summary:
-      "Uma gama de dois pitches mais estreita do que a LMini, afinada para os espaços onde um ecrã funciona todo o dia perante o público. O seu conjunto ótico EBL melhora o nível de preto e a consistência de cor, e consome cerca de 40% menos do que um P1.2 convencional — que, num ecrã que nunca se desliga, é o número que interessa realmente ao gestor de instalações.",
+      "Uma gama de dois pitches mais estreita do que a LMini, afinada para os espaços onde um ecrã funciona todo o dia perante o público. O seu conjunto ótico EBL melhora o nível de preto e a consistência de cor, e consome cerca de 40% menos do que um P1.2 convencional. Num ecrã que nunca se desliga, é o número que interessa realmente ao gestor de instalações.",
     heroStats: [
       { label: "Pixel pitch", value: "1,25 / 1,56 mm" },
       { label: "Poupança de energia", value: "~40%" },
@@ -668,7 +668,7 @@ const pt: Record<string, SeriesCopy> = {
       },
       {
         title: "Preto que se mantém preto",
-        body: "Processamento ótico multicamada EBL para um nível de preto profundo e alta consistência de cor entre painéis — a falha pela qual um ecrã de pitch fino é realmente julgado, já que um cabinete desalinhado na cor vê-se do outro lado da sala.",
+        body: "Processamento ótico multicamada EBL para um nível de preto profundo e alta consistência de cor entre painéis. É a falha pela qual um ecrã de pitch fino é realmente julgado, já que um cabinete desalinhado na cor vê-se do outro lado da sala.",
       },
       {
         title: "Alinhado a partir de seis direções",
@@ -722,7 +722,7 @@ const pt: Record<string, SeriesCopy> = {
       },
       {
         title: "Energia e dados redundantes",
-        body: "Ambos os caminhos suportam redundância, pelo que a falha de uma fonte ou de um cabo não apaga o ecrã. Num centro de comando o ecrã faz parte da imagem operacional — um ecrã apagado é um incidente, não um contratempo.",
+        body: "Ambos os caminhos suportam redundância, pelo que a falha de uma fonte ou de um cabo não apaga o ecrã. Num centro de comando o ecrã faz parte da imagem operacional: um ecrã apagado é um incidente, não um contratempo.",
       },
       {
         title: "Traseira selada, assistência frontal",
@@ -774,7 +774,7 @@ const pt: Record<string, SeriesCopy> = {
       },
       {
         title: "Reporta as próprias falhas",
-        body: "Deteção de pontos, monitorização de tensão da fonte, deteção de sinal e leitura de temperatura do módulo, opcionais — a telemetria em que assenta um contrato de assistência, para que um módulo em falha seja um telefonema nosso e não uma reclamação sua.",
+        body: "Deteção de pontos, monitorização de tensão da fonte, deteção de sinal e leitura de temperatura do módulo, opcionais. É a telemetria em que assenta um contrato de assistência, para que um módulo em falha seja um telefonema nosso e não uma reclamação sua.",
       },
     ],
     specTables: [
@@ -814,7 +814,7 @@ const pt: Record<string, SeriesCopy> = {
     highlights: [
       {
         title: "É a parede até ser um ecrã",
-        body: "A superfície é acabada como material decorativo — veio de madeira, mármore — para que, desligada, pertença ao interior em vez de o interromper. É esse o argumento todo, e a razão pela qual entra onde um ecrã convencional seria recusado.",
+        body: "A superfície é acabada como material decorativo (veio de madeira, mármore) para que, desligada, pertença ao interior em vez de o interromper. É esse o argumento todo, e a razão pela qual entra onde um ecrã convencional seria recusado.",
       },
       {
         title: "0,5% de refletividade",
@@ -908,7 +908,7 @@ const pt: Record<string, SeriesCopy> = {
   "rn-ii": {
     tagline: "Lidera a era P1 do aluguer de interior",
     summary:
-      "O extremo de pitch fino da plataforma de aluguer, até 1,5 mm com contraste de 15 000:1 e 96% DCI-P3. Especificada onde um ecrã de aluguer entra em câmara e tem de aguentar como fonte de emissão e não apenas como cenário — lançamentos, galas, produção virtual.",
+      "O extremo de pitch fino da plataforma de aluguer, até 1,5 mm com contraste de 15 000:1 e 96% DCI-P3. Especificada onde um ecrã de aluguer entra em câmara e tem de aguentar como fonte de emissão e não apenas como cenário: lançamentos, galas, produção virtual.",
     heroStats: [
       { label: "Pixel pitch", value: "1,5 – 2,6 mm" },
       { label: "Contraste", value: "15 000:1" },
@@ -917,7 +917,7 @@ const pt: Record<string, SeriesCopy> = {
     highlights: [
       {
         title: "Feito para ser filmado",
-        body: "Contraste de 15 000:1 e cobertura de 96% DCI-P3. Em câmara o ecrã é uma fonte de luz dentro do plano, pelo que a gama e o nível de preto decidem se o plano se corrige na pós — um cenário que não segura os pretos custa tempo de pós em cada take.",
+        body: "Contraste de 15 000:1 e cobertura de 96% DCI-P3. Em câmara o ecrã é uma fonte de luz dentro do plano, pelo que a gama e o nível de preto decidem se o plano se corrige na pós. Um cenário que não segura os pretos custa tempo de pós em cada take.",
       },
       {
         title: "Sem ferramentas, dos dois lados",
@@ -1102,14 +1102,14 @@ const pt: Record<string, SeriesCopy> = {
       },
       {
         title: "Assistido de qualquer um dos lados",
-        body: "Manutenção frontal e traseira, pelo que o método de acesso é decidido pelo local e não pelo produto — o que, num tapume sem passadiço traseiro, é a questão toda.",
+        body: "Manutenção frontal e traseira, pelo que o método de acesso é decidido pelo local e não pelo produto. Num tapume sem passadiço traseiro, é a questão toda.",
       },
     ],
     specTables: [
       {
         title: "Série LST",
         caption:
-          "Ficha de distribuidor — confirmar com uma ficha técnica LAMPRO atual antes de orçamentar",
+          "Ficha de distribuidor, confirmar com uma ficha técnica LAMPRO atual antes de orçamentar",
         rows: [
           { parameter: "Pixel pitch", value: "4,44 / 6,67 / 8 / 10 mm" },
           { parameter: "Luminosidade", value: "5 500 – 10 000 nits" },
@@ -1128,7 +1128,7 @@ const pt: Record<string, SeriesCopy> = {
   lsk: {
     tagline: "Pitch fino de exterior, selado a IP69K",
     summary:
-      "A série de exterior de alta densidade, de 2,6 a 5,95 mm, selada a IP69K — um grau escrito para lavagem a alta pressão e alta temperatura, não para o clima. Especificada onde uma face de exterior está próxima do observador e vai ser limpa de forma agressiva durante toda a vigência do contrato.",
+      "A série de exterior de alta densidade, de 2,6 a 5,95 mm, selada a IP69K, um grau escrito para lavagem a alta pressão e alta temperatura, não para o clima. Especificada onde uma face de exterior está próxima do observador e vai ser limpa de forma agressiva durante toda a vigência do contrato.",
     heroStats: [
       { label: "Pixel pitch", value: "2,6 – 5,95 mm" },
       { label: "Luminosidade", value: "5 000 – 6 500 nits" },
@@ -1141,14 +1141,14 @@ const pt: Record<string, SeriesCopy> = {
       },
       {
         title: "Pitch fino, no exterior",
-        body: "Até 2,604 mm com mais de 5 000 nits. Faces de exterior vistas de perto — abrigos de transportes, montras, átrios cobertos — precisam do pitch de um ecrã de interior com a saída de um de exterior.",
+        body: "Até 2,604 mm com mais de 5 000 nits. Faces de exterior vistas de perto (abrigos de transportes, montras, átrios cobertos) precisam do pitch de um ecrã de interior com a saída de um de exterior.",
       },
     ],
     specTables: [
       {
         title: "Série LSK",
         caption:
-          "Ficha de distribuidor — confirmar com uma ficha técnica LAMPRO atual antes de orçamentar",
+          "Ficha de distribuidor, confirmar com uma ficha técnica LAMPRO atual antes de orçamentar",
         rows: [
           {
             parameter: "Pixel pitch",

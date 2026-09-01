@@ -10,7 +10,7 @@ import { GalleryContent } from "./gallery-content";
 export const metadata: Metadata = {
   title: "Project gallery",
   description:
-    "LED installations delivered across Ontario — media facades, control rooms, transparent shopfronts, festival stages and roadside billboard networks.",
+    "LED installations delivered across Ontario: media facades, control rooms, transparent shopfronts, festival stages and roadside billboard networks.",
 };
 
 export default function Page() {

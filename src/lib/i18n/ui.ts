@@ -62,7 +62,7 @@ export const en = {
     eyebrow: "Supply · Install · Service · Ontario",
     titleTop: "The whole wall.",
     titleBottom: "One contract.",
-    lede: "We engineer, install and service LED display systems across Ontario — structural drawings through final pixel calibration. No subcontractors. No panels that quit in February.",
+    lede: "We engineer, install and service LED display systems across Ontario, from structural drawings through final pixel calibration. No subcontractors. No panels that quit in February.",
     playVideo: "Play background video",
     proof: [
       { value: "12", unit: "yrs", label: "Operating in Ontario" },
@@ -86,14 +86,14 @@ export const en = {
     /** {d} is the viewing distance in metres. */
     viewingDistance: "Sharp from {d} m back",
     wallHint: "Drag the pitch and watch the grid appear.",
-    body: "Understand these four and you will buy the right display — from us or from anyone. Everything else on a datasheet is downstream of them.",
+    body: "Understand these four and you will buy the right display, from us or from anyone. Everything else on a datasheet is downstream of them.",
     caption: "Typical specification ranges by application",
     metrics: [
       {
         name: "Pixel pitch",
         unit: "mm",
         meaning:
-          "Centre-to-centre distance between LED clusters. It sets how close a viewer can stand before the grid becomes visible — roughly one metre of viewing distance per millimetre of pitch.",
+          "Centre-to-centre distance between LED clusters. It sets how close a viewer can stand before the grid becomes visible: roughly one metre of viewing distance per millimetre of pitch.",
       },
       {
         name: "Brightness",
@@ -105,13 +105,13 @@ export const en = {
         name: "Refresh rate",
         unit: "Hz",
         meaning:
-          "How often the wall redraws. Under 3,840 Hz a broadcast camera picks up scan banding that the naked eye never sees — which is why this number matters even when the room looks fine.",
+          "How often the wall redraws. Under 3,840 Hz a broadcast camera picks up scan banding that the naked eye never sees. That is why this number matters even when the room looks fine.",
       },
       {
         name: "Ingress rating",
         unit: "IP",
         meaning:
-          "Sealing against dust and water. Anything mounted outdoors in Ontario is specified at IP65 front and rear, because the failure mode is not rain — it is a freeze-thaw cycle on trapped moisture.",
+          "Sealing against dust and water. Anything mounted outdoors in Ontario is specified at IP65 front and rear, because the failure mode is not rain. It is a freeze-thaw cycle on trapped moisture.",
       },
     ],
   },
@@ -231,7 +231,7 @@ export const en = {
     breadcrumb: "Breadcrumb",
     summaryFallback: "A series in the {platform} platform. {summary}",
     specsBodyEnvelope:
-      "The figures below are the {platform} platform envelope, not this series in particular. Every series sits somewhere inside it, and the exact numbers for {series} come off its own datasheet — ask and we will send it the same day.",
+      "The figures below are the {platform} platform envelope, not this series in particular. Every series sits somewhere inside it, and the exact numbers for {series} come off its own datasheet. Ask and we will send it the same day.",
   },
 
   productsPage: {
@@ -259,7 +259,7 @@ export const en = {
     },
     ctaHeading: "Not sure which platform the site needs?",
     ctaBody:
-      "Send the address, the viewing distance and whether it is indoors or out. We will tell you which of the four fits and what it costs — including the ones where the answer is that you do not need us.",
+      "Send the address, the viewing distance and whether it is indoors or out. We will tell you which of the four fits and what it costs, including the ones where the answer is that you do not need us.",
     parameter: "Parameter",
     fullPlatformPage: "Full platform page",
     compareValues: {
@@ -317,7 +317,7 @@ export const en = {
   aboutPage: {
     eyebrow: "Twelve years in Ontario",
     title: "We fix the problem we saw in the field",
-    lede: "We started CityScreen because we were tired of pulling cheap offshore panels off walls. A display is a capital asset, not a disposable screen — so we engineer every install for the site, handle the permit, fabricate the steel, and stay on call for the life of the product.",
+    lede: "We started CityScreen because we were tired of pulling cheap offshore panels off walls. A display is a capital asset, not a disposable screen, so we engineer every install for the site, handle the permit, fabricate the steel, and stay on call for the life of the product.",
     principlesEyebrow: "How we work",
     principlesHeading: "Four things we will not compromise on",
     principles: [
@@ -392,7 +392,7 @@ export const en = {
     dealerHeading:
       "Authorised dealer and certified installer across every line we sell",
     dealerBody:
-      "We hold direct partnerships with the manufacturers and the certifications that require factory training — not just a reseller agreement. It is the difference between someone who can order the part and someone who can diagnose why it failed.",
+      "We hold direct partnerships with the manufacturers and the certifications that require factory training, not just a reseller agreement. It is the difference between someone who can order the part and someone who can diagnose why it failed.",
     ctaHeading: "Come and see the calibration bay",
     ctaBody:
       "We burn in and colour-match every batch before it ships. If you are specifying a wall, it is worth an hour of your time to watch that happen.",
@@ -401,7 +401,7 @@ export const en = {
   contactPage: {
     eyebrow: "Five business days",
     title: "Send us the site",
-    lede: "Give us the address, the application and roughly the surface you have in mind. You get back a stamped proposal with a fixed price and a delivery date — not a brochure and a follow-up call.",
+    lede: "Give us the address, the application and roughly the surface you have in mind. You get back a stamped proposal with a fixed price and a delivery date, not a brochure and a follow-up call.",
     loadingForm: "Loading form…",
     reachEyebrow: "Reach us directly",
     officeLabel: "Office",
@@ -464,7 +464,7 @@ export const en = {
         topic: "Guides",
         minutes: "6",
         summary:
-          "Contrast against ambient light — not peak output — is what makes a roadside face legible at noon. What to ask a supplier for instead of a headline nit figure.",
+          "Contrast against ambient light, not peak output, is what makes a roadside face legible at noon. What to ask a supplier for instead of a headline nit figure.",
       },
       {
         title: "A practical guide to IP ratings for LED",
@@ -502,13 +502,13 @@ export const en = {
       "The complete datasheet for each family is published on its own page. Nothing sits behind an email capture.",
     ctaHeading: "Want this applied to your site?",
     ctaBody:
-      "The guides get you to the right question. A survey gets you the answer — measured, stamped and priced.",
+      "The guides get you to the right question. A survey gets you the answer: measured, stamped and priced.",
   },
 
   warrantyPage: {
     eyebrow: "Four-hour average response",
     title: "We do not disappear after the install",
-    lede: "A CityScreen technician answers your call from our Ontario office. We keep parts in stock here, and we stock modules for every system we have ever installed — including the ones we stopped selling years ago.",
+    lede: "A CityScreen technician answers your call from our Ontario office. We keep parts in stock here, and we stock modules for every system we have ever installed, including the ones we stopped selling years ago.",
     stats: [
       { label: "Parts & labour", value: "5 years" },
       { label: "Average response", value: "4 hours" },
@@ -524,7 +524,7 @@ export const en = {
       },
       {
         title: "Parts held in Ontario",
-        body: "Spare modules, power supplies and receiving cards for every system we have ever installed sit on a shelf here — not in a warehouse overseas on a twelve-week lead time.",
+        body: "Spare modules, power supplies and receiving cards for every system we have ever installed sit on a shelf here, not in a warehouse overseas on a twelve-week lead time.",
       },
       {
         title: "Our own technicians",
@@ -627,13 +627,13 @@ export const en = {
     projectType: "Project type",
     projectTypePlaceholder: "Select the discipline",
     carriedOver:
-      "Carried over from your selection — change it here if it is wrong.",
+      "Carried over from your selection. Change it here if it is wrong.",
     screenSize: "Estimated screen size",
     screenSizeAria: "Estimated screen size in square metres",
     blueprints: "Architectural blueprints",
     dropHere: "Drop drawings here or",
     browse: "browse",
-    fileHint: "DWG · DXF · RVT · IFC · PDF · ZIP — max 25 MB each",
+    fileHint: "DWG · DXF · RVT · IFC · PDF · ZIP, max 25 MB each",
     removeFile: "Remove {name}",
     brief: "Project brief",
     optional: "(optional)",
@@ -716,7 +716,7 @@ export const pt: Dict = {
     eyebrow: "Fornecimento · Instalação · Assistência · Ontário",
     titleTop: "A parede inteira.",
     titleBottom: "Um só contrato.",
-    lede: "Projetamos, instalamos e assistimos sistemas de ecrãs LED em todo o Ontário — do desenho estrutural à calibração final de píxel. Sem subcontratados. Sem painéis que desistem em fevereiro.",
+    lede: "Projetamos, instalamos e assistimos sistemas de ecrãs LED em todo o Ontário, do desenho estrutural à calibração final de píxel. Sem subcontratados. Sem painéis que desistem em fevereiro.",
     playVideo: "Reproduzir vídeo de fundo",
     proof: [
       { value: "12", unit: "anos", label: "A operar no Ontário" },
@@ -737,14 +737,14 @@ export const pt: Dict = {
     viewingDistance: "Nítido a partir de {d} m",
     wallHint: "Arraste o pitch e veja a grelha aparecer.",
     heading: "A ficha técnica é um conjunto de promessas",
-    body: "Perceba estes quatro e comprará o ecrã certo — connosco ou com qualquer outro. Tudo o resto numa ficha técnica decorre deles.",
+    body: "Perceba estes quatro e comprará o ecrã certo, connosco ou com qualquer outro. Tudo o resto numa ficha técnica decorre deles.",
     caption: "Intervalos típicos de especificação por aplicação",
     metrics: [
       {
         name: "Pixel pitch",
         unit: "mm",
         meaning:
-          "Distância entre centros de dois grupos de LED. Define a que distância mínima se pode estar antes de a grelha ficar visível — sensivelmente um metro de distância por cada milímetro de pitch.",
+          "Distância entre centros de dois grupos de LED. Define a que distância mínima se pode estar antes de a grelha ficar visível: sensivelmente um metro de distância por cada milímetro de pitch.",
       },
       {
         name: "Luminosidade",
@@ -756,13 +756,13 @@ export const pt: Dict = {
         name: "Taxa de atualização",
         unit: "Hz",
         meaning:
-          "Frequência com que a parede se redesenha. Abaixo de 3 840 Hz uma câmara de televisão capta bandas de varrimento que o olho nunca vê — daí este número importar mesmo quando a sala parece bem.",
+          "Frequência com que a parede se redesenha. Abaixo de 3 840 Hz uma câmara de televisão capta bandas de varrimento que o olho nunca vê. Daí este número importar mesmo quando a sala parece bem.",
       },
       {
         name: "Grau de proteção",
         unit: "IP",
         meaning:
-          "Vedação contra pó e água. Tudo o que é montado no exterior no Ontário é especificado a IP65 à frente e atrás, porque o modo de falha não é a chuva — é o ciclo de gelo e degelo sobre humidade retida.",
+          "Vedação contra pó e água. Tudo o que é montado no exterior no Ontário é especificado a IP65 à frente e atrás, porque o modo de falha não é a chuva. É o ciclo de gelo e degelo sobre humidade retida.",
       },
     ],
   },
@@ -881,7 +881,7 @@ export const pt: Dict = {
     breadcrumb: "Navegação estrutural",
     summaryFallback: "Uma série da plataforma {platform}. {summary}",
     specsBodyEnvelope:
-      "Os valores abaixo correspondem ao envelope da plataforma {platform}, não a esta série em particular. Cada série situa-se algures dentro dele, e os números exatos da {series} constam da sua própria ficha técnica — peça-a e enviamo-la no mesmo dia.",
+      "Os valores abaixo correspondem ao envelope da plataforma {platform}, não a esta série em particular. Cada série situa-se algures dentro dele, e os números exatos da {series} constam da sua própria ficha técnica. Peça-a e enviamo-la no mesmo dia.",
   },
 
   productsPage: {
@@ -909,7 +909,7 @@ export const pt: Dict = {
     },
     ctaHeading: "Não tem a certeza de qual a plataforma para o local?",
     ctaBody:
-      "Envie a morada, a distância de visualização e se é interior ou exterior. Dizemos-lhe qual das quatro serve e quanto custa — incluindo os casos em que a resposta é que não precisa de nós.",
+      "Envie a morada, a distância de visualização e se é interior ou exterior. Dizemos-lhe qual das quatro serve e quanto custa, incluindo os casos em que a resposta é que não precisa de nós.",
     parameter: "Parâmetro",
     fullPlatformPage: "Página completa da plataforma",
     compareValues: {
@@ -966,7 +966,7 @@ export const pt: Dict = {
   aboutPage: {
     eyebrow: "Doze anos no Ontário",
     title: "Resolvemos o problema que vimos no terreno",
-    lede: "Criámos a CityScreen porque estávamos fartos de retirar painéis baratos importados das paredes. Um ecrã é um ativo de capital, não um monitor descartável — por isso projetamos cada instalação para o local, tratamos do licenciamento, fabricamos a estrutura e ficamos disponíveis durante toda a vida útil do produto.",
+    lede: "Criámos a CityScreen porque estávamos fartos de retirar painéis baratos importados das paredes. Um ecrã é um ativo de capital, não um monitor descartável, por isso projetamos cada instalação para o local, tratamos do licenciamento, fabricamos a estrutura e ficamos disponíveis durante toda a vida útil do produto.",
     principlesEyebrow: "Como trabalhamos",
     principlesHeading: "Quatro coisas em que não abdicamos",
     principles: [
@@ -984,7 +984,7 @@ export const pt: Dict = {
       },
       {
         title: "Um ecrã é um ativo de capital",
-        body: "Criámos a CityScreen porque estávamos fartos de retirar painéis baratos importados das paredes. Pensar a dez anos muda aquilo que se especifica — e aquilo que se recusa.",
+        body: "Criámos a CityScreen porque estávamos fartos de retirar painéis baratos importados das paredes. Pensar a dez anos muda aquilo que se especifica. E aquilo que se recusa.",
       },
     ],
     scaleEyebrow: "Dimensão",
@@ -1041,7 +1041,7 @@ export const pt: Dict = {
     dealerHeading:
       "Revendedor autorizado e instalador certificado em todas as linhas que vendemos",
     dealerBody:
-      "Temos parcerias diretas com os fabricantes e as certificações que exigem formação de fábrica — não apenas um contrato de revenda. É a diferença entre quem sabe encomendar a peça e quem sabe diagnosticar porque falhou.",
+      "Temos parcerias diretas com os fabricantes e as certificações que exigem formação de fábrica, não apenas um contrato de revenda. É a diferença entre quem sabe encomendar a peça e quem sabe diagnosticar porque falhou.",
     ctaHeading: "Venha conhecer a bancada de calibração",
     ctaBody:
       "Fazemos o burn-in e a correspondência de cor de cada lote antes de expedir. Se está a especificar um ecrã, vale a pena uma hora do seu tempo para ver isso acontecer.",
@@ -1050,7 +1050,7 @@ export const pt: Dict = {
   contactPage: {
     eyebrow: "Cinco dias úteis",
     title: "Envie-nos o local",
-    lede: "Dê-nos a morada, a aplicação e aproximadamente a superfície que tem em mente. Recebe de volta uma proposta carimbada com preço fixo e data de entrega — não um catálogo e uma chamada de seguimento.",
+    lede: "Dê-nos a morada, a aplicação e aproximadamente a superfície que tem em mente. Recebe de volta uma proposta carimbada com preço fixo e data de entrega, não um catálogo e uma chamada de seguimento.",
     loadingForm: "A carregar o formulário…",
     reachEyebrow: "Fale connosco diretamente",
     officeLabel: "Escritório",
@@ -1113,7 +1113,7 @@ export const pt: Dict = {
         topic: "Guias",
         minutes: "6",
         summary:
-          "É o contraste face à luz ambiente — não a saída de pico — que torna uma face legível ao meio-dia. O que pedir a um fornecedor em vez de um número de nits de montra.",
+          "É o contraste face à luz ambiente, não a saída de pico, que torna uma face legível ao meio-dia. O que pedir a um fornecedor em vez de um número de nits de montra.",
       },
       {
         title: "Guia prático dos graus de proteção IP para LED",
@@ -1151,13 +1151,13 @@ export const pt: Dict = {
       "A ficha técnica completa de cada família está publicada na sua própria página. Nada fica atrás de um pedido de email.",
     ctaHeading: "Quer isto aplicado ao seu local?",
     ctaBody:
-      "Os guias levam-no à pergunta certa. Um levantamento dá-lhe a resposta — medida, carimbada e orçamentada.",
+      "Os guias levam-no à pergunta certa. Um levantamento dá-lhe a resposta: medida, carimbada e orçamentada.",
   },
 
   warrantyPage: {
     eyebrow: "Resposta média de quatro horas",
     title: "Não desaparecemos depois da instalação",
-    lede: "Um técnico da CityScreen atende a sua chamada a partir do nosso escritório no Ontário. Mantemos peças em stock aqui e temos módulos para todos os sistemas que alguma vez instalámos — incluindo os que deixámos de vender há anos.",
+    lede: "Um técnico da CityScreen atende a sua chamada a partir do nosso escritório no Ontário. Mantemos peças em stock aqui e temos módulos para todos os sistemas que alguma vez instalámos, incluindo os que deixámos de vender há anos.",
     stats: [
       { label: "Peças e mão de obra", value: "5 anos" },
       { label: "Resposta média", value: "4 horas" },
@@ -1173,7 +1173,7 @@ export const pt: Dict = {
       },
       {
         title: "Peças em stock no Ontário",
-        body: "Módulos de reserva, fontes de alimentação e placas recetoras para todos os sistemas que alguma vez instalámos estão numa prateleira aqui — não num armazém no estrangeiro com doze semanas de prazo.",
+        body: "Módulos de reserva, fontes de alimentação e placas recetoras para todos os sistemas que alguma vez instalámos estão numa prateleira aqui, não num armazém no estrangeiro com doze semanas de prazo.",
       },
       {
         title: "Técnicos nossos",
@@ -1276,13 +1276,13 @@ export const pt: Dict = {
     projectType: "Tipo de projeto",
     projectTypePlaceholder: "Selecione a disciplina",
     carriedOver:
-      "Transitou da sua seleção — altere aqui se estiver errado.",
+      "Transitou da sua seleção. Altere aqui se estiver errado.",
     screenSize: "Área estimada do ecrã",
     screenSizeAria: "Área estimada do ecrã em metros quadrados",
     blueprints: "Plantas de arquitetura",
     dropHere: "Largue os desenhos aqui ou",
     browse: "procure",
-    fileHint: "DWG · DXF · RVT · IFC · PDF · ZIP — máx. 25 MB cada",
+    fileHint: "DWG · DXF · RVT · IFC · PDF · ZIP, máx. 25 MB cada",
     removeFile: "Remover {name}",
     brief: "Descrição do projeto",
     optional: "(opcional)",

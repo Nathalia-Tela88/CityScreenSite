@@ -151,7 +151,7 @@ export function SeriesPage({ item }: { item: Series }) {
             <ProductGallery
               images={media}
               name={item.name}
-              zoomLabel={`${item.name} — ${t.common.specifications}`}
+              zoomLabel={`${item.name}: ${t.common.specifications}`}
             />
             {tagline && (
               <div className="lg:pt-4">

@@ -36,7 +36,7 @@ const en: Service[] = [
     highlights: [
       {
         title: "Quick-lock cabinets",
-        body: "Cam-lock latches seat and align adjacent cabinets in a single quarter-turn — no shims, no tools, no calibration pass on site.",
+        body: "Cam-lock latches seat and align adjacent cabinets in a single quarter-turn. No shims, no tools, no calibration pass on site.",
       },
       {
         title: "Fly or stack",
@@ -163,7 +163,7 @@ const en: Service[] = [
     name: "Commercial LED",
     tagline: "Merchandising surface, not a monitor.",
     summary:
-      "Indoor shopfront walls, window-facing displays and transparent glass LED that keeps daylight and sightlines intact. Designed to sit inside a shopfit programme — flush frames, concealed services and finishes that read as architecture.",
+      "Indoor shopfront walls, window-facing displays and transparent glass LED that keeps daylight and sightlines intact. Designed to sit inside a shopfit programme: flush frames, concealed services and finishes that read as architecture.",
     heroStats: [
       { label: "Glass transparency", value: "up to 85%" },
       { label: "Cabinet depth", value: "68 mm" },
@@ -231,7 +231,7 @@ const en: Service[] = [
     name: "Professional Visualisation",
     tagline: "Seamless, silent, always on.",
     summary:
-      "COB fine-pitch MicroLED for control rooms and boardrooms — sub-millimetre pitch, a fully sealed emissive surface and 24/7 duty rating. No bezels, no fans, no visible seam between sources.",
+      "COB fine-pitch MicroLED for control rooms and boardrooms, with sub-millimetre pitch, a fully sealed emissive surface and 24/7 duty rating. No bezels, no fans, no visible seam between sources.",
     heroStats: [
       { label: "Pitch from", value: "0.6 mm" },
       { label: "Duty cycle", value: "24 / 7" },
@@ -240,7 +240,7 @@ const en: Service[] = [
     highlights: [
       {
         title: "COB MicroLED surface",
-        body: "Chip-on-board encapsulation puts a continuous resin layer over the diodes — impact resistant, dust proof and cleanable.",
+        body: "Chip-on-board encapsulation puts a continuous resin layer over the diodes: impact resistant, dust proof and cleanable.",
       },
       {
         title: "True seamless canvas",
@@ -313,7 +313,7 @@ const pt: Service[] = [
     highlights: [
       {
         title: "Módulos de fecho rápido",
-        body: "Os fechos de came assentam e alinham módulos adjacentes num quarto de volta — sem calços, sem ferramenta, sem passagem de calibração no local.",
+        body: "Os fechos de came assentam e alinham módulos adjacentes num quarto de volta. Sem calços, sem ferramenta, sem passagem de calibração no local.",
       },
       {
         title: "Suspenso ou empilhado",
@@ -440,7 +440,7 @@ const pt: Service[] = [
     name: "LED comercial",
     tagline: "Superfície de venda, não um monitor.",
     summary:
-      "Paredes de montra interiores, ecrãs voltados para a rua e LED transparente em vidro que preserva a luz natural e as linhas de visão. Pensado para caber num programa de remodelação de loja — molduras à face, infraestruturas ocultas e acabamentos que se leem como arquitetura.",
+      "Paredes de montra interiores, ecrãs voltados para a rua e LED transparente em vidro que preserva a luz natural e as linhas de visão. Pensado para caber num programa de remodelação de loja: molduras à face, infraestruturas ocultas e acabamentos que se leem como arquitetura.",
     heroStats: [
       { label: "Transparência do vidro", value: "até 85%" },
       { label: "Profundidade do módulo", value: "68 mm" },
@@ -508,7 +508,7 @@ const pt: Service[] = [
     name: "Visualização profissional",
     tagline: "Sem juntas, silencioso, sempre ligado.",
     summary:
-      "MicroLED COB de pitch fino para salas de controlo e salas de administração — pitch abaixo do milímetro, superfície emissiva totalmente selada e classificação para serviço contínuo. Sem molduras, sem ventoinhas, sem junta visível entre fontes.",
+      "MicroLED COB de pitch fino para salas de controlo e salas de administração, com pitch abaixo do milímetro, superfície emissiva totalmente selada e classificação para serviço contínuo. Sem molduras, sem ventoinhas, sem junta visível entre fontes.",
     heroStats: [
       { label: "Pitch desde", value: "0,6 mm" },
       { label: "Ciclo de serviço", value: "24 / 7" },
@@ -517,7 +517,7 @@ const pt: Service[] = [
     highlights: [
       {
         title: "Superfície MicroLED COB",
-        body: "O encapsulamento chip-on-board coloca uma camada contínua de resina sobre os díodos — resistente ao impacto, à prova de pó e lavável.",
+        body: "O encapsulamento chip-on-board coloca uma camada contínua de resina sobre os díodos: resistente ao impacto, à prova de pó e lavável.",
       },
       {
         title: "Tela verdadeiramente contínua",
