@@ -45,13 +45,13 @@ export type Series = {
    */
   cutout?: boolean;
   /**
-   * Further frames of the same series — detail shots, the rear service side,
-   * an installed view. `image` is the first frame; these follow it.
+   * Further frames of the same product — a second angle, the service side, an
+   * installed view. These are the only frames the gallery shows: `image` is
+   * already full size in the header directly above it, and including it here
+   * opened every series page with the same render twice.
    *
-   * Feeds the gallery on the series page and the hover swap on its card. Both
-   * degrade on their own when this is unset, which is the current state for
-   * every series: the gallery falls back to the single frame, and the card
-   * has nothing to swap to. See public/img/SERIES-IMAGES.md.
+   * Unset on a series that has no second frame yet, and the page then carries
+   * the header render alone. See public/img/SERIES-IMAGES.md.
    */
   gallery?: string[];
 };
@@ -67,9 +67,11 @@ export type Series = {
 export const series: Series[] = [
   // Professional — COB fine pitch for control rooms and boardrooms.
   { slug: "lmini", name: "LMini Series", platform: "professional",
-    image: "/img/series-lmini.webp", cutout: true },
+    image: "/img/series-lmini.webp", cutout: true,
+    gallery: ["/img/series-lmini-2.webp"] },
   { slug: "lmini-p", name: "LMini P Series", platform: "professional",
-    image: "/img/series-lmini-p.webp", cutout: true },
+    image: "/img/series-lmini-p.webp", cutout: true,
+    gallery: ["/img/series-lmini-p-2.jpg"] },
   { slug: "lhp", name: "LHP Series", platform: "professional",
     image: "/img/series-lhp.webp", cutout: true },
 
@@ -85,11 +87,14 @@ export const series: Series[] = [
 
   // Rental — event and stage.
   { slug: "lrs", name: "LRS Series", platform: "rental",
-    image: "/img/series-lrs.webp", cutout: true },
+    image: "/img/series-lrs.webp", cutout: true,
+    gallery: ["/img/series-lrs-2.webp"] },
   { slug: "rn-ii", name: "RNⅡ Series", platform: "rental",
-    image: "/img/series-rn-ii.webp", cutout: true },
+    image: "/img/series-rn-ii.webp", cutout: true,
+    gallery: ["/img/series-rn-ii-2.webp"] },
   { slug: "lrm", name: "LRM Series", platform: "rental",
-    image: "/img/series-lrm.webp", cutout: true },
+    image: "/img/series-lrm.webp", cutout: true,
+    gallery: ["/img/series-lrm-2.webp"] },
 
   // DOOH — outdoor media.
   { slug: "lx-ii-pro", name: "LXⅡ Pro Series", platform: "dooh",
@@ -99,7 +104,8 @@ export const series: Series[] = [
   { slug: "lst", name: "LST Series", platform: "dooh",
     image: "/img/series-lst.jpg" },
   { slug: "lsk", name: "LSK Series", platform: "dooh",
-    image: "/img/series-lsk.webp", cutout: true },
+    image: "/img/series-lsk.webp", cutout: true,
+    gallery: ["/img/series-lsk-2.webp"] },
 ];
 
 export const seriesBySlug = Object.fromEntries(

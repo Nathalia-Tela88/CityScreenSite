@@ -56,11 +56,11 @@ export function SeriesPage({ item }: { item: Series }) {
   const highlights = copy?.highlights ?? item.highlights;
   const specTables = copy?.specTables ?? item.specTables;
 
-  // `image` is the first frame, `gallery` the rest. Today this is empty for
-  // every series — the manufacturer photography has not been brought in yet —
-  // so the media section below simply does not render. It lights up per series
-  // the moment a file is added to lib/series.ts, with no further wiring.
-  const media = [item.image, ...(item.gallery ?? [])].filter(
+  // Only the further frames. `image` is already shown full size in the header
+  // directly above, and including it here made every series page open with the
+  // same render twice in a row. A series with no further frames shows the
+  // "what sets it apart" note on its own rather than a gallery of one.
+  const media = (item.gallery ?? []).filter(
     (src): src is string => Boolean(src),
   );
 
@@ -196,18 +196,26 @@ export function SeriesPage({ item }: { item: Series }) {
 
       {/* Media. Sits directly under the header so the product is seen before
           it is read about, and only when there is something real to show. */}
-      {media.length > 0 && (
+      {(media.length > 0 || tagline) && (
         <Section className="py-16 md:py-20">
-          <div className="grid grid-cols-1 gap-10 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
-            <ProductGallery
-              images={media}
-              name={item.name}
-              zoomLabel={`${item.name}: ${t.common.specifications}`}
-            />
+          <div
+            className={cn(
+              "grid grid-cols-1 gap-10",
+              media.length > 0 && "lg:grid-cols-[1.15fr_0.85fr] lg:gap-16",
+            )}
+          >
+            {media.length > 0 && (
+              <ProductGallery
+                images={media}
+                name={item.name}
+                contain={item.cutout}
+                zoomLabel={`${item.name}: ${t.common.specifications}`}
+              />
+            )}
             {tagline && (
-              <div className="lg:pt-4">
+              <div className={cn(media.length > 0 && "lg:pt-4")}>
                 <Eyebrow>{t.seriesPage.apartEyebrow}</Eyebrow>
-                <p className="mt-6 font-display text-2xl text-filament md:text-3xl">
+                <p className="mt-6 max-w-3xl font-display text-2xl text-filament md:text-3xl">
                   {tagline}
                 </p>
               </div>

@@ -31,12 +31,19 @@ export function ProductGallery({
   name,
   className,
   zoomLabel,
+  contain = false,
 }: {
   images: string[];
   name: string;
   className?: string;
   /** Announced to assistive tech in place of the pointer-only zoom hint. */
   zoomLabel?: string;
+  /**
+   * Fit the frame rather than fill it. Cut-out renders have no background to
+   * crop into, so covering the frame slices the cabinet instead of bleeding a
+   * photograph past its edges.
+   */
+  contain?: boolean;
 }) {
   const [active, setActive] = React.useState(0);
   const [zooming, setZooming] = React.useState(false);
@@ -154,7 +161,8 @@ export function ProductGallery({
             draggable={false}
             sizes="(max-width: 992px) 100vw, 55vw"
             className={cn(
-              "object-cover transition-[opacity,transform] duration-500 ease-out",
+              "transition-[opacity,transform] duration-500 ease-out",
+              contain ? "object-contain p-6" : "object-cover",
               index === active ? "opacity-100" : "opacity-0",
             )}
             style={
@@ -194,7 +202,7 @@ export function ProductGallery({
                   aria-hidden
                   fill
                   sizes="80px"
-                  className="object-cover"
+                  className={cn(contain ? "object-contain p-1" : "object-cover")}
                 />
               </button>
             </li>
