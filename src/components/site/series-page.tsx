@@ -5,6 +5,7 @@ import Link from "next/link";
 import * as React from "react";
 
 import { useT } from "@/lib/i18n";
+import { cn } from "@/lib/utils";
 import { seriesByPlatform, hasDetail, type Series } from "@/lib/series";
 import { ProductGallery } from "@/components/site/product-gallery";
 import { SiteHeader } from "@/components/site/site-header";
@@ -88,7 +89,7 @@ export function SeriesPage({ item }: { item: Series }) {
         </div>
 
         <div className="relative z-10 mx-auto max-w-[1560px] px-6 pb-16 pt-28 md:px-10 md:pb-24 md:pt-40">
-          <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_minmax(0,30rem)] lg:items-center lg:gap-16">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-[minmax(0,1fr)_minmax(0,44rem)] lg:items-center lg:gap-14">
             <div>
           <nav
             aria-label={t.seriesPage.breadcrumb}
@@ -135,18 +136,37 @@ export function SeriesPage({ item }: { item: Series }) {
 
             {/* The cabinet, lit and legible, rather than a mood shot. Sits on
                 its own panel so a render with a white ground and one with a
-                transparent ground read the same way against the wall behind. */}
+                transparent ground read the same way against the wall behind.
+
+                No `justify-self` on the figure: that sizes it to its content
+                and the plate collapses to a fraction of its column. Default
+                stretch is what makes it fill the track. */}
             {item.image && (
-              <figure className="lg:justify-self-end">
-                <div className="panel-lift relative aspect-[4/3] w-full overflow-hidden border border-seam bg-cabinet">
+              <figure className="w-full">
+                <div
+                  className={cn(
+                    "relative aspect-[4/3] w-full",
+                    // A cut-out needs no container: it sits on the wall behind
+                    // the header and the type reads straight past it. Anything
+                    // with its own ground gets a panel, so the edge of that
+                    // ground looks intentional rather than like a stray box.
+                    !item.cutout &&
+                      "panel-lift overflow-hidden border border-seam bg-cabinet",
+                  )}
+                >
                   <Image
                     src={item.image}
                     alt={`${item.name} — ${t.seriesPage.renderNote}`}
                     fill
                     priority
                     quality={90}
-                    sizes="(min-width: 1024px) 30rem, 100vw"
-                    className="object-contain p-5"
+                    sizes="(min-width: 1024px) 44rem, 100vw"
+                    className={cn(
+                      "object-contain",
+                      item.cutout
+                        ? "drop-shadow-[0_18px_45px_rgba(0,0,0,0.55)]"
+                        : "p-3",
+                    )}
                   />
                 </div>
                 <figcaption className="label-data mt-3 flex items-center gap-2.5 text-graphite-dim">

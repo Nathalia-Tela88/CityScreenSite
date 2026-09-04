@@ -23,7 +23,14 @@ export type Service = {
    * exclude every graphic whose burnt-in numbers disagree with the specTables
    * above, so nothing here can contradict the published sheet.
    */
-  visuals?: { src: string; alt: string; caption: string }[];
+  visuals?: {
+    src: string;
+    alt: string;
+    /** The trade term, for a reader who already knows the category. */
+    term: string;
+    /** What that term means in plain language, for a reader who does not. */
+    caption: string;
+  }[];
 };
 
 /* Portuguese uses the comma as decimal separator and a thin space for
@@ -102,27 +109,44 @@ const en: Service[] = [
       {
         src: "/img/feat-ren-quick-lock.jpg",
         alt: "Rental cabinet shown exploded, LED modules lifted clear of the frame",
-        caption: "Tool-free latches: modules lift out of the frame without a driver.",
+        term: "Quick-lock cabinet",
+        caption:
+          "Latches seat the next cabinet in a quarter turn. No tools, and no alignment pass once the wall is up.",
       },
       {
         src: "/img/feat-ren-stack-fly.jpg",
         alt: "The same cabinet ground-stacked on a support frame beside a flown wall",
-        caption: "Ground-stacked on a support frame, or flown as a wall.",
+        term: "Fly or ground-stack",
+        caption:
+          "One inventory does both jobs: hung from truss overhead, or built up from the deck on a support frame.",
       },
       {
         src: "/img/feat-ren-curve-corner.jpg",
         alt: "Semi-cabinets forming corners and a curved run, with preset concave angles",
-        caption: "Semi-cabinets and preset concave angles build corners and curves from stock parts.",
+        term: "Curve and corner locks",
+        caption:
+          "Preset angles let the wall bend or turn a corner using stock parts, instead of a custom frame.",
       },
       {
         src: "/img/feat-ren-heat.jpg",
         alt: "Cutaway of a cabinet showing the airflow path through the body",
-        caption: "Airflow routed through the cabinet body, so the wall holds up across a long show.",
+        term: "Thermal path",
+        caption:
+          "Air is routed through the cabinet body, which is what keeps brightness stable across a long show.",
       },
       {
         src: "/img/feat-ren-splicing.jpg",
         alt: "Flat, cube and curved screen builds assembled from the same cabinets",
-        caption: "Flat, cube and curved builds from one cabinet inventory.",
+        term: "Splice geometry",
+        caption:
+          "Flat, cube and curved builds, all from one stock of cabinets.",
+      },
+      {
+        src: "/img/feat-ren-build-quality.jpg",
+        alt: "Gold-wire LED package, die-cast aluminium module and assembled cabinet",
+        term: "Lamp and frame construction",
+        caption:
+          "Gold-wire diodes in a die-cast aluminium module: the parts that decide whether a panel survives its fifth tour.",
       },
     ],
   },
@@ -197,22 +221,51 @@ const en: Service[] = [
       {
         src: "/img/feat-dooh-weather-fire.jpg",
         alt: "One cabinet under a water splash, another beside flame, shown side by side",
-        caption: "Sealed against driven rain and windborne sand; the housing is fire-resistant.",
+        term: "Sealed and fire-resistant housing",
+        caption:
+          "Sealed against driven rain and windborne sand, in a housing that resists fire.",
+      },
+      {
+        src: "/img/feat-dooh-corrosion.jpg",
+        alt: "Diagram of coatings rated against oxidation, acid, corrosion and salt",
+        term: "Anti-corrosion treatment",
+        caption:
+          "Coatings rated against oxidation, acid, corrosion and salt — the reason a coastal or roadside site does not eat the cabinet.",
+      },
+      {
+        src: "/img/feat-dooh-seamless.jpg",
+        alt: "Two versions of the same image, one continuous and one crossed by dark seams",
+        term: "Seam visibility",
+        caption:
+          "Left, a wall with no visible join. Right, the dark lines a cheaper cabinet leaves across the picture.",
       },
       {
         src: "/img/feat-dooh-control-box.jpg",
         alt: "Control box drawn out from the front of a cabinet and again from the rear",
-        caption: "Control box reachable from the front or the rear, depending on how the site is built.",
+        term: "Service access",
+        caption:
+          "The control box comes out from the front or the rear, so the mounting position does not decide whether it can be serviced.",
+      },
+      {
+        src: "/img/feat-dooh-formats.jpg",
+        alt: "Four outdoor displays: stadium, roadside, shopfront and truss-mounted",
+        term: "Format range",
+        caption:
+          "Stadium, roadside, shopfront and truss-mounted, on one platform.",
       },
       {
         src: "/img/feat-dooh-installs.jpg",
         alt: "Grid of roadside, forecourt and building-mounted outdoor displays in service",
-        caption: "Roadside, forecourt and building-mounted formats already in service.",
+        term: "In service",
+        caption:
+          "Roadside, forecourt and building-mounted formats already running.",
       },
       {
         src: "/img/feat-dooh-stadium.jpg",
         alt: "Large outdoor display running at a floodlit stadium in the rain",
-        caption: "Stadium-scale media, legible through weather and floodlight.",
+        term: "Ambient conditions",
+        caption:
+          "Legible against floodlight and weather, which is the case that sets the brightness figure.",
       },
     ],
   },
@@ -287,22 +340,51 @@ const en: Service[] = [
       {
         src: "/img/feat-com-interior-wall.jpg",
         alt: "Large interior LED wall in a lounge, reading as a lit architectural surface",
-        caption: "A fixed interior wall that reads as architecture, not as a monitor.",
+        term: "Fixed interior install",
+        caption:
+          "A wall built into the room rather than hung on it, so it reads as architecture instead of as a large television.",
+      },
+      {
+        src: "/img/feat-com-corners.jpg",
+        alt: "Right-angle and radius corner cabinets turning a display around a corner",
+        term: "Corner cabinets",
+        caption:
+          "Right-angle and radius cabinets turn the screen around a column or a shopfront return without a break in the image.",
       },
       {
         src: "/img/feat-com-shapes-mall.jpg",
         alt: "Retail interior with cylindrical, right-angled and concave display runs",
-        caption: "Cylinders, right angles and concave runs built for a retail interior.",
+        term: "Creative form factors",
+        caption:
+          "Cylinders, curves and concave runs, all built from the same cabinets as a flat wall.",
+      },
+      {
+        src: "/img/feat-com-shapes-built.jpg",
+        alt: "Right angle, cube and mixed-splice screen builds shown as finished objects",
+        term: "Cube and mixed builds",
+        caption:
+          "The same parts assembled as a free-standing object rather than a wall, for a foyer or a display plinth.",
+      },
+      {
+        src: "/img/feat-com-wiring.jpg",
+        alt: "Power and data routed inside the frame, with connectors concealed",
+        term: "Concealed services",
+        caption:
+          "Power and data run inside the frame, so nothing is visible where the screen meets the shopfit.",
       },
       {
         src: "/img/feat-com-unatural-mapping.jpg",
         alt: "Three patterned tile layers separating to show pattern mapped across modules",
-        caption: "U-Natural: pattern mapped across modules, tile by tile.",
+        term: "Seamless pattern mapping",
+        caption:
+          "U-Natural: a pattern is mapped across the whole surface, so the joins between modules do not cut through it.",
       },
       {
         src: "/img/feat-com-unatural-finishes.jpg",
         alt: "Timber, concrete and marble tile finishes laid out as samples",
-        caption: "U-Natural finishes — timber, stone and marble surfaces.",
+        term: "Decorative finishes",
+        caption:
+          "U-Natural surfaces in timber, stone and marble, for a screen that has to sit inside a finished interior.",
       },
     ],
   },
@@ -379,17 +461,44 @@ const en: Service[] = [
       {
         src: "/img/feat-pro-cob-layers.jpg",
         alt: "Panel layers separated: protective coating, nano-optical film and the LED board",
-        caption: "The COB stack: protective coating, nano-optical film, then the MicroLED board.",
-      },
-      {
-        src: "/img/feat-pro-front-service.jpg",
-        alt: "A module drawn off the front of a wall, and a cabinet accessed from behind",
-        caption: "Front service with vacuum tools; rear access where the wall allows it.",
+        term: "COB encapsulation",
+        caption:
+          "The diodes sit under a solid resin layer instead of standing proud of the board. That is what makes the surface cleanable, and safe to touch.",
       },
       {
         src: "/img/feat-pro-module-assembly.jpg",
         alt: "Module mounting onto the cabinet frame behind a finished display surface",
-        caption: "Modules mount to the cabinet frame behind the finished surface.",
+        term: "Module and cabinet",
+        caption:
+          "Small LED modules bolt onto a rigid cabinet frame. The cabinet is what hangs on the wall; the module is the part that gets swapped.",
+      },
+      {
+        src: "/img/feat-pro-front-service.jpg",
+        alt: "A module drawn off the front of a wall, and a cabinet accessed from behind",
+        term: "Front service access",
+        caption:
+          "A module lifts off the face with suction tools, so a wall built tight against a structure can still be repaired.",
+      },
+      {
+        src: "/img/feat-pro-integration.jpg",
+        alt: "Frame, backplate and control electronics shown as one assembly",
+        term: "Integrated construction",
+        caption:
+          "Frame, backplate and control electronics arrive as one assembly rather than as parts to be built up on site.",
+      },
+      {
+        src: "/img/feat-pro-splicing.jpg",
+        alt: "Cabinets joined edge to edge in a grid and in a cross formation",
+        term: "Cabinet splicing",
+        caption:
+          "Cabinets join edge to edge in a grid. Any rectangle you can tile with them is a size you can order.",
+      },
+      {
+        src: "/img/feat-pro-coating.jpg",
+        alt: "Diagram of an added surface layer resisting moisture and impact",
+        term: "Protective coating, optional",
+        caption:
+          "An added surface layer that resists moisture and knocks. Specified where the wall sits within reach of people.",
       },
     ],
   },
@@ -467,27 +576,44 @@ const pt: Service[] = [
       {
         src: "/img/feat-ren-quick-lock.jpg",
         alt: "Módulo de aluguer em vista explodida, com os módulos LED soltos da estrutura",
-        caption: "Fechos sem ferramenta: os módulos saem da estrutura sem chave de fendas.",
+        term: "Cabinete de fecho rápido",
+        caption:
+          "Os fechos prendem o cabinete seguinte num quarto de volta. Sem ferramenta, e sem acerto depois de a parede estar montada.",
       },
       {
         src: "/img/feat-ren-stack-fly.jpg",
-        alt: "O mesmo módulo empilhado no solo sobre estrutura de apoio, ao lado de uma parede suspensa",
-        caption: "Empilhado no solo sobre estrutura de apoio, ou suspenso em parede.",
+        alt: "O mesmo cabinete empilhado no solo sobre estrutura de apoio, ao lado de uma parede suspensa",
+        term: "Suspenso ou empilhado",
+        caption:
+          "O mesmo inventário faz as duas coisas: suspenso da treliça, ou montado a partir do chão sobre estrutura de apoio.",
       },
       {
         src: "/img/feat-ren-curve-corner.jpg",
-        alt: "Semi-módulos a formar cantos e um troço curvo, com ângulos côncavos predefinidos",
-        caption: "Semi-módulos e ângulos côncavos predefinidos formam cantos e curvas com peças de stock.",
+        alt: "Semi-cabinetes a formar cantos e um troço curvo, com ângulos côncavos predefinidos",
+        term: "Fechos de curva e canto",
+        caption:
+          "Ângulos predefinidos deixam a parede curvar ou virar um canto com peças de stock, em vez de uma estrutura à medida.",
       },
       {
         src: "/img/feat-ren-heat.jpg",
-        alt: "Corte de um módulo a mostrar o percurso do ar pelo corpo",
-        caption: "Fluxo de ar encaminhado pelo corpo do módulo, para a parede aguentar um espetáculo longo.",
+        alt: "Corte de um cabinete a mostrar o percurso do ar pelo corpo",
+        term: "Percurso térmico",
+        caption:
+          "O ar é encaminhado pelo corpo do cabinete, e é isso que mantém a luminosidade estável ao longo de um espetáculo.",
       },
       {
         src: "/img/feat-ren-splicing.jpg",
-        alt: "Montagens planas, em cubo e curvas feitas com os mesmos módulos",
-        caption: "Montagens planas, em cubo e curvas a partir do mesmo inventário.",
+        alt: "Montagens planas, em cubo e curvas feitas com os mesmos cabinetes",
+        term: "Geometria de união",
+        caption:
+          "Montagens planas, em cubo e curvas, todas a partir do mesmo stock de cabinetes.",
+      },
+      {
+        src: "/img/feat-ren-build-quality.jpg",
+        alt: "Encapsulamento LED com fio de ouro, módulo em alumínio fundido e cabinete montado",
+        term: "Construção do díodo e da estrutura",
+        caption:
+          "Díodos com fio de ouro num módulo de alumínio injetado: as peças que decidem se um painel sobrevive à quinta digressão.",
       },
     ],
   },
@@ -561,23 +687,52 @@ const pt: Service[] = [
     visuals: [
       {
         src: "/img/feat-dooh-weather-fire.jpg",
-        alt: "Um módulo sob salpico de água e outro junto a chamas, lado a lado",
-        caption: "Vedado contra chuva batida e areia levada pelo vento; o invólucro é resistente ao fogo.",
+        alt: "Um cabinete sob salpico de água e outro junto a chamas, lado a lado",
+        term: "Invólucro vedado e resistente ao fogo",
+        caption:
+          "Vedado contra chuva batida e areia levada pelo vento, num invólucro que resiste ao fogo.",
+      },
+      {
+        src: "/img/feat-dooh-corrosion.jpg",
+        alt: "Esquema de revestimentos classificados contra oxidação, ácido, corrosão e sal",
+        term: "Tratamento anticorrosão",
+        caption:
+          "Revestimentos classificados contra oxidação, ácido, corrosão e sal — a razão pela qual um local costeiro ou de berma não destrói o cabinete.",
+      },
+      {
+        src: "/img/feat-dooh-seamless.jpg",
+        alt: "Duas versões da mesma imagem, uma contínua e outra atravessada por juntas escuras",
+        term: "Visibilidade das juntas",
+        caption:
+          "À esquerda, uma parede sem junta visível. À direita, as linhas escuras que um cabinete mais barato deixa na imagem.",
       },
       {
         src: "/img/feat-dooh-control-box.jpg",
-        alt: "Caixa de controlo puxada pela frente do módulo e novamente por trás",
-        caption: "Caixa de controlo acessível pela frente ou por trás, consoante a construção do local.",
+        alt: "Caixa de controlo puxada pela frente do cabinete e novamente por trás",
+        term: "Acesso para assistência",
+        caption:
+          "A caixa de controlo sai pela frente ou por trás, para que a posição de montagem não decida se pode ser assistida.",
+      },
+      {
+        src: "/img/feat-dooh-formats.jpg",
+        alt: "Quatro ecrãs exteriores: estádio, berma, montra e montado em treliça",
+        term: "Gama de formatos",
+        caption:
+          "Estádio, berma, montra e montagem em treliça, na mesma plataforma.",
       },
       {
         src: "/img/feat-dooh-installs.jpg",
         alt: "Grelha de ecrãs exteriores de berma, posto de combustível e fachada em serviço",
-        caption: "Formatos de berma, posto de combustível e fachada já em serviço.",
+        term: "Em serviço",
+        caption:
+          "Formatos de berma, posto de combustível e fachada já em funcionamento.",
       },
       {
         src: "/img/feat-dooh-stadium.jpg",
         alt: "Grande ecrã exterior em funcionamento num estádio iluminado, à chuva",
-        caption: "Media à escala de estádio, legível com mau tempo e holofotes.",
+        term: "Condições ambientais",
+        caption:
+          "Legível contra holofotes e mau tempo, que é o caso que define o valor de luminosidade.",
       },
     ],
   },
@@ -652,22 +807,51 @@ const pt: Service[] = [
       {
         src: "/img/feat-com-interior-wall.jpg",
         alt: "Grande parede LED interior numa sala de estar, lida como superfície arquitetónica",
-        caption: "Uma parede interior fixa que se lê como arquitetura e não como um monitor.",
+        term: "Instalação interior fixa",
+        caption:
+          "Uma parede integrada na sala e não pendurada nela, para se ler como arquitetura e não como um televisor grande.",
+      },
+      {
+        src: "/img/feat-com-corners.jpg",
+        alt: "Cabinetes de canto reto e de raio a virar o ecrã numa esquina",
+        term: "Cabinetes de canto",
+        caption:
+          "Cabinetes em ângulo reto e de raio viram o ecrã à volta de um pilar ou de uma montra sem quebra na imagem.",
       },
       {
         src: "/img/feat-com-shapes-mall.jpg",
         alt: "Interior comercial com troços cilíndricos, em ângulo reto e côncavos",
-        caption: "Cilindros, ângulos retos e troços côncavos construídos para um interior comercial.",
+        term: "Formatos criativos",
+        caption:
+          "Cilindros, curvas e troços côncavos, todos construídos com os mesmos cabinetes de uma parede plana.",
+      },
+      {
+        src: "/img/feat-com-shapes-built.jpg",
+        alt: "Montagens em ângulo reto, cubo e união mista como objetos acabados",
+        term: "Cubos e montagens mistas",
+        caption:
+          "As mesmas peças montadas como objeto autónomo em vez de parede, para um átrio ou um expositor.",
+      },
+      {
+        src: "/img/feat-com-wiring.jpg",
+        alt: "Alimentação e dados encaminhados dentro da estrutura, com ligações ocultas",
+        term: "Infraestruturas ocultas",
+        caption:
+          "A alimentação e os dados correm dentro da estrutura, para que nada fique à vista onde o ecrã encontra a loja.",
       },
       {
         src: "/img/feat-com-unatural-mapping.jpg",
         alt: "Três camadas de ladrilho padronizado separadas, a mostrar o padrão mapeado nos módulos",
-        caption: "U-Natural: padrão mapeado ao longo dos módulos, ladrilho a ladrilho.",
+        term: "Mapeamento contínuo de padrão",
+        caption:
+          "U-Natural: o padrão é mapeado em toda a superfície, para que as juntas entre módulos não o cortem.",
       },
       {
         src: "/img/feat-com-unatural-finishes.jpg",
         alt: "Acabamentos em madeira, betão e mármore dispostos como amostras",
-        caption: "Acabamentos U-Natural — superfícies em madeira, pedra e mármore.",
+        term: "Acabamentos decorativos",
+        caption:
+          "Superfícies U-Natural em madeira, pedra e mármore, para um ecrã que tem de viver dentro de um interior acabado.",
       },
     ],
   },
@@ -744,17 +928,44 @@ const pt: Service[] = [
       {
         src: "/img/feat-pro-cob-layers.jpg",
         alt: "Camadas do painel separadas: revestimento protetor, película nano-ótica e a placa LED",
-        caption: "A pilha COB: revestimento protetor, película nano-ótica e depois a placa MicroLED.",
-      },
-      {
-        src: "/img/feat-pro-front-service.jpg",
-        alt: "Um módulo retirado pela frente da parede e um cabinete acedido por trás",
-        caption: "Assistência pela frente com ventosas; acesso traseiro onde a parede o permitir.",
+        term: "Encapsulamento COB",
+        caption:
+          "Os díodos ficam sob uma camada sólida de resina em vez de salientes na placa. É isso que torna a superfície lavável e segura ao toque.",
       },
       {
         src: "/img/feat-pro-module-assembly.jpg",
         alt: "Montagem do módulo na estrutura do cabinete, atrás da superfície acabada",
-        caption: "Os módulos fixam-se à estrutura do cabinete, atrás da superfície acabada.",
+        term: "Módulo e cabinete",
+        caption:
+          "Os módulos LED aparafusam-se a uma estrutura rígida. O cabinete é o que fica na parede; o módulo é a peça que se substitui.",
+      },
+      {
+        src: "/img/feat-pro-front-service.jpg",
+        alt: "Um módulo retirado pela frente da parede e um cabinete acedido por trás",
+        term: "Assistência pela frente",
+        caption:
+          "O módulo sai pela face com ventosas, para que uma parede encostada à estrutura continue a ser reparável.",
+      },
+      {
+        src: "/img/feat-pro-integration.jpg",
+        alt: "Estrutura, painel traseiro e eletrónica de controlo como um só conjunto",
+        term: "Construção integrada",
+        caption:
+          "Estrutura, painel traseiro e eletrónica de controlo chegam como um só conjunto, e não como peças a montar no local.",
+      },
+      {
+        src: "/img/feat-pro-splicing.jpg",
+        alt: "Cabinetes unidos lado a lado em grelha e em cruz",
+        term: "União de cabinetes",
+        caption:
+          "Os cabinetes unem-se lado a lado numa grelha. Qualquer retângulo que se consiga formar com eles é uma medida que pode encomendar.",
+      },
+      {
+        src: "/img/feat-pro-coating.jpg",
+        alt: "Esquema de uma camada adicional resistente à humidade e ao impacto",
+        term: "Revestimento protetor, opcional",
+        caption:
+          "Uma camada adicional resistente à humidade e a pancadas. Especificada quando a parede fica ao alcance das pessoas.",
       },
     ],
   },

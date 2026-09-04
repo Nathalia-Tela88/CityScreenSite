@@ -205,6 +205,32 @@ export const en = {
     visualsHeading: "What the specification looks like",
     visualsBody:
       "Manufacturer figures for this platform. Each one shows a mechanism named in the table below, so a claim on the sheet has something to point at.",
+    /* Five terms that every table further down the page assumes you already
+       know. Written for someone specifying their first wall; anyone who
+       already knows them can read the tables and skip this. */
+    primerHeading: "The five terms the tables assume",
+    primer: [
+      {
+        term: "Pixel pitch",
+        body: "The distance between one diode and the next, in millimetres. Smaller pitch, closer you can stand before the picture turns into dots.",
+      },
+      {
+        term: "Nits",
+        body: "Brightness. A television is around 300 nits. A wall facing direct sun needs thousands, or the image disappears at midday.",
+      },
+      {
+        term: "Cabinet and module",
+        body: "The cabinet is the frame that hangs on the structure. Modules are the tiles inside it that actually light up, and they are what gets swapped in a repair.",
+      },
+      {
+        term: "IP rating",
+        body: "Two digits: dust, then water. IP65 means fully sealed against dust and against jets of water from any direction.",
+      },
+      {
+        term: "Refresh rate",
+        body: "How many times a second the panel redraws. Too low and it looks fine to the eye but flickers in banding on camera.",
+      },
+    ],
     installsEyebrow: "Built and running",
     installOne: "A recent install",
     installMany: "Recent installs on this platform",
@@ -864,6 +890,29 @@ export const pt: Dict = {
     visualsHeading: "O aspeto da especificação",
     visualsBody:
       "Imagens do fabricante para esta plataforma. Cada uma mostra um mecanismo indicado na tabela abaixo, para que cada afirmação da ficha tenha algo que se veja.",
+    primerHeading: "Os cinco termos que as tabelas pressupõem",
+    primer: [
+      {
+        term: "Pixel pitch",
+        body: "A distância entre um díodo e o seguinte, em milímetros. Quanto menor o pitch, mais perto pode estar antes de a imagem virar pontos.",
+      },
+      {
+        term: "Nits",
+        body: "Luminosidade. Um televisor tem cerca de 300 nits. Uma parede virada ao sol direto precisa de milhares, ou a imagem desaparece ao meio-dia.",
+      },
+      {
+        term: "Cabinete e módulo",
+        body: "O cabinete é a estrutura que fica presa ao edifício. Os módulos são as peças no interior que acendem, e são elas que se substituem numa reparação.",
+      },
+      {
+        term: "Grau IP",
+        body: "Dois dígitos: poeiras e depois água. IP65 significa totalmente vedado a poeiras e a jatos de água de qualquer direção.",
+      },
+      {
+        term: "Taxa de atualização",
+        body: "Quantas vezes por segundo o painel se redesenha. Se for baixa, parece bem a olho nu mas aparece com bandas na câmara.",
+      },
+    ],
     installsEyebrow: "Construído e a funcionar",
     installOne: "Uma instalação recente",
     installMany: "Instalações recentes nesta plataforma",

@@ -35,6 +35,16 @@ export type Series = {
   /** Product photography, once it exists. */
   image?: string;
   /**
+   * True when `image` is a cut-out with a real alpha channel rather than a
+   * render on its own background.
+   *
+   * The series header uses this to decide how to mount it: a cut-out sits
+   * straight on the page so the cabinet reads as an object beside the type,
+   * while anything with its own ground keeps a bordered panel — without one it
+   * would show as a hard rectangle of somebody else's background colour.
+   */
+  cutout?: boolean;
+  /**
    * Further frames of the same series — detail shots, the rear service side,
    * an installed view. `image` is the first frame; these follow it.
    *
@@ -57,15 +67,15 @@ export type Series = {
 export const series: Series[] = [
   // Professional — COB fine pitch for control rooms and boardrooms.
   { slug: "lmini", name: "LMini Series", platform: "professional",
-    image: "/img/series-lmini.jpg" },
+    image: "/img/series-lmini.webp", cutout: true },
   { slug: "lmini-p", name: "LMini P Series", platform: "professional",
-    image: "/img/series-lmini-p.jpg" },
+    image: "/img/series-lmini-p.webp", cutout: true },
   { slug: "lhp", name: "LHP Series", platform: "professional",
-    image: "/img/series-lhp.webp" },
+    image: "/img/series-lhp.webp", cutout: true },
 
   // Commercial — retail and interior.
   { slug: "bnx-ii", name: "BNXⅡ Series", platform: "commercial",
-    image: "/img/series-bnx-ii.webp" },
+    image: "/img/series-bnx-ii.webp", cutout: true },
   // U-Natural is a Unilumin commercial product — a decorative texture screen
   // for reception desks, screen walls and hospitality interiors. It was
   // previously filed under rental, which it has never been: it is a fixed
@@ -75,11 +85,11 @@ export const series: Series[] = [
 
   // Rental — event and stage.
   { slug: "lrs", name: "LRS Series", platform: "rental",
-    image: "/img/series-lrs.webp" },
+    image: "/img/series-lrs.webp", cutout: true },
   { slug: "rn-ii", name: "RNⅡ Series", platform: "rental",
-    image: "/img/series-rn-ii.webp" },
+    image: "/img/series-rn-ii.webp", cutout: true },
   { slug: "lrm", name: "LRM Series", platform: "rental",
-    image: "/img/series-lrm.jpg" },
+    image: "/img/series-lrm.webp", cutout: true },
 
   // DOOH — outdoor media.
   { slug: "lx-ii-pro", name: "LXⅡ Pro Series", platform: "dooh",
@@ -89,7 +99,7 @@ export const series: Series[] = [
   { slug: "lst", name: "LST Series", platform: "dooh",
     image: "/img/series-lst.jpg" },
   { slug: "lsk", name: "LSK Series", platform: "dooh",
-    image: "/img/series-lsk.webp" },
+    image: "/img/series-lsk.webp", cutout: true },
 ];
 
 export const seriesBySlug = Object.fromEntries(

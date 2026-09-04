@@ -104,12 +104,16 @@ export function ServicePage({
                     className="object-contain"
                   />
                 </div>
-                <figcaption className="mt-4 flex gap-3 text-base text-graphite">
-                  <span
-                    aria-hidden
-                    className="mt-2 h-1.5 w-1.5 shrink-0 bg-signal"
-                  />
-                  {visual.caption}
+                {/* Term first, then the plain reading of it. A buyer who knows
+                    the category can scan the terms alone and skip the prose. */}
+                <figcaption className="mt-4">
+                  <p className="label-data flex items-center gap-2.5 text-signal">
+                    <span aria-hidden className="inline-block h-1.5 w-1.5 bg-signal" />
+                    {visual.term}
+                  </p>
+                  <p className="mt-2.5 text-base text-graphite">
+                    {visual.caption}
+                  </p>
                 </figcaption>
               </figure>
             ))}
@@ -125,6 +129,29 @@ export function ServicePage({
         intro={t.series.intro}
         requestLabel={t.series.request}
       />
+
+      {/* Vocabulary, immediately before the tables that use it. Placed here
+          rather than at the top of the page because a reader who already knows
+          these terms should meet the hardware first, not a glossary. */}
+      <Section className="py-16 md:py-20">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-20">
+          <div>
+            <Display as="h2" size="sm" delay={0.08}>
+              {t.platform.primerHeading}
+            </Display>
+          </div>
+          <dl className="grid grid-cols-1 gap-px border border-seam bg-seam sm:grid-cols-2">
+            {t.platform.primer.map((entry) => (
+              <div key={entry.term} className="bg-cabinet p-6 md:p-7">
+                <dt className="font-display text-lg font-medium text-filament">
+                  {entry.term}
+                </dt>
+                <dd className="mt-2.5 text-base text-graphite">{entry.body}</dd>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </Section>
 
       {/* The datasheet, presented as a datasheet. */}
       <Section className="bg-cabinet-raised py-20 md:py-28">
