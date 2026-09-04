@@ -12,6 +12,14 @@ Replacing one with true per-series photography from the dealer portal needs no
 code change — only the path in `src/lib/series.ts`. Drop the correct file in and
 the header, the card and the gallery all pick it up.
 
+**Match the hardware to the platform.** Most renders in the manufacturer bundle
+are rental cabinets, recognisable by carry handles, quick-lock latches and
+rigging ears. Those belong only on the rental series. A fine-pitch professional
+panel is slim and front-serviced with no handles; an outdoor cabinet is a
+sealed white or silver housing. Putting a rental cabinet on a commercial or
+outdoor series is the mistake to watch for — it reads as the wrong product to
+anyone who knows the category, which includes most buyers.
+
 Platform feature figures (`feat-*`) are separate: they sit on the four platform
 pages and are wired through `visuals` in `src/lib/i18n/services.ts`.
 

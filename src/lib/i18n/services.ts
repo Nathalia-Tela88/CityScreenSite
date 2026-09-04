@@ -466,13 +466,6 @@ const en: Service[] = [
           "The diodes sit under a solid resin layer instead of standing proud of the board. That is what makes the surface cleanable, and safe to touch.",
       },
       {
-        src: "/img/feat-pro-module-assembly.jpg",
-        alt: "Module mounting onto the cabinet frame behind a finished display surface",
-        term: "Module and cabinet",
-        caption:
-          "Small LED modules bolt onto a rigid cabinet frame. The cabinet is what hangs on the wall; the module is the part that gets swapped.",
-      },
-      {
         src: "/img/feat-pro-front-service.jpg",
         alt: "A module drawn off the front of a wall, and a cabinet accessed from behind",
         term: "Front service access",
@@ -931,13 +924,6 @@ const pt: Service[] = [
         term: "Encapsulamento COB",
         caption:
           "Os díodos ficam sob uma camada sólida de resina em vez de salientes na placa. É isso que torna a superfície lavável e segura ao toque.",
-      },
-      {
-        src: "/img/feat-pro-module-assembly.jpg",
-        alt: "Montagem do módulo na estrutura do cabinete, atrás da superfície acabada",
-        term: "Módulo e cabinete",
-        caption:
-          "Os módulos LED aparafusam-se a uma estrutura rígida. O cabinete é o que fica na parede; o módulo é a peça que se substitui.",
       },
       {
         src: "/img/feat-pro-front-service.jpg",

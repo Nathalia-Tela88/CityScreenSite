@@ -67,8 +67,7 @@ export type Series = {
 export const series: Series[] = [
   // Professional — COB fine pitch for control rooms and boardrooms.
   { slug: "lmini", name: "LMini Series", platform: "professional",
-    image: "/img/series-lmini.webp", cutout: true,
-    gallery: ["/img/series-lmini-2.webp"] },
+    image: "/img/series-lmini.webp", cutout: true },
   { slug: "lmini-p", name: "LMini P Series", platform: "professional",
     image: "/img/series-lmini-p.webp", cutout: true,
     gallery: ["/img/series-lmini-p-2.jpg"] },
@@ -88,13 +87,13 @@ export const series: Series[] = [
   // Rental — event and stage.
   { slug: "lrs", name: "LRS Series", platform: "rental",
     image: "/img/series-lrs.webp", cutout: true,
-    gallery: ["/img/series-lrs-2.webp"] },
+    gallery: ["/img/series-lrs-2.webp", "/img/series-lrs-3.webp"] },
   { slug: "rn-ii", name: "RNⅡ Series", platform: "rental",
     image: "/img/series-rn-ii.webp", cutout: true,
-    gallery: ["/img/series-rn-ii-2.webp"] },
+    gallery: ["/img/series-rn-ii-2.webp", "/img/series-rn-ii-3.webp"] },
   { slug: "lrm", name: "LRM Series", platform: "rental",
     image: "/img/series-lrm.webp", cutout: true,
-    gallery: ["/img/series-lrm-2.webp"] },
+    gallery: ["/img/series-lrm-2.webp", "/img/series-lrm-3.webp"] },
 
   // DOOH — outdoor media.
   { slug: "lx-ii-pro", name: "LXⅡ Pro Series", platform: "dooh",
@@ -104,8 +103,7 @@ export const series: Series[] = [
   { slug: "lst", name: "LST Series", platform: "dooh",
     image: "/img/series-lst.jpg" },
   { slug: "lsk", name: "LSK Series", platform: "dooh",
-    image: "/img/series-lsk.webp", cutout: true,
-    gallery: ["/img/series-lsk-2.webp"] },
+    image: "/img/series-lsk.webp", cutout: true },
 ];
 
 export const seriesBySlug = Object.fromEntries(
