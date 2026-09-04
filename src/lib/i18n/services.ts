@@ -505,16 +505,16 @@ const pt: Service[] = [
     name: "LED de aluguer",
     tagline: "Feito para o relógio da montagem.",
     summary:
-      "Módulos de aluguer com fecho rápido que sobem a prumo, assentam planos e desmontam em minutos. Estruturas preparadas para curvatura, fechos sem ferramenta e caminhos de dados redundantes mantêm a equipa a andar quando o horário não espera.",
+      "Cabinetes de aluguer com fecho rápido que sobem a prumo, assentam planos e desmontam em minutos. Estruturas preparadas para curvatura, fechos sem ferramenta e caminhos de dados redundantes mantêm a equipa a andar quando o horário não espera.",
     heroStats: [
-      { label: "Peso do módulo", value: "6,8 kg" },
+      { label: "Peso do cabinete", value: "6,8 kg" },
       { label: "Tempo de fecho", value: "< 8 s" },
       { label: "Amplitude de curva", value: "±15°" },
     ],
     highlights: [
       {
-        title: "Módulos de fecho rápido",
-        body: "Os fechos de came assentam e alinham módulos adjacentes num quarto de volta. Sem calços, sem ferramenta, sem passagem de calibração no local.",
+        title: "Cabinetes de fecho rápido",
+        body: "Os fechos de came assentam e alinham cabinetes adjacentes num quarto de volta. Sem calços, sem ferramenta, sem passagem de calibração no local.",
       },
       {
         title: "Suspenso ou empilhado",
@@ -531,12 +531,12 @@ const pt: Service[] = [
     ],
     specTables: [
       {
-        title: "Plataforma de módulo",
+        title: "Plataforma de cabinete",
         caption: "Estrutura padrão de aluguer 500 × 500 mm.",
         rows: [
           { parameter: "Pixel pitch", value: "2,6 / 2,9 / 3,9 / 4,8 mm" },
-          { parameter: "Dimensão do módulo", value: "500 × 500 × 75 mm" },
-          { parameter: "Peso do módulo", value: "6,8 kg", note: "Magnésio injetado" },
+          { parameter: "Dimensão do cabinete", value: "500 × 500 × 75 mm" },
+          { parameter: "Peso do cabinete", value: "6,8 kg", note: "Magnésio injetado" },
           { parameter: "Luminosidade", value: "1 000 – 1 500 nits" },
           { parameter: "Taxa de atualização", value: "3 840 Hz", note: "Seguro para televisão" },
           { parameter: "Rácio de contraste", value: "5 000 : 1" },
@@ -568,7 +568,7 @@ const pt: Service[] = [
     visuals: [
       {
         src: "/img/feat-ren-quick-lock.jpg",
-        alt: "Módulo de aluguer em vista explodida, com os módulos LED soltos da estrutura",
+        alt: "Cabinete de aluguer em vista explodida, com os módulos LED soltos da estrutura",
         term: "Cabinete de fecho rápido",
         caption:
           "Os fechos prendem o cabinete seguinte num quarto de volta. Sem ferramenta, e sem acerto depois de a parede estar montada.",
@@ -638,13 +638,13 @@ const pt: Service[] = [
       },
       {
         title: "Diagnóstico remoto",
-        body: "A telemetria por módulo reporta temperatura, estado das ventoinhas e falhas de píxel antes de um anunciante ver um defeito.",
+        body: "A telemetria por cabinete reporta temperatura, estado das ventoinhas e falhas de píxel antes de um anunciante ver um defeito.",
       },
     ],
     specTables: [
       {
         title: "Plataforma de ecrã",
-        caption: "Módulo de instalação fixa em exterior.",
+        caption: "Cabinete de instalação fixa em exterior.",
         rows: [
           { parameter: "Pixel pitch", value: "4 / 6,6 / 8 / 10 mm" },
           { parameter: "Luminosidade de pico", value: "10 000 nits" },
@@ -663,7 +663,7 @@ const pt: Service[] = [
           { parameter: "Saída mínima noturna", value: "300 nits", note: "Configurável por regulamento" },
           { parameter: "Entrega de conteúdos", value: "4G / 5G / fibra, independente de CMS" },
           { parameter: "Programático", value: "Registos compatíveis com OpenRTB" },
-          { parameter: "Monitorização", value: "Telemetria por módulo, SNMP" },
+          { parameter: "Monitorização", value: "Telemetria por cabinete, SNMP" },
           { parameter: "Consumo", value: "450 W médio / 1 100 W pico por m²" },
         ],
       },
@@ -739,7 +739,7 @@ const pt: Service[] = [
       "Paredes de montra interiores, ecrãs voltados para a rua e LED transparente em vidro que preserva a luz natural e as linhas de visão. Pensado para caber num programa de remodelação de loja: molduras à face, infraestruturas ocultas e acabamentos que se leem como arquitetura.",
     heroStats: [
       { label: "Transparência do vidro", value: "até 85%" },
-      { label: "Profundidade do módulo", value: "68 mm" },
+      { label: "Profundidade do cabinete", value: "68 mm" },
       { label: "Pixel pitch desde", value: "1,8 mm" },
     ],
     highlights: [
@@ -749,7 +749,7 @@ const pt: Service[] = [
       },
       {
         title: "Moldura arquitetónica à face",
-        body: "Módulo de 68 mm de profundidade com gestão de cabos oculta, que assenta em paredes divisórias correntes sem necessidade de tabica.",
+        body: "Cabinete de 68 mm de profundidade com gestão de cabos oculta, que assenta em paredes divisórias correntes sem necessidade de tabica.",
       },
       {
         title: "Saída legível em montra",
@@ -766,7 +766,7 @@ const pt: Service[] = [
         caption: "Plataforma para montra e parede interior.",
         rows: [
           { parameter: "Pixel pitch", value: "1,8 / 2,5 / 3,0 mm" },
-          { parameter: "Dimensão do módulo", value: "640 × 480 × 68 mm" },
+          { parameter: "Dimensão do cabinete", value: "640 × 480 × 68 mm" },
           { parameter: "Luminosidade", value: "800 – 5 000 nits", note: "Opção para montra" },
           { parameter: "Taxa de atualização", value: "3 840 Hz" },
           { parameter: "Temperatura de cor", value: "3 200 – 9 300 K ajustável" },
@@ -868,7 +868,7 @@ const pt: Service[] = [
       },
       {
         title: "Tela verdadeiramente contínua",
-        body: "Juntas entre módulos abaixo de 0,1 mm, com módulos emparelhados em fábrica. Nenhuma linha de moldura atravessa um gráfico, um mapa ou uma imagem de vídeo.",
+        body: "Juntas entre cabinetes abaixo de 0,1 mm, com módulos emparelhados em fábrica. Nenhuma linha de moldura atravessa um gráfico, um mapa ou uma imagem de vídeo.",
       },
       {
         title: "Sem ventoinhas e silencioso",
@@ -886,7 +886,7 @@ const pt: Service[] = [
         rows: [
           { parameter: "Pixel pitch", value: "0,6 / 0,9 / 1,2 / 1,5 mm" },
           { parameter: "Tipo de encapsulamento", value: "MicroLED COB" },
-          { parameter: "Dimensão do módulo", value: "600 × 337,5 × 38 mm" },
+          { parameter: "Dimensão do cabinete", value: "600 × 337,5 × 38 mm" },
           { parameter: "Tolerância de junta", value: "< 0,1 mm" },
           { parameter: "Luminosidade", value: "600 – 1 200 nits" },
           { parameter: "Rácio de contraste", value: "20 000 : 1" },

@@ -769,10 +769,10 @@ export const pt: Dict = {
 
   specPrimer: {
     eyebrow: "Quatro números",
+    heading: "A ficha técnica é um conjunto de promessas",
     pitchLabel: "Pixel pitch",
     viewingDistance: "Nítido a partir de {d} m",
     wallHint: "Arraste o pitch e veja a grelha aparecer.",
-    heading: "A ficha técnica é um conjunto de promessas",
     body: "Perceba estes quatro e comprará o ecrã certo, connosco ou com qualquer outro. Tudo o resto numa ficha técnica decorre deles.",
     caption: "Intervalos típicos de especificação por aplicação",
     metrics: [
@@ -836,7 +836,7 @@ export const pt: Dict = {
       {
         title: "Assistência",
         produces: "SLA de resposta",
-        body: "Peças em stock no Ontário, resposta média de quatro horas e telemetria por módulo que sinaliza uma falha antes de o seu público reparar nela.",
+        body: "Peças em stock no Ontário, resposta média de quatro horas e telemetria por cabinete que sinaliza um módulo em falha antes de o seu público reparar nela.",
       },
     ],
   },
