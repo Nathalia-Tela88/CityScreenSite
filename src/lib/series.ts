@@ -46,30 +46,50 @@ export type Series = {
   gallery?: string[];
 };
 
+/* The `image` on each series is a manufacturer render of the cabinet for that
+   platform, not a photograph of that exact series — LAMPRO publishes per-series
+   photography behind the dealer login, and it has not been pulled in yet. The
+   series page therefore shows it as a labelled product render beside the
+   heading rather than passing it off as an installed photograph. Swapping in
+   the real per-series file later needs no code change: only the path below.
+   See public/img/SERIES-IMAGES.md. */
+
 export const series: Series[] = [
   // Professional — COB fine pitch for control rooms and boardrooms.
-  { slug: "lmini", name: "LMini Series", platform: "professional" },
-  { slug: "lmini-p", name: "LMini P Series", platform: "professional" },
-  { slug: "lhp", name: "LHP Series", platform: "professional" },
+  { slug: "lmini", name: "LMini Series", platform: "professional",
+    image: "/img/series-lmini.jpg" },
+  { slug: "lmini-p", name: "LMini P Series", platform: "professional",
+    image: "/img/series-lmini-p.jpg" },
+  { slug: "lhp", name: "LHP Series", platform: "professional",
+    image: "/img/series-lhp.webp" },
 
   // Commercial — retail and interior.
-  { slug: "bnx-ii", name: "BNXⅡ Series", platform: "commercial" },
+  { slug: "bnx-ii", name: "BNXⅡ Series", platform: "commercial",
+    image: "/img/series-bnx-ii.webp" },
   // U-Natural is a Unilumin commercial product — a decorative texture screen
   // for reception desks, screen walls and hospitality interiors. It was
   // previously filed under rental, which it has never been: it is a fixed
   // architectural surface, not something that goes out on a truck.
-  { slug: "u-natural", name: "U-Natural", platform: "commercial" },
+  { slug: "u-natural", name: "U-Natural", platform: "commercial",
+    image: "/img/series-u-natural.webp" },
 
   // Rental — event and stage.
-  { slug: "lrs", name: "LRS Series", platform: "rental" },
-  { slug: "rn-ii", name: "RNⅡ Series", platform: "rental" },
-  { slug: "lrm", name: "LRM Series", platform: "rental" },
+  { slug: "lrs", name: "LRS Series", platform: "rental",
+    image: "/img/series-lrs.webp" },
+  { slug: "rn-ii", name: "RNⅡ Series", platform: "rental",
+    image: "/img/series-rn-ii.webp" },
+  { slug: "lrm", name: "LRM Series", platform: "rental",
+    image: "/img/series-lrm.jpg" },
 
   // DOOH — outdoor media.
-  { slug: "lx-ii-pro", name: "LXⅡ Pro Series", platform: "dooh" },
-  { slug: "ls-pro", name: "LS Pro Series", platform: "dooh" },
-  { slug: "lst", name: "LST Series", platform: "dooh" },
-  { slug: "lsk", name: "LSK Series", platform: "dooh" },
+  { slug: "lx-ii-pro", name: "LXⅡ Pro Series", platform: "dooh",
+    image: "/img/series-lx-ii-pro.jpg" },
+  { slug: "ls-pro", name: "LS Pro Series", platform: "dooh",
+    image: "/img/series-ls-pro.jpg" },
+  { slug: "lst", name: "LST Series", platform: "dooh",
+    image: "/img/series-lst.jpg" },
+  { slug: "lsk", name: "LSK Series", platform: "dooh",
+    image: "/img/series-lsk.webp" },
 ];
 
 export const seriesBySlug = Object.fromEntries(

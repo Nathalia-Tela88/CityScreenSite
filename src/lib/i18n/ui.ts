@@ -199,6 +199,12 @@ export const en = {
       "Published rather than sent on request. If a figure here does not suit the site, say so and we will tell you what does.",
     applicationsEyebrow: "Typical deployments",
     applicationsHeading: "Where this platform earns its place",
+    /* Heads the figure band between the highlights and the series grid: the
+       claims above it, shown as hardware. */
+    visualsEyebrow: "The hardware",
+    visualsHeading: "What the specification looks like",
+    visualsBody:
+      "Manufacturer figures for this platform. Each one shows a mechanism named in the table below, so a claim on the sheet has something to point at.",
     installsEyebrow: "Built and running",
     installOne: "A recent install",
     installMany: "Recent installs on this platform",
@@ -215,6 +221,10 @@ export const en = {
     platformWord: "platform.",
     apartEyebrow: "What sets it apart",
     behaviourHeading: "How this series behaves",
+    /* Sits under the cabinet render in the series header. It says "render",
+       not "photograph", because the file is the manufacturer's render of the
+       platform cabinet rather than a shot of this exact series. */
+    renderNote: "Manufacturer cabinet render",
     specsOnRequest: "Published on request",
     specsFull: "The numbers, in full",
     specsBodyFull:
@@ -850,6 +860,10 @@ export const pt: Dict = {
       "Publicados, e não enviados a pedido. Se algum valor não servir ao local, diga-nos e indicamos-lhe o que serve.",
     applicationsEyebrow: "Aplicações típicas",
     applicationsHeading: "Onde esta plataforma faz sentido",
+    visualsEyebrow: "O equipamento",
+    visualsHeading: "O aspeto da especificação",
+    visualsBody:
+      "Imagens do fabricante para esta plataforma. Cada uma mostra um mecanismo indicado na tabela abaixo, para que cada afirmação da ficha tenha algo que se veja.",
     installsEyebrow: "Construído e a funcionar",
     installOne: "Uma instalação recente",
     installMany: "Instalações recentes nesta plataforma",
@@ -865,6 +879,7 @@ export const pt: Dict = {
     platformWord: ".",
     apartEyebrow: "O que a distingue",
     behaviourHeading: "Como se comporta esta série",
+    renderNote: "Render do fabricante",
     specsOnRequest: "Disponíveis a pedido",
     specsFull: "Os números, na íntegra",
     specsBodyFull:

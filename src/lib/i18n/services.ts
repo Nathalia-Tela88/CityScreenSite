@@ -13,6 +13,17 @@ export type Service = {
   specTables: SpecTable[];
   applications: string[];
   image: string;
+  /**
+   * Manufacturer figures that show the hardware doing what the spec table
+   * claims — an exploded cabinet, the service side, the weatherproofing rig.
+   *
+   * Each one carries its own caption naming what is in the frame, because a
+   * cabinet render is unreadable to anyone who does not already know the
+   * product. Captions describe the mechanism only: the figures deliberately
+   * exclude every graphic whose burnt-in numbers disagree with the specTables
+   * above, so nothing here can contradict the published sheet.
+   */
+  visuals?: { src: string; alt: string; caption: string }[];
 };
 
 /* Portuguese uses the comma as decimal separator and a thin space for
@@ -87,6 +98,33 @@ const en: Service[] = [
       "Exhibition stand headers",
     ],
     image: "/img/app-rental.jpg",
+    visuals: [
+      {
+        src: "/img/feat-ren-quick-lock.jpg",
+        alt: "Rental cabinet shown exploded, LED modules lifted clear of the frame",
+        caption: "Tool-free latches: modules lift out of the frame without a driver.",
+      },
+      {
+        src: "/img/feat-ren-stack-fly.jpg",
+        alt: "The same cabinet ground-stacked on a support frame beside a flown wall",
+        caption: "Ground-stacked on a support frame, or flown as a wall.",
+      },
+      {
+        src: "/img/feat-ren-curve-corner.jpg",
+        alt: "Semi-cabinets forming corners and a curved run, with preset concave angles",
+        caption: "Semi-cabinets and preset concave angles build corners and curves from stock parts.",
+      },
+      {
+        src: "/img/feat-ren-heat.jpg",
+        alt: "Cutaway of a cabinet showing the airflow path through the body",
+        caption: "Airflow routed through the cabinet body, so the wall holds up across a long show.",
+      },
+      {
+        src: "/img/feat-ren-splicing.jpg",
+        alt: "Flat, cube and curved screen builds assembled from the same cabinets",
+        caption: "Flat, cube and curved builds from one cabinet inventory.",
+      },
+    ],
   },
   {
     slug: "dooh",
@@ -155,6 +193,28 @@ const en: Service[] = [
       "Retail park pylon signage",
     ],
     image: "/img/app-dooh.jpg",
+    visuals: [
+      {
+        src: "/img/feat-dooh-weather-fire.jpg",
+        alt: "One cabinet under a water splash, another beside flame, shown side by side",
+        caption: "Sealed against driven rain and windborne sand; the housing is fire-resistant.",
+      },
+      {
+        src: "/img/feat-dooh-control-box.jpg",
+        alt: "Control box drawn out from the front of a cabinet and again from the rear",
+        caption: "Control box reachable from the front or the rear, depending on how the site is built.",
+      },
+      {
+        src: "/img/feat-dooh-installs.jpg",
+        alt: "Grid of roadside, forecourt and building-mounted outdoor displays in service",
+        caption: "Roadside, forecourt and building-mounted formats already in service.",
+      },
+      {
+        src: "/img/feat-dooh-stadium.jpg",
+        alt: "Large outdoor display running at a floodlit stadium in the rain",
+        caption: "Stadium-scale media, legible through weather and floodlight.",
+      },
+    ],
   },
   {
     slug: "commercial",
@@ -223,6 +283,28 @@ const en: Service[] = [
       "Lobby and reception canvases",
     ],
     image: "/img/app-commercial.jpg",
+    visuals: [
+      {
+        src: "/img/feat-com-interior-wall.jpg",
+        alt: "Large interior LED wall in a lounge, reading as a lit architectural surface",
+        caption: "A fixed interior wall that reads as architecture, not as a monitor.",
+      },
+      {
+        src: "/img/feat-com-shapes-mall.jpg",
+        alt: "Retail interior with cylindrical, right-angled and concave display runs",
+        caption: "Cylinders, right angles and concave runs built for a retail interior.",
+      },
+      {
+        src: "/img/feat-com-unatural-mapping.jpg",
+        alt: "Three patterned tile layers separating to show pattern mapped across modules",
+        caption: "U-Natural: pattern mapped across modules, tile by tile.",
+      },
+      {
+        src: "/img/feat-com-unatural-finishes.jpg",
+        alt: "Timber, concrete and marble tile finishes laid out as samples",
+        caption: "U-Natural finishes — timber, stone and marble surfaces.",
+      },
+    ],
   },
   {
     slug: "professional",
@@ -293,6 +375,23 @@ const en: Service[] = [
       "Command and dispatch centres",
     ],
     image: "/img/app-professional.jpg",
+    visuals: [
+      {
+        src: "/img/feat-pro-cob-layers.jpg",
+        alt: "Panel layers separated: protective coating, nano-optical film and the LED board",
+        caption: "The COB stack: protective coating, nano-optical film, then the MicroLED board.",
+      },
+      {
+        src: "/img/feat-pro-front-service.jpg",
+        alt: "A module drawn off the front of a wall, and a cabinet accessed from behind",
+        caption: "Front service with vacuum tools; rear access where the wall allows it.",
+      },
+      {
+        src: "/img/feat-pro-module-assembly.jpg",
+        alt: "Module mounting onto the cabinet frame behind a finished display surface",
+        caption: "Modules mount to the cabinet frame behind the finished surface.",
+      },
+    ],
   },
 ];
 
@@ -364,6 +463,33 @@ const pt: Service[] = [
       "Topos de stand em feiras",
     ],
     image: "/img/app-rental.jpg",
+    visuals: [
+      {
+        src: "/img/feat-ren-quick-lock.jpg",
+        alt: "Módulo de aluguer em vista explodida, com os módulos LED soltos da estrutura",
+        caption: "Fechos sem ferramenta: os módulos saem da estrutura sem chave de fendas.",
+      },
+      {
+        src: "/img/feat-ren-stack-fly.jpg",
+        alt: "O mesmo módulo empilhado no solo sobre estrutura de apoio, ao lado de uma parede suspensa",
+        caption: "Empilhado no solo sobre estrutura de apoio, ou suspenso em parede.",
+      },
+      {
+        src: "/img/feat-ren-curve-corner.jpg",
+        alt: "Semi-módulos a formar cantos e um troço curvo, com ângulos côncavos predefinidos",
+        caption: "Semi-módulos e ângulos côncavos predefinidos formam cantos e curvas com peças de stock.",
+      },
+      {
+        src: "/img/feat-ren-heat.jpg",
+        alt: "Corte de um módulo a mostrar o percurso do ar pelo corpo",
+        caption: "Fluxo de ar encaminhado pelo corpo do módulo, para a parede aguentar um espetáculo longo.",
+      },
+      {
+        src: "/img/feat-ren-splicing.jpg",
+        alt: "Montagens planas, em cubo e curvas feitas com os mesmos módulos",
+        caption: "Montagens planas, em cubo e curvas a partir do mesmo inventário.",
+      },
+    ],
   },
   {
     slug: "dooh",
@@ -432,6 +558,28 @@ const pt: Service[] = [
       "Sinalética em totens de parques comerciais",
     ],
     image: "/img/app-dooh.jpg",
+    visuals: [
+      {
+        src: "/img/feat-dooh-weather-fire.jpg",
+        alt: "Um módulo sob salpico de água e outro junto a chamas, lado a lado",
+        caption: "Vedado contra chuva batida e areia levada pelo vento; o invólucro é resistente ao fogo.",
+      },
+      {
+        src: "/img/feat-dooh-control-box.jpg",
+        alt: "Caixa de controlo puxada pela frente do módulo e novamente por trás",
+        caption: "Caixa de controlo acessível pela frente ou por trás, consoante a construção do local.",
+      },
+      {
+        src: "/img/feat-dooh-installs.jpg",
+        alt: "Grelha de ecrãs exteriores de berma, posto de combustível e fachada em serviço",
+        caption: "Formatos de berma, posto de combustível e fachada já em serviço.",
+      },
+      {
+        src: "/img/feat-dooh-stadium.jpg",
+        alt: "Grande ecrã exterior em funcionamento num estádio iluminado, à chuva",
+        caption: "Media à escala de estádio, legível com mau tempo e holofotes.",
+      },
+    ],
   },
   {
     slug: "commercial",
@@ -500,6 +648,28 @@ const pt: Service[] = [
       "Telas de átrio e receção",
     ],
     image: "/img/app-commercial.jpg",
+    visuals: [
+      {
+        src: "/img/feat-com-interior-wall.jpg",
+        alt: "Grande parede LED interior numa sala de estar, lida como superfície arquitetónica",
+        caption: "Uma parede interior fixa que se lê como arquitetura e não como um monitor.",
+      },
+      {
+        src: "/img/feat-com-shapes-mall.jpg",
+        alt: "Interior comercial com troços cilíndricos, em ângulo reto e côncavos",
+        caption: "Cilindros, ângulos retos e troços côncavos construídos para um interior comercial.",
+      },
+      {
+        src: "/img/feat-com-unatural-mapping.jpg",
+        alt: "Três camadas de ladrilho padronizado separadas, a mostrar o padrão mapeado nos módulos",
+        caption: "U-Natural: padrão mapeado ao longo dos módulos, ladrilho a ladrilho.",
+      },
+      {
+        src: "/img/feat-com-unatural-finishes.jpg",
+        alt: "Acabamentos em madeira, betão e mármore dispostos como amostras",
+        caption: "Acabamentos U-Natural — superfícies em madeira, pedra e mármore.",
+      },
+    ],
   },
   {
     slug: "professional",
@@ -570,6 +740,23 @@ const pt: Service[] = [
       "Centros de comando e despacho",
     ],
     image: "/img/app-professional.jpg",
+    visuals: [
+      {
+        src: "/img/feat-pro-cob-layers.jpg",
+        alt: "Camadas do painel separadas: revestimento protetor, película nano-ótica e a placa LED",
+        caption: "A pilha COB: revestimento protetor, película nano-ótica e depois a placa MicroLED.",
+      },
+      {
+        src: "/img/feat-pro-front-service.jpg",
+        alt: "Um módulo retirado pela frente da parede e um cabinete acedido por trás",
+        caption: "Assistência pela frente com ventosas; acesso traseiro onde a parede o permitir.",
+      },
+      {
+        src: "/img/feat-pro-module-assembly.jpg",
+        alt: "Montagem do módulo na estrutura do cabinete, atrás da superfície acabada",
+        caption: "Os módulos fixam-se à estrutura do cabinete, atrás da superfície acabada.",
+      },
+    ],
   },
 ];
 

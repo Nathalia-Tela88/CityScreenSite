@@ -1,7 +1,24 @@
 # Series product photography
 
+## Current state
+
+All twelve series now carry a **manufacturer cabinet render** — see the
+`series-*` files in this folder, wired up in `src/lib/series.ts`. These are
+platform-level renders, not photographs of each specific series: the LSK render
+is a DOOH cabinet, the LRS render is a rental cabinet, and so on. The series
+header labels them "Manufacturer cabinet render" for exactly that reason.
+
+Replacing one with true per-series photography from the dealer portal needs no
+code change — only the path in `src/lib/series.ts`. Drop the correct file in and
+the header, the card and the gallery all pick it up.
+
+Platform feature figures (`feat-*`) are separate: they sit on the four platform
+pages and are wired through `visuals` in `src/lib/i18n/services.ts`.
+
+## Adding or replacing an image
+
 The twelve series pages under `/products/<slug>` fall back to a typographic
-panel until a real photograph exists. To wire one in:
+panel when no image is set. To wire one in:
 
 1. Drop the file in this folder using the filename below.
 2. Add the `image` field to that series in `src/lib/series.ts`.

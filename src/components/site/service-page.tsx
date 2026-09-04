@@ -1,5 +1,6 @@
 "use client";
 
+import Image from "next/image";
 import * as React from "react";
 
 import { useT } from "@/lib/i18n";
@@ -74,6 +75,47 @@ export function ServicePage({
           ))}
         </div>
       </Section>
+
+      {/* The same claims, as hardware. Sits between the written highlights and
+          the series grid so the page alternates prose and picture instead of
+          running four screens of specification before showing anything. */}
+      {service.visuals && service.visuals.length > 0 && (
+        <Section className="bg-cabinet-raised py-20 md:py-28">
+          <div className="max-w-2xl">
+            <Eyebrow>{t.platform.visualsEyebrow}</Eyebrow>
+            <Display as="h2" size="md" delay={0.08} className="mt-6">
+              {t.platform.visualsHeading}
+            </Display>
+            <p className="mt-5 text-base text-graphite">
+              {t.platform.visualsBody}
+            </p>
+          </div>
+
+          <div className="mt-12 grid grid-cols-1 gap-x-8 gap-y-10 sm:grid-cols-2 lg:grid-cols-3">
+            {service.visuals.map((visual) => (
+              <figure key={visual.src}>
+                <div className="relative aspect-[4/3] overflow-hidden border border-seam bg-obsidian">
+                  <Image
+                    src={visual.src}
+                    alt={visual.alt}
+                    fill
+                    quality={90}
+                    sizes="(min-width: 1024px) 33vw, (min-width: 640px) 50vw, 100vw"
+                    className="object-contain"
+                  />
+                </div>
+                <figcaption className="mt-4 flex gap-3 text-base text-graphite">
+                  <span
+                    aria-hidden
+                    className="mt-2 h-1.5 w-1.5 shrink-0 bg-signal"
+                  />
+                  {visual.caption}
+                </figcaption>
+              </figure>
+            ))}
+          </div>
+        </Section>
+      )}
 
       {/* The named series inside this platform. */}
       <SeriesGrid

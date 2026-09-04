@@ -67,13 +67,17 @@ export function SeriesPage({ item }: { item: Series }) {
     <>
       <SiteHeader />
 
-      {/* Header. Kept on the platform's photograph rather than a stand-in of
-          the cabinet, so nothing implies a picture of this specific series. */}
+      {/* Header. The backdrop stays the platform photograph — an installed wall
+          of this discipline — while the cabinet itself sits in front of it as a
+          labelled object. Putting the render behind the gradient instead, as
+          this once did, dimmed it to 40% and buried the one thing a buyer opens
+          the page to look at. */}
       <section className="on-wall relative bg-obsidian">
         <div className="absolute inset-0">
           <Image
-            src={item.image ?? platform.image}
-            alt={item.image ? item.name : platform.name}
+            src={platform.image}
+            alt=""
+            aria-hidden
             fill
             priority
             quality={90}
@@ -84,6 +88,8 @@ export function SeriesPage({ item }: { item: Series }) {
         </div>
 
         <div className="relative z-10 mx-auto max-w-[1560px] px-6 pb-16 pt-28 md:px-10 md:pb-24 md:pt-40">
+          <div className="grid grid-cols-1 gap-12 lg:grid-cols-[1fr_minmax(0,30rem)] lg:items-center lg:gap-16">
+            <div>
           <nav
             aria-label={t.seriesPage.breadcrumb}
             className="label-data text-graphite-dim"
@@ -124,6 +130,31 @@ export function SeriesPage({ item }: { item: Series }) {
             <Cta href={platform.href} variant="outline">
               {t.seriesPage.aboutPlatform} {platform.name}
             </Cta>
+          </div>
+            </div>
+
+            {/* The cabinet, lit and legible, rather than a mood shot. Sits on
+                its own panel so a render with a white ground and one with a
+                transparent ground read the same way against the wall behind. */}
+            {item.image && (
+              <figure className="lg:justify-self-end">
+                <div className="panel-lift relative aspect-[4/3] w-full overflow-hidden border border-seam bg-cabinet">
+                  <Image
+                    src={item.image}
+                    alt={`${item.name} — ${t.seriesPage.renderNote}`}
+                    fill
+                    priority
+                    quality={90}
+                    sizes="(min-width: 1024px) 30rem, 100vw"
+                    className="object-contain p-5"
+                  />
+                </div>
+                <figcaption className="label-data mt-3 flex items-center gap-2.5 text-graphite-dim">
+                  <span aria-hidden className="inline-block h-1.5 w-1.5 bg-signal" />
+                  {item.name} · {t.seriesPage.renderNote}
+                </figcaption>
+              </figure>
+            )}
           </div>
 
           {heroStats && heroStats.length > 0 && (
