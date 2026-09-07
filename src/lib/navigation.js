@@ -42,8 +42,8 @@ export const ctaLabel = "Request a quote";
 
 export const company = {
   name: "CityScreen",
-  address: "120 Adelaide Street West, Suite 2500, Toronto, Ontario M5H 1T1",
-  phone: "1 800 555 3488",
-  phoneHref: "tel:+18005553488",
-  email: "info@cityscreen.ca",
+  address: "Av. do Rio Douro 33, 2910-567 Setúbal",
+  phone: "265 123 456",
+  phoneHref: "tel:+351265123456",
+  email: "info@cityscreen.pt",
 };

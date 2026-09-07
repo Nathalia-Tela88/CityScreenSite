@@ -23,11 +23,11 @@ const plexMono = IBM_Plex_Mono({
 
 export const metadata: Metadata = {
   title: {
-    default: "CityScreen: LED display systems for Ontario",
+    default: "CityScreen: LED display systems for Portugal",
     template: "%s | CityScreen",
   },
   description:
-    "CityScreen supplies, installs and services LED display systems across Ontario. Structural engineering through final pixel calibration, under one contract.",
+    "CityScreen supplies, installs and services LED display systems across Portugal. Structural engineering through final pixel calibration, under one contract.",
 };
 
 export default function RootLayout({ children }: LayoutProps<"/">) {

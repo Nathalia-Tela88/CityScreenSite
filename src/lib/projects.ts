@@ -16,7 +16,7 @@ export const projects: Project[] = [
   {
     slug: "bay-street-media-facade",
     title: "Eight-storey media facade",
-    location: "Bay Street, Toronto",
+    location: "Avenida da Liberdade, Lisboa",
     discipline: "DOOH",
     year: "2025",
     summary:
@@ -32,7 +32,7 @@ export const projects: Project[] = [
   {
     slug: "grid-control-room",
     title: "Grid operations video wall",
-    location: "Mississauga",
+    location: "Palmela",
     discipline: "Professional",
     year: "2025",
     summary:
@@ -48,7 +48,7 @@ export const projects: Project[] = [
   {
     slug: "queen-west-shopfront",
     title: "Transparent shopfront wall",
-    location: "Queen Street West, Toronto",
+    location: "Rua Augusta, Lisboa",
     discipline: "Commercial",
     year: "2024",
     summary:
@@ -64,7 +64,7 @@ export const projects: Project[] = [
   {
     slug: "festival-main-stage",
     title: "Main stage backdrop and wings",
-    location: "Ottawa",
+    location: "Setúbal",
     discipline: "Rental",
     year: "2025",
     summary:
@@ -80,7 +80,7 @@ export const projects: Project[] = [
   {
     slug: "highway-401-network",
     title: "Corridor billboard network",
-    location: "Highway 401, Ontario",
+    location: "A2, Setúbal",
     discipline: "DOOH",
     year: "2024",
     summary:
@@ -96,7 +96,7 @@ export const projects: Project[] = [
   {
     slug: "financial-district-corner",
     title: "Corner-wrap podium screen",
-    location: "Financial District, Toronto",
+    location: "Parque das Nações, Lisboa",
     discipline: "DOOH",
     year: "2024",
     summary:

@@ -90,7 +90,7 @@ export function ProjectCard({
               {project.title}
             </h3>
           </div>
-          {/* Place and year on one line. They are read together — "Toronto,
+          {/* Place and year on one line. They are read together — "Lisboa,
               2025" — and splitting them across two rows spent a line of the
               card on half a fact. */}
           <p className="label-data mt-2.5 flex flex-wrap items-center gap-x-2.5 gap-y-1 text-graphite-dim">

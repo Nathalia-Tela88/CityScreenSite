@@ -458,7 +458,7 @@ const en: Record<string, SeriesCopy> = {
       },
       {
         title: "IP66, cabling included",
-        body: "Die-cast aluminium modules with a cable management system protected from UV. In Ontario the failure mode is not rain, it is years of sun on a cable jacket and a freeze-thaw cycle on trapped moisture.",
+        body: "Die-cast aluminium modules with a cable management system protected from UV. On the Setúbal coast the failure mode is not rain, it is years of salt-laden humidity working into every seam and cable jacket.",
       },
       {
         title: "Mixed splicing and 3D",
@@ -1022,7 +1022,7 @@ const pt: Record<string, SeriesCopy> = {
       },
       {
         title: "IP66, cablagem incluída",
-        body: "Módulos em alumínio injetado com um sistema de gestão de cabos protegido de UV. No Ontário o modo de falha não é a chuva, são anos de sol sobre a bainha de um cabo e um ciclo de gelo-degelo sobre humidade retida.",
+        body: "Módulos em alumínio injetado com um sistema de gestão de cabos protegido de UV. Na costa de Setúbal o modo de falha não é a chuva, é a humidade salina a infiltrar-se em cada junta e na bainha dos cabos, ano após ano.",
       },
       {
         title: "Montagem mista e 3D",

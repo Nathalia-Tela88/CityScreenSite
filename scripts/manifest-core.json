@@ -2,7 +2,7 @@
   {
     "name": "hero-facade",
     "aspect": "21:9",
-    "prompt": "Wide cinematic architectural photograph at blue hour of a downtown Toronto office tower whose lower eight storeys are wrapped in a seamless high-resolution LED media facade. The screen emits a single controlled crimson-red abstract light field that washes across wet asphalt and streetcar tracks below. Deep indigo-black winter sky, bare trees, long-exposure traffic light trails, faint snow in the air"
+    "prompt": "Wide cinematic architectural photograph at blue hour of a downtown Lisboa office tower whose lower eight storeys are wrapped in a seamless high-resolution LED media facade. The screen emits a single controlled crimson-red abstract light field that washes across wet cobblestone and tram tracks below. Deep indigo-black night sky, long-exposure traffic light trails, faint mist off the river"
   },
   {
     "name": "app-professional",
@@ -22,7 +22,7 @@
   {
     "name": "app-dooh",
     "aspect": "4:3",
-    "prompt": "A large roadside digital billboard on a steel monopole beside a Canadian highway at dusk in winter. The panel glows with an abstract crimson-red field, brilliantly bright against a slate-grey overcast sky, snowbanks along the shoulder, motion-blurred transport trucks passing below"
+    "prompt": "A large roadside digital billboard on a steel monopole beside a Portuguese motorway at dusk. The panel glows with an abstract crimson-red field, brilliantly bright against a slate-grey overcast sky, dry scrubland along the shoulder, motion-blurred transport trucks passing below"
   },
   {
     "name": "product-fine-pitch",
@@ -62,7 +62,7 @@
   {
     "name": "spec-ingress",
     "aspect": "3:2",
-    "prompt": "A sealed outdoor LED billboard cabinet during a heavy Canadian ice storm at dusk, rime ice and driven snow building on the top edge and the mounting frame while the panel face stays clear and burns bright crimson through the weather. Bleak grey-white whiteout background"
+    "prompt": "A sealed outdoor LED billboard cabinet during a heavy Atlantic coastal storm at dusk, driven rain and salt spray lashing the top edge and the mounting frame while the panel face stays clear and burns bright crimson through the weather. Bleak grey overcast background"
   },
   {
     "name": "gallery-arena",

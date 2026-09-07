@@ -24,7 +24,7 @@ export const homeFaqs: FaqItem[] = [
   },
   {
     q: "Do you offer financing?",
-    a: "We work with several Canadian equipment financing partners. Terms typically range from twenty-four to sixty months. We can include the financing application with your quote package if you request it.",
+    a: "We work with several Portuguese equipment financing partners. Terms typically range from twenty-four to sixty months. We can include the financing application with your quote package if you request it.",
   },
 ];
 
@@ -43,18 +43,18 @@ export const contactFaqs: FaqItem[] = [
   },
   {
     q: "Do you handle permits?",
-    a: "Yes. We manage the full permit application with your municipality including structural drawings sealed by a professional engineer licensed in Ontario. This is standard in every fixed installation quote.",
+    a: "Yes. We manage the full permit application with your municipality including structural drawings sealed by an engineer certified by the Ordem dos Engenheiros. This is standard in every fixed installation quote.",
   },
   {
     q: "What warranty do you offer?",
-    a: "Our standard warranty covers parts and labour for three years. The real differentiator is lifetime service. We answer the phone, we stock spares in Ontario and we dispatch a technician when you need one.",
+    a: "Our standard warranty covers parts and labour for three years. The real differentiator is lifetime service. We answer the phone, we stock spares in Setúbal and we dispatch a technician when you need one.",
   },
 ];
 
 export const doohFaqs: FaqItem[] = [
   {
     q: "What permits are required?",
-    a: "Outdoor signage in Ontario requires municipal sign permits and may need MTO approval near provincial highways. CityScreen manages the full permit application, including structural drawings sealed by a professional engineer licensed in Ontario. We handle the process from submission to approval.",
+    a: "Outdoor signage in Portugal requires municipal sign permits and may need an Infraestruturas de Portugal permit near national roads. CityScreen manages the full permit application, including structural drawings sealed by an engineer certified by the Ordem dos Engenheiros. We handle the process from submission to approval.",
   },
   {
     q: "How bright must it be?",
@@ -70,7 +70,7 @@ export const doohFaqs: FaqItem[] = [
   },
   {
     q: "Is 24/7 operation covered?",
-    a: "Yes. Our warranty covers continuous operation including all components, power supplies, and receiving cards. We stock replacement modules in our Ontario warehouse. A service call typically happens within 24 hours, and we do not prorate coverage based on operating hours.",
+    a: "Yes. Our warranty covers continuous operation including all components, power supplies, and receiving cards. We stock replacement modules in our Setúbal warehouse. A service call typically happens within 24 hours, and we do not prorate coverage based on operating hours.",
   },
 ];
 
@@ -100,11 +100,11 @@ export const rentalFaqs: FaqItem[] = [
 export const warrantyFaqs: FaqItem[] = [
   {
     q: "What is your average response time?",
-    a: "We respond to service calls within four hours during business days. Critical failures on outdoor digital displays are addressed same-day. Our Ontario-based technicians are never more than a short drive from your site.",
+    a: "We respond to service calls within four hours during business days. Critical failures on outdoor digital displays are addressed same-day. Our Setúbal-based technicians are never more than a short drive from your site.",
   },
   {
     q: "How far do you travel?",
-    a: "Our service radius covers all of Ontario from Windsor to Ottawa and north to Timmins. We do not subcontract. A CityScreen technician in a company vehicle arrives at your location every time.",
+    a: "Our service radius covers the Lisboa and Setúbal district, door to door. We do not subcontract. A CityScreen technician in a company vehicle arrives at your location every time.",
   },
   {
     q: "Is after-hours support available?",
@@ -127,15 +127,15 @@ export const faqGroups: FaqGroup[] = [
     items: [
       {
         q: "Do I need a permit?",
-        a: "Almost certainly. Every municipality in Ontario has its own sign by-law governing size, brightness, and location. We manage the entire permit application on your behalf, from initial drawings to final approval.",
+        a: "Almost certainly. Every município in Portugal has its own sign regulations governing size, brightness, and location. We manage the entire permit application on your behalf, from initial drawings to final approval.",
       },
       {
         q: "How long does approval take?",
         a: "Typical municipal review runs four to eight weeks. Complex sites or those requiring minor variances can extend the timeline. We submit early and follow up relentlessly.",
       },
       {
-        q: "What about the MTO?",
-        a: "Displays visible from a 400-series highway require a Ministry of Transportation permit. This is a separate application with strict criteria on messaging and dwell time. We handle it.",
+        q: "What about national roads?",
+        a: "Displays visible from a national road (IP or IC) require an Infraestruturas de Portugal permit. This is a separate application with strict criteria on messaging and dwell time. We handle it.",
       },
       {
         q: "Who prepares the drawings?",
@@ -193,7 +193,7 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: "Do you make content?",
-        a: "We do not. We focus on the hardware and its performance. We can recommend several Ontario-based creative shops who understand the pixel pitch and resolution of your specific display.",
+        a: "We do not. We focus on the hardware and its performance. We can recommend several Lisboa-based creative shops who understand the pixel pitch and resolution of your specific display.",
       },
     ],
   },
@@ -206,11 +206,11 @@ export const faqGroups: FaqGroup[] = [
       },
       {
         q: "What is lifetime service?",
-        a: "After the warranty expires, we do not disappear. We stock modules for every system we have ever installed. Our service trucks are on the road in Ontario daily. You pay for parts and labour at a pre-agreed rate.",
+        a: "After the warranty expires, we do not disappear. We stock modules for every system we have ever installed. Our service trucks are on the road in the Lisboa and Setúbal district daily. You pay for parts and labour at a pre-agreed rate.",
       },
       {
         q: "How fast is response?",
-        a: "We guarantee a technician on site within 48 hours for any critical failure during the warranty period. Most issues are diagnosed remotely and resolved same-day. We carry spare modules in our Ontario warehouse.",
+        a: "We guarantee a technician on site within 48 hours for any critical failure during the warranty period. Most issues are diagnosed remotely and resolved same-day. We carry spare modules in our Setúbal warehouse.",
       },
       {
         q: "What voids it?",
@@ -227,11 +227,11 @@ export const faqGroups: FaqGroup[] = [
     items: [
       {
         q: "Do you offer leasing?",
-        a: "Yes. We work with several Canadian equipment finance companies to structure operating leases or capital leases. Terms typically run 36 to 60 months with a buyout option at the end.",
+        a: "Yes. We work with several Portuguese equipment finance companies to structure operating leases or capital leases. Terms typically run 36 to 60 months with a buyout option at the end.",
       },
       {
         q: "What about municipalities?",
-        a: "Municipal procurement often requires a different approach. We can structure the project to align with your fiscal year budgeting and have experience with RFP-based purchasing in Ontario.",
+        a: "Municipal procurement often requires a different approach. We can structure the project to align with your fiscal year budgeting and have experience with public tender purchasing in Portugal.",
       },
       {
         q: "Is there a credit check?",
@@ -252,11 +252,11 @@ export const faqGroups: FaqGroup[] = [
     items: [
       {
         q: "Do I need an engineer?",
-        a: "Yes. Ontario building code requires a professional engineer to stamp structural drawings for any permanent outdoor display. Our P.Eng handles this in-house. It is not an extra line item.",
+        a: "Yes. Portuguese building regulations require a certified engineer to stamp structural drawings for any permanent outdoor display. Our in-house engineer handles this. It is not an extra line item.",
       },
       {
         q: "What about wind load?",
-        a: "Every outdoor structure is engineered for the specific wind region per the Ontario building code. We calculate gust factors, exposure, and importance category. The steel is sized accordingly.",
+        a: "Every outdoor structure is engineered for the specific wind region per Portuguese building regulations. We calculate gust factors, exposure, and importance category. The steel is sized accordingly.",
       },
       {
         q: "What power do I need?",

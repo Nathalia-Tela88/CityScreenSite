@@ -10,7 +10,7 @@ import { AboutContent } from "./about-content";
 export const metadata: Metadata = {
   title: "About us",
   description:
-    "CityScreen keeps structural engineering, fabrication, installation and commissioning in-house. Twelve years and 400 installs across Ontario.",
+    "CityScreen keeps structural engineering, fabrication, installation and commissioning in-house. Twelve years and 400 installs across Portugal.",
 };
 
 export default function Page() {

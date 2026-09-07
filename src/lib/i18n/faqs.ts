@@ -34,7 +34,7 @@ const en: FaqBundle = {
     },
     {
       q: "Do you offer financing?",
-      a: "We work with several Canadian equipment financing partners. Terms typically range from twenty-four to sixty months. We can include the financing application with your quote package if you request it.",
+      a: "We work with several Portuguese equipment financing partners. Terms typically range from twenty-four to sixty months. We can include the financing application with your quote package if you request it.",
     },
   ],
   contact: [
@@ -52,17 +52,17 @@ const en: FaqBundle = {
     },
     {
       q: "Do you handle permits?",
-      a: "Yes. We manage the full permit application with your municipality including structural drawings sealed by a professional engineer licensed in Ontario. This is standard in every fixed installation quote.",
+      a: "Yes. We manage the full permit application with your municipality including structural drawings sealed by an engineer certified by the Ordem dos Engenheiros. This is standard in every fixed installation quote.",
     },
     {
       q: "What warranty do you offer?",
-      a: "Our standard warranty covers parts and labour for three years. The real differentiator is lifetime service. We answer the phone, we stock spares in Ontario and we dispatch a technician when you need one.",
+      a: "Our standard warranty covers parts and labour for three years. The real differentiator is lifetime service. We answer the phone, we stock spares in Setúbal and we dispatch a technician when you need one.",
     },
   ],
   dooh: [
     {
       q: "What permits are required?",
-      a: "Outdoor signage in Ontario requires municipal sign permits and may need MTO approval near provincial highways. CityScreen manages the full permit application, including structural drawings sealed by a professional engineer licensed in Ontario. We handle the process from submission to approval.",
+      a: "Outdoor signage in Portugal requires municipal sign permits and may need an Infraestruturas de Portugal permit near national roads. CityScreen manages the full permit application, including structural drawings sealed by an engineer certified by the Ordem dos Engenheiros. We handle the process from submission to approval.",
     },
     {
       q: "How bright must it be?",
@@ -78,7 +78,7 @@ const en: FaqBundle = {
     },
     {
       q: "Is 24/7 operation covered?",
-      a: "Yes. Our warranty covers continuous operation including all components, power supplies, and receiving cards. We stock replacement modules in our Ontario warehouse. A service call typically happens within 24 hours, and we do not prorate coverage based on operating hours.",
+      a: "Yes. Our warranty covers continuous operation including all components, power supplies, and receiving cards. We stock replacement modules in our Setúbal warehouse. A service call typically happens within 24 hours, and we do not prorate coverage based on operating hours.",
     },
   ],
   rental: [
@@ -106,11 +106,11 @@ const en: FaqBundle = {
   warranty: [
     {
       q: "What is your average response time?",
-      a: "We respond to service calls within four hours during business days. Critical failures on outdoor digital displays are addressed same-day. Our Ontario-based technicians are never more than a short drive from your site.",
+      a: "We respond to service calls within four hours during business days. Critical failures on outdoor digital displays are addressed same-day. Our Setúbal-based technicians are never more than a short drive from your site.",
     },
     {
       q: "How far do you travel?",
-      a: "Our service radius covers all of Ontario from Windsor to Ottawa and north to Timmins. We do not subcontract. A CityScreen technician in a company vehicle arrives at your location every time.",
+      a: "Our service radius covers the Lisboa and Setúbal district, door to door. We do not subcontract. A CityScreen technician in a company vehicle arrives at your location every time.",
     },
     {
       q: "Is after-hours support available?",
@@ -131,15 +131,15 @@ const en: FaqBundle = {
       items: [
         {
           q: "Do I need a permit?",
-          a: "Almost certainly. Every municipality in Ontario has its own sign by-law governing size, brightness, and location. We manage the entire permit application on your behalf, from initial drawings to final approval.",
+          a: "Almost certainly. Every município in Portugal has its own sign regulations governing size, brightness, and location. We manage the entire permit application on your behalf, from initial drawings to final approval.",
         },
         {
           q: "How long does approval take?",
           a: "Typical municipal review runs four to eight weeks. Complex sites or those requiring minor variances can extend the timeline. We submit early and follow up relentlessly.",
         },
         {
-          q: "What about the MTO?",
-          a: "Displays visible from a 400-series highway require a Ministry of Transportation permit. This is a separate application with strict criteria on messaging and dwell time. We handle it.",
+          q: "What about national roads?",
+          a: "Displays visible from a national road (IP or IC) require an Infraestruturas de Portugal permit. This is a separate application with strict criteria on messaging and dwell time. We handle it.",
         },
         {
           q: "Who prepares the drawings?",
@@ -197,7 +197,7 @@ const en: FaqBundle = {
         },
         {
           q: "Do you make content?",
-          a: "We do not. We focus on the hardware and its performance. We can recommend several Ontario-based creative shops who understand the pixel pitch and resolution of your specific display.",
+          a: "We do not. We focus on the hardware and its performance. We can recommend several Lisboa-based creative shops who understand the pixel pitch and resolution of your specific display.",
         },
       ],
     },
@@ -210,11 +210,11 @@ const en: FaqBundle = {
         },
         {
           q: "What is lifetime service?",
-          a: "After the warranty expires, we do not disappear. We stock modules for every system we have ever installed. Our service trucks are on the road in Ontario daily. You pay for parts and labour at a pre-agreed rate.",
+          a: "After the warranty expires, we do not disappear. We stock modules for every system we have ever installed. Our service trucks are on the road in the Lisboa and Setúbal district daily. You pay for parts and labour at a pre-agreed rate.",
         },
         {
           q: "How fast is response?",
-          a: "We guarantee a technician on site within 48 hours for any critical failure during the warranty period. Most issues are diagnosed remotely and resolved same-day. We carry spare modules in our Ontario warehouse.",
+          a: "We guarantee a technician on site within 48 hours for any critical failure during the warranty period. Most issues are diagnosed remotely and resolved same-day. We carry spare modules in our Setúbal warehouse.",
         },
         {
           q: "What voids it?",
@@ -231,11 +231,11 @@ const en: FaqBundle = {
       items: [
         {
           q: "Do you offer leasing?",
-          a: "Yes. We work with several Canadian equipment finance companies to structure operating leases or capital leases. Terms typically run 36 to 60 months with a buyout option at the end.",
+          a: "Yes. We work with several Portuguese equipment finance companies to structure operating leases or capital leases. Terms typically run 36 to 60 months with a buyout option at the end.",
         },
         {
           q: "What about municipalities?",
-          a: "Municipal procurement often requires a different approach. We can structure the project to align with your fiscal year budgeting and have experience with RFP-based purchasing in Ontario.",
+          a: "Municipal procurement often requires a different approach. We can structure the project to align with your fiscal year budgeting and have experience with public tender purchasing in Portugal.",
         },
         {
           q: "Is there a credit check?",
@@ -256,11 +256,11 @@ const en: FaqBundle = {
       items: [
         {
           q: "Do I need an engineer?",
-          a: "Yes. Ontario building code requires a professional engineer to stamp structural drawings for any permanent outdoor display. Our P.Eng handles this in-house. It is not an extra line item.",
+          a: "Yes. Portuguese building regulations require a certified engineer to stamp structural drawings for any permanent outdoor display. Our in-house engineer handles this. It is not an extra line item.",
         },
         {
           q: "What about wind load?",
-          a: "Every outdoor structure is engineered for the specific wind region per the Ontario building code. We calculate gust factors, exposure, and importance category. The steel is sized accordingly.",
+          a: "Every outdoor structure is engineered for the specific wind region per Portuguese building regulations. We calculate gust factors, exposure, and importance category. The steel is sized accordingly.",
         },
         {
           q: "What power do I need?",
@@ -299,7 +299,7 @@ const pt: FaqBundle = {
     },
     {
       q: "Existe financiamento?",
-      a: "Trabalhamos com vários parceiros canadianos de financiamento de equipamento. Os prazos vão normalmente de vinte e quatro a sessenta meses. Se pedir, incluímos a proposta de financiamento no dossiê do orçamento.",
+      a: "Trabalhamos com vários parceiros portugueses de financiamento de equipamento. Os prazos vão normalmente de vinte e quatro a sessenta meses. Se pedir, incluímos a proposta de financiamento no dossiê do orçamento.",
     },
   ],
   contact: [
@@ -317,17 +317,17 @@ const pt: FaqBundle = {
     },
     {
       q: "Tratam do licenciamento?",
-      a: "Sim. Gerimos todo o pedido de licença junto do município, incluindo desenhos estruturais carimbados por um engenheiro licenciado no Ontário. Isto é padrão em qualquer orçamento de instalação fixa.",
+      a: "Sim. Gerimos todo o pedido de licença junto do município, incluindo desenhos estruturais carimbados por um engenheiro certificado pela Ordem dos Engenheiros. Isto é padrão em qualquer orçamento de instalação fixa.",
     },
     {
       q: "Que garantia oferecem?",
-      a: "A nossa garantia padrão cobre peças e mão de obra durante três anos. O verdadeiro diferencial é a assistência vitalícia. Atendemos o telefone, temos peças em stock no Ontário e enviamos um técnico quando precisa.",
+      a: "A nossa garantia padrão cobre peças e mão de obra durante três anos. O verdadeiro diferencial é a assistência vitalícia. Atendemos o telefone, temos peças em stock em Setúbal e enviamos um técnico quando precisa.",
     },
   ],
   dooh: [
     {
       q: "Que licenças são precisas?",
-      a: "A sinalética exterior no Ontário exige licenças municipais e pode exigir aprovação do MTO junto de autoestradas provinciais. A CityScreen gere todo o pedido, incluindo desenhos estruturais carimbados por um engenheiro licenciado no Ontário. Tratamos do processo, da submissão à aprovação.",
+      a: "A sinalética exterior em Portugal exige licenças municipais e pode exigir autorização da Infraestruturas de Portugal junto a estradas nacionais. A CityScreen gere todo o pedido, incluindo desenhos estruturais carimbados por um engenheiro certificado pela Ordem dos Engenheiros. Tratamos do processo, da submissão à aprovação.",
     },
     {
       q: "Que luminosidade é necessária?",
@@ -343,7 +343,7 @@ const pt: FaqBundle = {
     },
     {
       q: "O funcionamento 24/7 está coberto?",
-      a: "Sim. A garantia cobre funcionamento contínuo, incluindo todos os componentes, fontes de alimentação e placas recetoras. Temos módulos de substituição no nosso armazém no Ontário. Uma intervenção acontece normalmente em 24 horas e não reduzimos a cobertura em função das horas de funcionamento.",
+      a: "Sim. A garantia cobre funcionamento contínuo, incluindo todos os componentes, fontes de alimentação e placas recetoras. Temos módulos de substituição no nosso armazém em Setúbal. Uma intervenção acontece normalmente em 24 horas e não reduzimos a cobertura em função das horas de funcionamento.",
     },
   ],
   rental: [
@@ -371,11 +371,11 @@ const pt: FaqBundle = {
   warranty: [
     {
       q: "Qual é o tempo médio de resposta?",
-      a: "Respondemos a pedidos de assistência em quatro horas em dias úteis. Falhas críticas em ecrãs digitais exteriores são resolvidas no próprio dia. Os nossos técnicos, sediados no Ontário, estão sempre a curta distância do seu local.",
+      a: "Respondemos a pedidos de assistência em quatro horas em dias úteis. Falhas críticas em ecrãs digitais exteriores são resolvidas no próprio dia. Os nossos técnicos, sediados em Setúbal, estão sempre a curta distância do seu local.",
     },
     {
       q: "Até onde se deslocam?",
-      a: "O nosso raio de assistência cobre todo o Ontário, de Windsor a Otava e a norte até Timmins. Não subcontratamos. Chega sempre um técnico da CityScreen numa viatura da empresa.",
+      a: "O nosso raio de assistência cobre o distrito de Lisboa e Setúbal, porta a porta. Não subcontratamos. Chega sempre um técnico da CityScreen numa viatura da empresa.",
     },
     {
       q: "Existe apoio fora de horas?",
@@ -396,15 +396,15 @@ const pt: FaqBundle = {
       items: [
         {
           q: "Preciso de licença?",
-          a: "Quase de certeza. Cada município do Ontário tem o seu próprio regulamento de reclamos, que rege dimensão, luminosidade e localização. Gerimos todo o pedido de licença em seu nome, dos primeiros desenhos à aprovação final.",
+          a: "Quase de certeza. Cada município em Portugal tem o seu próprio regulamento de reclamos, que rege dimensão, luminosidade e localização. Gerimos todo o pedido de licença em seu nome, dos primeiros desenhos à aprovação final.",
         },
         {
           q: "Quanto tempo demora a aprovação?",
           a: "A apreciação municipal habitual demora de quatro a oito semanas. Locais complexos ou que exijam pequenas derrogações podem alargar o prazo. Submetemos cedo e insistimos sem descanso.",
         },
         {
-          q: "E o MTO?",
-          a: "Ecrãs visíveis a partir de uma autoestrada da série 400 exigem licença do Ministério dos Transportes. É um pedido separado, com critérios rigorosos quanto à mensagem e ao tempo de exposição. Nós tratamos disso.",
+          q: "E as estradas nacionais?",
+          a: "Ecrãs visíveis a partir de uma estrada nacional (IP ou IC) exigem autorização da Infraestruturas de Portugal. É um pedido separado, com critérios rigorosos quanto à mensagem e ao tempo de exposição. Nós tratamos disso.",
         },
         {
           q: "Quem prepara os desenhos?",
@@ -462,7 +462,7 @@ const pt: FaqBundle = {
         },
         {
           q: "Produzem conteúdos?",
-          a: "Não. Concentramo-nos no equipamento e no seu desempenho. Podemos recomendar várias agências criativas no Ontário que percebem o pixel pitch e a resolução do seu ecrã em concreto.",
+          a: "Não. Concentramo-nos no equipamento e no seu desempenho. Podemos recomendar várias agências criativas em Lisboa que percebem o pixel pitch e a resolução do seu ecrã em concreto.",
         },
       ],
     },
@@ -475,11 +475,11 @@ const pt: FaqBundle = {
         },
         {
           q: "O que é a assistência vitalícia?",
-          a: "Quando a garantia termina, não desaparecemos. Temos em stock módulos de todos os sistemas que alguma vez instalámos. As nossas viaturas de assistência andam na estrada no Ontário todos os dias. Paga peças e mão de obra a um preço acordado previamente.",
+          a: "Quando a garantia termina, não desaparecemos. Temos em stock módulos de todos os sistemas que alguma vez instalámos. As nossas viaturas de assistência andam na estrada no distrito de Lisboa e Setúbal todos os dias. Paga peças e mão de obra a um preço acordado previamente.",
         },
         {
           q: "Qual é a rapidez de resposta?",
-          a: "Garantimos um técnico no local em 48 horas para qualquer falha crítica durante o período de garantia. A maioria das avarias é diagnosticada remotamente e resolvida no próprio dia. Temos módulos de reserva no nosso armazém do Ontário.",
+          a: "Garantimos um técnico no local em 48 horas para qualquer falha crítica durante o período de garantia. A maioria das avarias é diagnosticada remotamente e resolvida no próprio dia. Temos módulos de reserva no nosso armazém de Setúbal.",
         },
         {
           q: "O que anula a garantia?",
@@ -496,11 +496,11 @@ const pt: FaqBundle = {
       items: [
         {
           q: "Existe locação?",
-          a: "Sim. Trabalhamos com várias financeiras canadianas de equipamento para estruturar locação operacional ou financeira. Os prazos vão normalmente de 36 a 60 meses, com opção de compra no final.",
+          a: "Sim. Trabalhamos com várias financeiras portuguesas de equipamento para estruturar locação operacional ou financeira. Os prazos vão normalmente de 36 a 60 meses, com opção de compra no final.",
         },
         {
           q: "E no caso de municípios?",
-          a: "A contratação pública exige muitas vezes uma abordagem diferente. Podemos estruturar o projeto para acompanhar o seu ano orçamental e temos experiência em aquisições por concurso no Ontário.",
+          a: "A contratação pública exige muitas vezes uma abordagem diferente. Podemos estruturar o projeto para acompanhar o seu ano orçamental e temos experiência em aquisições por concurso público em Portugal.",
         },
         {
           q: "Há análise de crédito?",
@@ -521,11 +521,11 @@ const pt: FaqBundle = {
       items: [
         {
           q: "Preciso de um engenheiro?",
-          a: "Sim. O código de construção do Ontário exige que um engenheiro carimbe os desenhos estruturais de qualquer ecrã exterior permanente. O nosso engenheiro trata disso internamente. Não é uma rubrica extra.",
+          a: "Sim. O regulamento português de construção exige que um engenheiro carimbe os desenhos estruturais de qualquer ecrã exterior permanente. O nosso engenheiro trata disso internamente. Não é uma rubrica extra.",
         },
         {
           q: "E a carga de vento?",
-          a: "Cada estrutura exterior é calculada para a região de vento específica, segundo o código de construção do Ontário. Calculamos fatores de rajada, exposição e categoria de importância. O aço é dimensionado em conformidade.",
+          a: "Cada estrutura exterior é calculada para a região de vento específica, segundo o regulamento português de construção. Calculamos fatores de rajada, exposição e categoria de importância. O aço é dimensionado em conformidade.",
         },
         {
           q: "Que potência é necessária?",

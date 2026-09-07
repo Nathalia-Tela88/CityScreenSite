@@ -10,7 +10,7 @@ import { FaqContent } from "./faq-content";
 export const metadata: Metadata = {
   title: "FAQ",
   description:
-    "Permits, timelines, content software, warranty, financing and engineering: the questions CityScreen engineers answer on every Ontario site survey.",
+    "Permits, timelines, content software, warranty, financing and engineering: the questions CityScreen engineers answer on every Setúbal-area site survey.",
 };
 
 export default function Page() {
