@@ -653,13 +653,13 @@ export const en = {
   /** The lead-capture form on /contact-us. */
   form: {
     fullName: "Full name",
-    fullNamePlaceholder: "Dana Whitfield",
+    fullNamePlaceholder: "Vitor Cunha",
     workEmail: "Work email",
-    workEmailPlaceholder: "dana@northfacilities.ca",
+    workEmailPlaceholder: "vitor@cityprint.pt",
     company: "Company",
-    companyPlaceholder: "Northgate Facilities",
+    companyPlaceholder: "CITYPRINT",
     location: "Project location",
-    locationPlaceholder: "Mississauga, ON",
+    locationPlaceholder: "Setúbal, Portugal",
     projectType: "Project type",
     projectTypePlaceholder: "Select the discipline",
     carriedOver:
@@ -1330,13 +1330,13 @@ export const pt: Dict = {
 
   form: {
     fullName: "Nome completo",
-    fullNamePlaceholder: "Dana Whitfield",
+    fullNamePlaceholder: "Vitor Cunha",
     workEmail: "Email profissional",
-    workEmailPlaceholder: "dana@northfacilities.ca",
+    workEmailPlaceholder: "vitor@cityprint.pt",
     company: "Empresa",
-    companyPlaceholder: "Northgate Facilities",
+    companyPlaceholder: "CITYPRINT",
     location: "Localização do projeto",
-    locationPlaceholder: "Mississauga, ON",
+    locationPlaceholder: "Setúbal, Portugal",
     projectType: "Tipo de projeto",
     projectTypePlaceholder: "Selecione a disciplina",
     carriedOver:
