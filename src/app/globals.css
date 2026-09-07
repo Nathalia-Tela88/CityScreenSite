@@ -353,6 +353,68 @@
   box-shadow: var(--panel-lift);
 }
 
+/* --- Frame plates ---------------------------------------------------------
+
+   Manufacturer product artwork does not adapt to a theme. It arrives already
+   committed to a ground: LAMPRO and Unilumin each drew their decks for their
+   own page, so some frames are white diagrams captioned in black ink and
+   others are cut-outs captioned in white on transparency. Put the second kind
+   on a white page and the caption disappears; put the first kind on this
+   site's dark one and "IP67 Waterproof Module" is not faint, it is simply not
+   there.
+
+   Nothing in CSS can recolour ink baked into a raster. So the page does the
+   only honest thing available: it holds the ground the artwork was drawn for,
+   in both themes, and lets the frame sit on it unaltered.
+
+   This is the same argument `.on-wall` above already makes for the hero — an
+   emissive surface does not turn pale because the room is lit — applied to a
+   printed one. A datasheet page photographed on white stays on white when the
+   lights go out.
+
+   Each plate re-declares the full token set rather than only its background,
+   so a caption, an eyebrow or a hairline rendered *over* a plate resolves
+   against the ground it is actually sitting on. Setting the background alone
+   is what produces grey-on-grey labels. */
+@utility plate-dark {
+  --surface-base: #05060a;
+  --surface-raised: #0b0d13;
+  --surface-raised-2: #12141c;
+  --line: #1c1f2a;
+  --line-strong: #2b2f3d;
+  --brand: #ff2233;
+  --brand-dim: #b3111e;
+  --text-primary: #fff1f2;
+  --text-secondary: #969bab;
+  --text-tertiary: #8b91a3;
+  --panel-lift: none;
+  --surface-sheen: none;
+  color-scheme: dark;
+  background-color: var(--surface-base);
+  color: var(--text-primary);
+}
+
+/* The light plate is paper, not the light theme's cast-aluminium base: the
+   artwork mounted on it was drawn on white, and anything cooler than white
+   shows as a visible rectangle around a frame whose own ground is #fff. */
+@utility plate-light {
+  --surface-base: #ffffff;
+  --surface-raised: #ffffff;
+  --surface-raised-2: #f1f3f6;
+  --line: #d7dbe2;
+  --line-strong: #a6aeba;
+  --brand: #c00510;
+  --brand-dim: #8d040c;
+  --text-primary: #0c0d13;
+  --text-secondary: #4a4f5c;
+  --text-tertiary: #4f5563;
+  --panel-lift: none;
+  --surface-sheen: none;
+  color-scheme: light;
+  background-color: var(--surface-base);
+  color: var(--text-primary);
+}
+
 /* The unlit substrate. A pitch grid, not a decorative dot pattern — the
    spacing is the module the layout is built on. */
 @utility pitch-grid {

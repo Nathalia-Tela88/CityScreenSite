@@ -247,10 +247,17 @@ export const en = {
     platformWord: "platform.",
     apartEyebrow: "What sets it apart",
     behaviourHeading: "How this series behaves",
-    /* Sits under the cabinet render in the series header. It says "render",
-       not "photograph", because the file is the manufacturer's render of the
-       platform cabinet rather than a shot of this exact series. */
+    /* Sits under the cabinet frame in the series header. It still says
+       "render" rather than "photograph": these are the manufacturer's own
+       renders, now per-series rather than per-platform, and most of them are
+       studio artwork rather than a photograph of a delivered unit. */
     renderNote: "Manufacturer cabinet render",
+    presentationEyebrow: "The product, frame by frame",
+    presentationLede:
+      "The manufacturer's own presentation deck for this series, in its own order: the cabinet first, then what decides a specification, then the installed evidence. Every figure quoted below is printed on the frame it sits under.",
+    /* Shown where a frame has no caption written for it yet. A guess at what
+       the manufacturer meant by a frame is worse than an admission. */
+    frameUncaptioned: "Manufacturer frame. Caption to follow.",
     specsOnRequest: "Published on request",
     specsFull: "The numbers, in full",
     specsBodyFull:
@@ -929,6 +936,10 @@ export const pt: Dict = {
     apartEyebrow: "O que a distingue",
     behaviourHeading: "Como se comporta esta série",
     renderNote: "Render do fabricante",
+    presentationEyebrow: "O produto, imagem a imagem",
+    presentationLede:
+      "A apresentação do próprio fabricante para esta série, pela ordem dele: primeiro o cabinete, depois o que decide uma especificação, depois a prova instalada. Todos os valores citados abaixo estão impressos na imagem que acompanham.",
+    frameUncaptioned: "Imagem do fabricante. Legenda a seguir.",
     specsOnRequest: "Disponíveis a pedido",
     specsFull: "Os números, na íntegra",
     specsBodyFull:

@@ -1,0 +1,18 @@
+# Netlify build for the Next.js App Router site.
+#
+# The Next.js runtime is what makes the deploy work: this site is not a pure
+# static export — it has route handlers and per-request rendering — so the
+# plugin wires the server routes to Netlify Functions and serves the prerendered
+# pages from the CDN. Publishing `.next` without it yields a 404 on every route.
+[build]
+  command = "npm run build"
+  publish = ".next"
+
+[build.environment]
+  # Next 16 requires Node 20+. Netlify's default image can lag behind that, and
+  # the failure it produces is an opaque syntax error rather than a version
+  # message, so it is pinned here.
+  NODE_VERSION = "20"
+
+[[plugins]]
+  package = "@netlify/plugin-nextjs"

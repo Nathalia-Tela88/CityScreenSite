@@ -6,6 +6,7 @@ import { servicesByLocale, type Service } from "@/lib/i18n/services";
 import { faqsByLocale, type FaqBundle } from "@/lib/i18n/faqs";
 import { projectsByLocale, type Project } from "@/lib/i18n/projects";
 import { seriesCopyByLocale, type SeriesCopy } from "@/lib/i18n/series";
+import { frameCopyByLocale, type FrameCopy } from "@/lib/i18n/frames";
 
 /**
  * One hook for everything localised.
@@ -24,6 +25,8 @@ export function useT(): {
   projects: Project[];
   /** Series datasheets and copy, keyed by series slug. */
   seriesCopy: Record<string, SeriesCopy>;
+  /** Presentation-frame captions, keyed by series slug and then frame order. */
+  frameCopy: Record<string, FrameCopy[]>;
 } {
   const { locale } = useLocale();
 
@@ -38,7 +41,8 @@ export function useT(): {
     faqs: faqsByLocale[locale],
     projects: projectsByLocale[locale],
     seriesCopy: seriesCopyByLocale[locale],
+    frameCopy: frameCopyByLocale[locale],
   };
 }
 
-export type { Dict, Service, Project, FaqBundle, SeriesCopy };
+export type { Dict, Service, Project, FaqBundle, SeriesCopy, FrameCopy };

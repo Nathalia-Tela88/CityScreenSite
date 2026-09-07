@@ -7,7 +7,7 @@ import * as React from "react";
 import { useT } from "@/lib/i18n";
 import { cn } from "@/lib/utils";
 import { seriesByPlatform, hasDetail, type Series } from "@/lib/series";
-import { ProductGallery } from "@/components/site/product-gallery";
+import { SeriesPresentation } from "@/components/site/series-presentation";
 import { SiteHeader } from "@/components/site/site-header";
 import { SiteFooter } from "@/components/site/site-footer";
 import { CtaBlock } from "@/components/site/cta-block";
@@ -36,7 +36,7 @@ function fill(template: string, values: Record<string, string>) {
  * a figure nobody measured.
  */
 export function SeriesPage({ item }: { item: Series }) {
-  const { t, serviceBySlug, projects, seriesCopy } = useT();
+  const { t, serviceBySlug, projects, seriesCopy, frameCopy } = useT();
 
   const platform = serviceBySlug[item.platform];
   const siblings = (seriesByPlatform[item.platform] ?? []).filter(
@@ -56,13 +56,13 @@ export function SeriesPage({ item }: { item: Series }) {
   const highlights = copy?.highlights ?? item.highlights;
   const specTables = copy?.specTables ?? item.specTables;
 
-  // Only the further frames. `image` is already shown full size in the header
-  // directly above, and including it here made every series page open with the
-  // same render twice in a row. A series with no further frames shows the
-  // "what sets it apart" note on its own rather than a gallery of one.
-  const media = (item.gallery ?? []).filter(
-    (src): src is string => Boolean(src),
-  );
+  // The manufacturer's deck for this series, and the ground each frame in it
+  // was drawn for. `hero` is frame 1 — the shot the header carries — and the
+  // presentation below renders the whole sequence including it, because the
+  // deck reads as a sequence and dropping its opening frame breaks the order
+  // the captions were written in.
+  const frames = item.frames ?? [];
+  const hero = frames[0];
 
   return (
     <>
@@ -141,32 +141,30 @@ export function SeriesPage({ item }: { item: Series }) {
                 No `justify-self` on the figure: that sizes it to its content
                 and the plate collapses to a fraction of its column. Default
                 stretch is what makes it fill the track. */}
-            {item.image && (
+            {hero && (
               <figure className="w-full">
                 <div
                   className={cn(
-                    "relative aspect-[4/3] w-full",
-                    // A cut-out needs no container: it sits on the wall behind
-                    // the header and the type reads straight past it. Anything
-                    // with its own ground gets a panel, so the edge of that
-                    // ground looks intentional rather than like a stray box.
-                    !item.cutout &&
-                      "panel-lift overflow-hidden border border-seam bg-cabinet",
+                    "relative aspect-[4/3] w-full overflow-hidden",
+                    // The plate holds the ground this frame was drawn for, in
+                    // both themes. A cabinet cut out on transparency sits on
+                    // the dark plate and reads as an object on the wall; a
+                    // white datasheet render sits on the light one and keeps
+                    // its own edge instead of showing as a bright rectangle
+                    // punched into the header.
+                    hero.tone === "dark"
+                      ? "plate-dark border border-seam"
+                      : "plate-light panel-lift border border-seam",
                   )}
                 >
                   <Image
-                    src={item.image}
+                    src={hero.src}
                     alt={`${item.name} — ${t.seriesPage.renderNote}`}
                     fill
                     priority
                     quality={90}
                     sizes="(min-width: 1024px) 44rem, 100vw"
-                    className={cn(
-                      "object-contain",
-                      item.cutout
-                        ? "drop-shadow-[0_18px_45px_rgba(0,0,0,0.55)]"
-                        : "p-3",
-                    )}
+                    className="object-contain p-3"
                   />
                 </div>
                 <figcaption className="label-data mt-3 flex items-center gap-2.5 text-graphite-dim">
@@ -194,33 +192,20 @@ export function SeriesPage({ item }: { item: Series }) {
         </div>
       </section>
 
-      {/* Media. Sits directly under the header so the product is seen before
-          it is read about, and only when there is something real to show. */}
-      {(media.length > 0 || tagline) && (
+      {/* The manufacturer's deck. Sits directly under the header so the
+          product is seen before it is read about. */}
+      <SeriesPresentation
+        frames={frames}
+        copy={frameCopy[item.slug]}
+        name={item.name}
+      />
+
+      {tagline && (
         <Section className="py-16 md:py-20">
-          <div
-            className={cn(
-              "grid grid-cols-1 gap-10",
-              media.length > 0 && "lg:grid-cols-[1.15fr_0.85fr] lg:gap-16",
-            )}
-          >
-            {media.length > 0 && (
-              <ProductGallery
-                images={media}
-                name={item.name}
-                contain={item.cutout}
-                zoomLabel={`${item.name}: ${t.common.specifications}`}
-              />
-            )}
-            {tagline && (
-              <div className={cn(media.length > 0 && "lg:pt-4")}>
-                <Eyebrow>{t.seriesPage.apartEyebrow}</Eyebrow>
-                <p className="mt-6 max-w-3xl font-display text-2xl text-filament md:text-3xl">
-                  {tagline}
-                </p>
-              </div>
-            )}
-          </div>
+          <Eyebrow>{t.seriesPage.apartEyebrow}</Eyebrow>
+          <p className="mt-6 max-w-3xl font-display text-2xl text-filament md:text-3xl">
+            {tagline}
+          </p>
         </Section>
       )}
 
